@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Direction",
+					"strict" : false
+				},
+				{
+					"name" : "Init",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Enable",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
