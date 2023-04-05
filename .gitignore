@@ -2,3 +2,4 @@
 Justfile
 *.ghw
 *.o
+*.wlf
