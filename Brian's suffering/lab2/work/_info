@@ -1,0 +1,309 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0\Compsys 305
+Ebcd_counter
+Z0 w1680240673
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\altera\13.0\Compsys 305\lab2
+Z7 8C:/altera/13.0/Compsys 305/lab2/BCD_counter.vhd
+Z8 FC:/altera/13.0/Compsys 305/lab2/BCD_counter.vhd
+l0
+L6
+VaTfc;kg:]3GzAD`4lmbXW3
+Z9 OV;C;10.1d;51
+32
+Z10 !s108 1680344159.769000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/BCD_counter.vhd|
+Z12 !s107 C:/altera/13.0/Compsys 305/lab2/BCD_counter.vhd|
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+!s100 5dO8ngh5S_9bo7RaD;^QR3
+!i10b 1
+Abehaviour
+R1
+R2
+R3
+R4
+R5
+DEx4 work 11 bcd_counter 0 22 aTfc;kg:]3GzAD`4lmbXW3
+l13
+L11
+V?PCLDd<bmFBPYjXWXk<[L2
+R9
+32
+R10
+R11
+R12
+R13
+R14
+!s100 4ZDS_:f<f@mW12_=eZW>T3
+!i10b 1
+Eseq_counter
+Z15 w1679558714
+R1
+R2
+R3
+R4
+R5
+R6
+Z16 8C:/altera/13.0/Compsys 305/lab2/seq_counter.vhd
+Z17 FC:/altera/13.0/Compsys 305/lab2/seq_counter.vhd
+l0
+L5
+VHXAiG7NAamWJ8naf9F>SE3
+R9
+32
+Z18 !s108 1680344159.575000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/seq_counter.vhd|
+Z20 !s107 C:/altera/13.0/Compsys 305/lab2/seq_counter.vhd|
+R13
+R14
+!s100 fY70>g^UDh8W3k]02GYUZ0
+!i10b 1
+Abehaviour
+R1
+R2
+R3
+R4
+R5
+DEx4 work 11 seq_counter 0 22 HXAiG7NAamWJ8naf9F>SE3
+l17
+L12
+VR]cCI;6]6;DV`cL>=zG@z1
+R9
+32
+R18
+R19
+R20
+R13
+R14
+!s100 DH6I;SOX?[z^j^Q4i<PDN1
+!i10b 1
+Etest_bcd_counter
+Z21 w1680034495
+R4
+R5
+R6
+Z22 8C:/altera/13.0/Compsys 305/lab2/test_BCD_counter.vhd
+Z23 FC:/altera/13.0/Compsys 305/lab2/test_BCD_counter.vhd
+l0
+L5
+V>=FFcW]Z=6lnP<co?I4<g0
+R9
+32
+Z24 !s108 1680344159.835000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/test_BCD_counter.vhd|
+Z26 !s107 C:/altera/13.0/Compsys 305/lab2/test_BCD_counter.vhd|
+R13
+R14
+!s100 bd@LWTdV4glHPBCn>LEzK3
+!i10b 1
+Atest
+R4
+R5
+DEx4 work 16 test_bcd_counter 0 22 >=FFcW]Z=6lnP<co?I4<g0
+l17
+L8
+Vhn9ZHFdeLEXDBcZ4P[aL^0
+R9
+32
+R24
+R25
+R26
+R13
+R14
+!s100 RK<^_M=?=j]]Ahb@aCCGP0
+!i10b 1
+Etest_counter_99
+Z27 w1680343897
+R4
+R5
+R6
+Z28 8C:/altera/13.0/Compsys 305/lab2/part3_test.vhd
+Z29 FC:/altera/13.0/Compsys 305/lab2/part3_test.vhd
+l0
+L5
+Vi@2<DMXX3]6OPgDan5c;C0
+!s100 kE4b]zCLOeYJ^Y^D9D8J42
+R9
+32
+!i10b 1
+Z30 !s108 1680344159.961000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/part3_test.vhd|
+Z32 !s107 C:/altera/13.0/Compsys 305/lab2/part3_test.vhd|
+R13
+R14
+Atest
+R4
+R5
+Z33 DEx4 work 15 test_counter_99 0 22 i@2<DMXX3]6OPgDan5c;C0
+l17
+L8
+Z34 Vi8JadY1I:9JiIn6aBUThe3
+Z35 !s100 BShVGZlJjDK<=gI3k<loi3
+R9
+32
+!i10b 1
+R30
+R31
+R32
+R13
+R14
+Etest_part1
+Z36 w1679557701
+R1
+R4
+R5
+R6
+Z37 8C:/altera/13.0/Compsys 305/lab2/another_test.vhd
+Z38 FC:/altera/13.0/Compsys 305/lab2/another_test.vhd
+l0
+L5
+V5J0GSJ6bhOX[cd::06?Nj3
+R9
+32
+Z39 !s108 1680344159.705000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/another_test.vhd|
+Z41 !s107 C:/altera/13.0/Compsys 305/lab2/another_test.vhd|
+R13
+R14
+!s100 IzH_jzl^IBf`MRmn@NXMj2
+!i10b 1
+Abehave
+R1
+R4
+R5
+DEx4 work 10 test_part1 0 22 5J0GSJ6bhOX[cd::06?Nj3
+l19
+L8
+VZmFMM:QSC;BHaL@K^1jA01
+R9
+32
+R39
+R40
+R41
+R13
+R14
+!s100 zACACf<Yh[V1IZ0EO9UA;1
+!i10b 1
+Etest_seq_counter
+Z42 w1680134017
+R1
+R4
+R5
+R6
+Z43 8C:/altera/13.0/Compsys 305/lab2/test_seq_counter.vhd
+Z44 FC:/altera/13.0/Compsys 305/lab2/test_seq_counter.vhd
+l0
+L5
+V;8WcbUhlo[38PS9@^c[MR0
+R9
+32
+Z45 !s108 1680344159.641000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/test_seq_counter.vhd|
+Z47 !s107 C:/altera/13.0/Compsys 305/lab2/test_seq_counter.vhd|
+R13
+R14
+!s100 ^zBK3Wahe[_nPGh<Q>4L=1
+!i10b 1
+Abehave
+R1
+R4
+R5
+DEx4 work 16 test_seq_counter 0 22 ;8WcbUhlo[38PS9@^c[MR0
+l19
+L8
+VB01Zi8^N9Z`??I1=kF?fQ2
+R9
+32
+R45
+R46
+R47
+R13
+R14
+!s100 ;:HfGIcBS8FHPo7]b>hhA1
+!i10b 1
+Atest
+R4
+R5
+DEx4 work 16 test_seq_counter 0 22 mkl`8[o<2LEaHHFdBV4Wc1
+l17
+L7
+V5KnbdTONX8=T]PV7M7K=H3
+R9
+32
+R46
+R13
+R14
+w1679948956
+R47
+!s108 1680130951.078000
+!s100 _IX=_GT<RE>iTiMLN12122
+!i10b 1
+Eup_counter
+Z48 w1680344156
+R1
+R2
+R3
+R4
+R5
+R6
+Z49 8C:/altera/13.0/Compsys 305/lab2/part3.vhd
+Z50 FC:/altera/13.0/Compsys 305/lab2/part3.vhd
+l0
+L6
+VKo>U7;cOY9<zI]UTKLUQZ3
+R9
+32
+Z51 !s108 1680344159.896000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/lab2/part3.vhd|
+Z53 !s107 C:/altera/13.0/Compsys 305/lab2/part3.vhd|
+R13
+R14
+!s100 8`b;?iGH`hf6_>Oz`<==:3
+!i10b 1
+Astructure
+R1
+R2
+R3
+R4
+R5
+DEx4 work 10 up_counter 0 22 Ko>U7;cOY9<zI]UTKLUQZ3
+l19
+L11
+VBGziFnC4V=l1JknEZ4l:S2
+!s100 g`>k93RR2Fb7oBl980L8S1
+R9
+32
+R51
+R52
+R53
+R13
+R14
+!i10b 1
+Abehave
+R1
+R4
+R5
+DEx4 work 10 up_counter 0 22 LA8kaGBFBW3aFG:kWBN_n1
+l20
+L8
+VoUR]8X2hldOceUoBiRZAT1
+R9
+32
+R13
+R14
+FC:/Users/brian/Downloads/up_counter.vhd
+w1680138258
+8C:/Users/brian/Downloads/up_counter.vhd
+!s108 1680138606.953000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/brian/Downloads/up_counter.vhd|
+!s107 C:/Users/brian/Downloads/up_counter.vhd|
+!s100 ogQ23M3UNCKW7fHjA:h;D1
+!i10b 1
