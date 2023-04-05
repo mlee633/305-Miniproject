@@ -9,10 +9,10 @@ begin
   
    wave_gen: process
    begin
-        A1 <= '1', '0' after 2ns, '1' after 3ns, '0' after 4ns;
-        B1 <= '0', '1' after 1ns, '0' after 2ns, '1' after 3ns, '0' after 4ns;    
-        C1 <= '1', '0' after 1ns, '1' after 2ns, '0' after 3ns, '1' after 4ns;
-        wait for 5ns;
+        A1 <= '1', '0' after 2 ns, '1' after 3 ns, '0' after 4 ns;
+        B1 <= '0', '1' after 1 ns, '0' after 2 ns, '1' after 3 ns, '0' after 4 ns;    
+        C1 <= '1', '0' after 1 ns, '1' after 2 ns, '0' after 3 ns, '1' after 4 ns;
+        wait for 5 ns;
    end process wave_gen;
    
    process (X, A1, B1, C1)

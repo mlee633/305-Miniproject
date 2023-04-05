@@ -1,0 +1,20 @@
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/ieee/v93/std_logic_1164.vhdl
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/ieee/v93/std_logic_1164-body.vhdl
+>bin/
+test_timer.vhd
+>bin/
+up_timer.vhd
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/synopsys/std_logic_arith.vhdl
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/synopsys/std_logic_unsigned.vhdl
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/ieee/v93/numeric_std.vhdl
+>/opt/homebrew/Caskroom/ghdl/3.0.0/lib/ghdl/ieee/v93/
+../../src/ieee/v93/numeric_std-body.vhdl
+>bin/
+Brian's suffering/Lab 3/BCD.vhd
+>bin/
+BCD_to_7Seg.vhd

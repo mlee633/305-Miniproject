@@ -58,8 +58,8 @@ architecture test of timer_test is
   clk_gen: process
     begin 
       set_clk <= '1';
-      wait for 500000000ns;
+      wait for 500000000 ns;
       set_clk <= '0';
-      wait for 500000000ns;
+      wait for 500000000 ns;
   end process clk_gen;
 end architecture test;

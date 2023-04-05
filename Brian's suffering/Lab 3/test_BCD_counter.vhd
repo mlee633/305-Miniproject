@@ -21,8 +21,8 @@ architecture test of test_BCD_counter is
     init: process 
     begin
       --Somehow when enable is set to 1 at same time as init, it messes up, as it ain't resetted properly. 
-      t_Enable <= '1', '0' after 600ns, '1' after 650ns, '0' after 700ns, '1' after 720ns ;
-      t_init <= '1', '0' after 10ns , '1' after 450ns, '0' after 460ns, '1' after 727ns, '0' after 740ns;         t_Direction <= '1', '0' after 200ns, '1' after 400ns, '0' after 600ns, '1' after 800ns;
+      t_Enable <= '1', '0' after 600 ns, '1' after 650 ns, '0' after 700 ns, '1' after 720 ns ;
+      t_init <= '1', '0' after 10 ns , '1' after 450 ns, '0' after 460 ns, '1' after 727 ns, '0' after 740 ns;         t_Direction <= '1', '0' after 200 ns, '1' after 400 ns, '0' after 600 ns, '1' after 800 ns;
       wait;
     end process init;
     
@@ -30,9 +30,9 @@ architecture test of test_BCD_counter is
     clk_gen: process
     begin
       t_Clk <= '1';
-      wait for 5ns;
+      wait for 5 ns;
       t_Clk <= '0';
-      wait for 5ns;
+      wait for 5 ns;
     end process clk_gen;
 end architecture test;
 
