@@ -1,5 +1,5 @@
 Flow report for Lab3
-Tue Apr 04 13:30:19 2023
+Wed Apr 05 22:19:52 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Apr 04 13:30:19 2023       ;
+; Flow Status                     ; Successful - Wed Apr 05 22:19:52 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Lab3                                        ;
-; Top-level Entity Name           ; BCD                                         ;
+; Top-level Entity Name           ; up_timer                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 5 / 18,480 ( < 1 % )                        ;
-; Total registers                 ; 4                                           ;
-; Total pins                      ; 8 / 224 ( 4 % )                             ;
+; Logic utilization (in ALMs)     ; 31 / 18,480 ( < 1 % )                       ;
+; Total registers                 ; 12                                          ;
+; Total pins                      ; 34 / 224 ( 15 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/04/2023 13:29:36 ;
+; Start date & time ; 04/05/2023 22:19:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -78,19 +78,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 66504336653839.168057177632952         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 66504336653839.168068994734504         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; BCD         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; BCD         ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; BCD         ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; up_timer    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; up_timer    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; up_timer    ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; BCD                                    ; Lab3          ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; up_timer                               ; Lab3          ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -99,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4864 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:18     ; 1.0                     ; 6438 MB             ; 00:00:46                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4805 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 5080 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:02                           ;
-; Total                ; 00:00:40     ; --                      ; --                  ; 00:01:17                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4865 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 6450 MB             ; 00:00:54                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4811 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5083 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:02                           ;
+; Total                ; 00:00:40     ; --                      ; --                  ; 00:01:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

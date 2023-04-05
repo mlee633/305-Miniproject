@@ -8,9 +8,9 @@ architecture test of timer_test is
   
   signal set_clk, start, isEqual: std_logic;
   signal conv_clk: std_logic;
-  signal setStop: std_logic_vector(9 downto 0);
-  signal minOut: std_logic_vector(6 downto 0);
-  signal secOut: std_logic_vector(13 downto 0);
+  signal setStop: std_logic_vector(9 downto 0):= "0000000000";
+  signal minOut: std_logic_vector(6 downto 0) := "0000000";
+  signal secOut: std_logic_vector(13 downto 0) := "00000000000000";
   signal u_Enable: std_logic;
   signal u_reset: std_logic := '0';
   signal sec_out1: std_logic_vector(3 downto 0);
@@ -23,10 +23,10 @@ architecture test of timer_test is
       time_out: out std_logic);
   end component timer;
   
-  component BCD is
-    port(Clk, Direction, Init, Enable: in std_logic;
-        Q_Out: out std_logic_vector(3 downto 0));
-  end component BCD;
+  --component BCD is
+    --port(Clk, Direction, Init, Enable: in std_logic;
+      --  Q_Out: out std_logic_vector(3 downto 0));
+  --end component BCD;
   
   --component timer_convert is
     --port(in_clk: in std_logic;
@@ -48,8 +48,6 @@ architecture test of timer_test is
     begin
       start <= '1';
       setStop <= "0100110111";
-      --u_Enable <= '1';
-      --u_reset <= '1', '0' after 5ns;
       wait;
     end process init;
     

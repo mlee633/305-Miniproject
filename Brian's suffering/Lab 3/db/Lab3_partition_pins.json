@@ -4,35 +4,139 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Q_Out[0]",
+					"name" : "Minute[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Q_Out[1]",
+					"name" : "Minute[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Q_Out[2]",
+					"name" : "Minute[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Q_Out[3]",
+					"name" : "Minute[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Direction",
+					"name" : "Minute[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Init",
+					"name" : "Minute[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "Minute[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Enable",
+					"name" : "time_out",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondOne[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SecondTen[6]",
+					"strict" : false
+				},
+				{
+					"name" : "t_Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_In[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
 					"strict" : false
 				}
 			]

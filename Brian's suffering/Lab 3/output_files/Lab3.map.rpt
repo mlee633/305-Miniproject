@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Apr 04 13:29:46 2023
+Wed Apr 05 22:19:18 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,11 +13,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "BCD:Minute1"
+ 12. Port Connectivity Checks: "BCD:Second2"
+ 13. Port Connectivity Checks: "BCD:Second1"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +47,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 04 13:29:46 2023       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 05 22:19:18 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Lab3                                        ;
-; Top-level Entity Name           ; BCD                                         ;
+; Top-level Entity Name           ; up_timer                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 4                                           ;
-; Total pins                      ; 8                                           ;
+; Total registers                 ; 12                                          ;
+; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +73,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; BCD                ; Lab3               ;
+; Top-level entity name                                                           ; up_timer           ; Lab3               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,50 +171,75 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                    ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+---------+
-; BCD.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; up_timer.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd    ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File  ; C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd ;         ;
+; BCD.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd         ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 4          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 5          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 3          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 2          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 4          ;
-;                                             ;            ;
-; I/O pins                                    ; 8          ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; counter[0] ;
-; Maximum fan-out                             ; 5          ;
-; Total fan-out                               ; 47         ;
-; Average fan-out                             ; 1.88       ;
-+---------------------------------------------+------------+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 31                     ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 55                     ;
+;     -- 7 input functions                    ; 0                      ;
+;     -- 6 input functions                    ; 6                      ;
+;     -- 5 input functions                    ; 8                      ;
+;     -- 4 input functions                    ; 28                     ;
+;     -- <=3 input functions                  ; 13                     ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 12                     ;
+;                                             ;                        ;
+; I/O pins                                    ; 34                     ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; BCD:Minute1|counter[0] ;
+; Maximum fan-out                             ; 13                     ;
+; Total fan-out                               ; 312                    ;
+; Average fan-out                             ; 2.31                   ;
++---------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |BCD                       ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 8    ; 0            ; |BCD                ; BCD         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
+; |up_timer                     ; 55 (17)             ; 12 (0)                    ; 0                 ; 0          ; 34   ; 0            ; |up_timer                          ; up_timer    ; work         ;
+;    |BCD:Minute1|              ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD:Minute1              ; BCD         ; work         ;
+;    |BCD:Second1|              ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD:Second1              ; BCD         ; work         ;
+;    |BCD:Second2|              ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD:Second2              ; BCD         ; work         ;
+;    |BCD_to_7Seg:min_segment|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD_to_7Seg:min_segment  ; BCD_to_7Seg ; work         ;
+;    |BCD_to_7Seg:sec1_segment| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD_to_7Seg:sec1_segment ; BCD_to_7Seg ; work         ;
+;    |BCD_to_7Seg:sec2_segment| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |up_timer|BCD_to_7Seg:sec2_segment ; BCD_to_7Seg ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; timeout                                            ; timeout             ; yes                    ;
+; min_reset                                          ; min_reset           ; yes                    ;
+; enable2                                            ; enable2             ; yes                    ;
+; secOne_reset                                       ; secOne_reset        ; yes                    ;
+; u_Enable                                           ; timeout             ; yes                    ;
+; secTen_reset                                       ; secTen_reset        ; yes                    ;
+; enable1                                            ; Start               ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -218,24 +247,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 12    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |BCD|counter[0]            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |BCD|counter[1]            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |up_timer|BCD:Minute1|counter[1]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |up_timer|BCD:Second1|counter[3]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |up_timer|BCD:Second2|counter[3]                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |up_timer|BCD_to_7Seg:min_segment|SevenSeg_out[0]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |up_timer|BCD_to_7Seg:sec1_segment|SevenSeg_out[5] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |up_timer|BCD_to_7Seg:sec2_segment|SevenSeg_out[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "BCD:Minute1"     ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; direction ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "BCD:Second2"     ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; direction ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "BCD:Second1"     ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; direction ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -243,17 +303,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 4                           ;
-;     ENA               ; 4                           ;
-; arriav_lcell_comb     ; 5                           ;
-;     normal            ; 5                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         6 data inputs ; 3                           ;
-; boundary_port         ; 8                           ;
+; arriav_ff             ; 12                          ;
+;     ENA               ; 12                          ;
+; arriav_lcell_comb     ; 61                          ;
+;     normal            ; 61                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 6                           ;
+; boundary_port         ; 34                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.92                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,40 +335,74 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 04 13:29:35 2023
+    Info: Processing started: Wed Apr 05 22:19:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file up_timer.vhd
+    Info (12022): Found design unit 1: up_timer-behaviour File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 13
+    Info (12023): Found entity 1: up_timer File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file timer_test.vhd
+    Info (12022): Found design unit 1: timer_test-test File: C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd Line: 7
+    Info (12023): Found entity 1: timer_test File: C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file timer_convert.vhd
     Info (12022): Found design unit 1: timer_convert-behaviour File: C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd Line: 9
     Info (12023): Found entity 1: timer_convert File: C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: timer-behaviour File: C:/altera/13.0/Compsys 305/Lab 3/timer.vhd Line: 12
-    Info (12023): Found entity 1: timer File: C:/altera/13.0/Compsys 305/Lab 3/timer.vhd Line: 4
+Warning (12019): Can't analyze file -- file timer.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file testing_time_conv.vhd
     Info (12022): Found design unit 1: testing_time_conv-test File: C:/altera/13.0/Compsys 305/Lab 3/testing_time_conv.vhd Line: 7
     Info (12023): Found entity 1: testing_time_conv File: C:/altera/13.0/Compsys 305/Lab 3/testing_time_conv.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd Line: 12
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd Line: 7
+    Info (12022): Found design unit 1: BCD_to_7Seg-arc1 File: C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd Line: 12
+    Info (12023): Found entity 1: BCD_to_7Seg File: C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file test_bcd_counter.vhd
     Info (12022): Found design unit 1: test_BCD_counter-test File: C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd Line: 8
     Info (12023): Found entity 1: test_BCD_counter File: C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bcd.vhd
     Info (12022): Found design unit 1: BCD-behaviour File: C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd Line: 10
     Info (12023): Found entity 1: BCD File: C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd Line: 5
-Info (12127): Elaborating entity "BCD" for the top level hierarchy
+Info (12127): Elaborating entity "up_timer" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(48): signal "Start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(56): signal "secOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(58): signal "secTen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(61): signal "min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(65): signal "Data_In" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(65): signal "min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(65): signal "secTen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at up_timer.vhd(65): signal "secOne" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 65
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "secOne_reset", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "secTen_reset", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "min_reset", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "u_Enable", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "timeout", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "enable1", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Warning (10631): VHDL Process Statement warning at up_timer.vhd(46): inferring latch(es) for signal or variable "enable2", which holds its previous value in one or more paths through the process File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "enable2" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "enable1" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "timeout" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "u_Enable" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "min_reset" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "secTen_reset" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (10041): Inferred latch for "secOne_reset" at up_timer.vhd(46) File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 46
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:Second1" File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 32
+Info (12128): Elaborating entity "BCD_to_7Seg" for hierarchy "BCD_to_7Seg:sec1_segment" File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 39
+Warning (13012): Latch min_reset has unsafe behavior File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 15
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:Second1|counter[0] File: C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd Line: 19
+Warning (13012): Latch enable2 has unsafe behavior File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:Second1|counter[0] File: C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd Line: 19
+Warning (13012): Latch secTen_reset has unsafe behavior File: C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd Line: 15
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BCD:Second1|counter[0] File: C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Tue Apr 04 13:29:46 2023
+Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 55 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Wed Apr 05 22:19:18 2023
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:24
 
 

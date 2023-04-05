@@ -23,9 +23,9 @@ architecture test of testing_time_conv is
   clk_gen: process
     begin 
       t_clk <= '1';
-      wait for 10 ns;
+      wait for 10ns;
       t_clk <= '0';
-      wait for 10 ns;
+      wait for 10ns;
   end process clk_gen;
 end architecture test;
       
