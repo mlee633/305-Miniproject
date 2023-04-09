@@ -18,7 +18,7 @@ L5
 V[Fie;E]dKBUXFz25fdc532
 Z9 OV;C;10.1d;51
 32
-Z10 !s108 1680689211.266000
+Z10 !s108 1680745199.477000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd|
 Z12 !s107 C:/altera/13.0/Compsys 305/Lab 3/BCD.vhd|
 Z13 o-work work -2002 -explicit -O0
@@ -97,7 +97,7 @@ L7
 Vc]SNzS>CHk?o=YK`SjPDX3
 R9
 32
-Z20 !s108 1680689211.531000
+Z20 !s108 1680745199.668000
 Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd|
 Z22 !s107 C:/altera/13.0/Compsys 305/Lab 3/BCD_to_7Seg.vhd|
 R13
@@ -167,7 +167,7 @@ L5
 V>=FFcW]Z=6lnP<co?I4<g0
 R9
 32
-Z28 !s108 1680689211.334000
+Z28 !s108 1680745199.545000
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd|
 Z30 !s107 C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd|
 R13
@@ -202,7 +202,7 @@ L4
 VXo;e[aAffz7n>nbY0EJL_2
 R9
 32
-Z34 !s108 1680689211.594000
+Z34 !s108 1680745199.731000
 Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/testing_time_conv.vhd|
 Z36 !s107 C:/altera/13.0/Compsys 305/Lab 3/testing_time_conv.vhd|
 R13
@@ -216,7 +216,6 @@ DEx4 work 17 testing_time_conv 0 22 Xo;e[aAffz7n>nbY0EJL_2
 l16
 L7
 V1S97K7b`T:BeTD0bRTazP0
-!s100 EZ?_DFK1L0PC`52KWf<[B1
 R9
 32
 R34
@@ -224,6 +223,7 @@ R35
 R36
 R13
 R14
+!s100 EZ?_DFK1L0PC`52KWf<[B1
 !i10b 1
 Etimer
 Z37 w1680667062
@@ -272,7 +272,7 @@ L4
 Vncn9K=7eM7U0IC8bMliQO2
 R9
 32
-Z46 !s108 1680689211.466000
+Z46 !s108 1680745199.604000
 Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd|
 Z48 !s107 C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd|
 R13
@@ -296,72 +296,72 @@ R14
 !s100 6[0U3RbX@WCkQCWddZLjf0
 !i10b 1
 Etimer_test
-Z49 w1680688181
+Z49 w1680691013
 R4
 R5
 R6
-Z50 8C:\altera\13.0\Compsys 305\Lab 3\timer_test.vhd
-Z51 FC:\altera\13.0\Compsys 305\Lab 3\timer_test.vhd
+Z50 8C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd
+Z51 FC:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd
 l0
 L4
 V]RIgP9hACmO7YzbnTV5W20
-!s100 JO9YD0k>GbMYBRd[WeYPN1
 R9
 32
-!i10b 1
-Z52 !s108 1680689211.657000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\altera\13.0\Compsys 305\Lab 3\timer_test.vhd|
-Z54 !s107 C:\altera\13.0\Compsys 305\Lab 3\timer_test.vhd|
+Z52 !s108 1680745199.791000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd|
+Z54 !s107 C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd|
 R13
 R14
+!s100 JO9YD0k>GbMYBRd[WeYPN1
+!i10b 1
 Atest
 R4
 R5
-Z55 DEx4 work 10 timer_test 0 22 ]RIgP9hACmO7YzbnTV5W20
+DEx4 work 10 timer_test 0 22 ]RIgP9hACmO7YzbnTV5W20
 l23
 L7
-Z56 VK?^:UfeanJR5@SE:?^K360
-Z57 !s100 39E<H0nXDfALgfLAhA=0]1
+V8fl4X9BP0<[a;GSSeREYg0
+!s100 ^gbFBH;7meJhBNd`Pfa:G0
 R9
 32
-!i10b 1
 R52
 R53
 R54
 R13
 R14
+!i10b 1
 Eup_timer
-Z58 w1680688570
+Z55 w1680745130
 R4
 R5
 R6
-R38
-R39
+Z56 8C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd
+Z57 FC:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd
 l0
 L4
 V_]IGggjEPl1?`Q9W`YeM90
+!s100 jocYn04]h48`g433ajSff1
 R9
 32
-Z59 !s108 1680689211.400000
-R41
-R42
+!i10b 1
+Z58 !s108 1680745199.854000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd|
+Z60 !s107 C:/altera/13.0/Compsys 305/Lab 3/up_timer.vhd|
 R13
 R14
-!s100 jocYn04]h48`g433ajSff1
-!i10b 1
 Abehaviour
 R4
 R5
-DEx4 work 8 up_timer 0 22 _]IGggjEPl1?`Q9W`YeM90
-l31
+Z61 DEx4 work 8 up_timer 0 22 _]IGggjEPl1?`Q9W`YeM90
+l38
 L13
-V7^c<K4@1L^WeIJ0JKbdF12
+Z62 V<[YJKjCbdVzYVZ@UL]BQO2
+Z63 !s100 ?a2?23P_klZJ61BbPZA@O0
 R9
 32
+!i10b 1
+R58
 R59
-R41
-R42
+R60
 R13
 R14
-!s100 gGldnA8i[Mb:@8?mL]X6L1
-!i10b 1

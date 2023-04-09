@@ -1,14 +1,6 @@
 |up_timer
-t_Clk => BCD:Second1.Clk
-t_Clk => BCD:Second2.Clk
-t_Clk => BCD:Minute1.Clk
-Start => timeout.ACLR
-Start => u_Enable.PRESET
-Start => min_reset.PRESET
-Start => secTen_reset.PRESET
-Start => secOne_reset.PRESET
-Start => enable2.IN1
-Start => enable1.LATCH_ENABLE
+t_Clk => timer_convert:conv_time.in_clk
+Start => Running.CLK
 Data_In[0] => Equal5.IN3
 Data_In[1] => Equal5.IN2
 Data_In[2] => Equal5.IN1
@@ -26,7 +18,7 @@ Minute[3] <= BCD_to_7Seg:min_segment.SevenSeg_out[3]
 Minute[4] <= BCD_to_7Seg:min_segment.SevenSeg_out[4]
 Minute[5] <= BCD_to_7Seg:min_segment.SevenSeg_out[5]
 Minute[6] <= BCD_to_7Seg:min_segment.SevenSeg_out[6]
-time_out <= timeout.DB_MAX_OUTPUT_PORT_TYPE
+time_out <= u_Enable.DB_MAX_OUTPUT_PORT_TYPE
 SecondOne[0] <= BCD_to_7Seg:sec1_segment.SevenSeg_out[0]
 SecondOne[1] <= BCD_to_7Seg:sec1_segment.SevenSeg_out[1]
 SecondOne[2] <= BCD_to_7Seg:sec1_segment.SevenSeg_out[2]
@@ -266,5 +258,42 @@ SevenSeg_out[3] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[4] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[5] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[6] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_timer|timer_convert:conv_time
+in_clk => out_clk~reg0.CLK
+in_clk => counter[0].CLK
+in_clk => counter[1].CLK
+in_clk => counter[2].CLK
+in_clk => counter[3].CLK
+in_clk => counter[4].CLK
+in_clk => counter[5].CLK
+in_clk => counter[6].CLK
+in_clk => counter[7].CLK
+in_clk => counter[8].CLK
+in_clk => counter[9].CLK
+in_clk => counter[10].CLK
+in_clk => counter[11].CLK
+in_clk => counter[12].CLK
+in_clk => counter[13].CLK
+in_clk => counter[14].CLK
+in_clk => counter[15].CLK
+in_clk => counter[16].CLK
+in_clk => counter[17].CLK
+in_clk => counter[18].CLK
+in_clk => counter[19].CLK
+in_clk => counter[20].CLK
+in_clk => counter[21].CLK
+in_clk => counter[22].CLK
+in_clk => counter[23].CLK
+in_clk => counter[24].CLK
+in_clk => counter[25].CLK
+in_clk => counter[26].CLK
+in_clk => counter[27].CLK
+in_clk => counter[28].CLK
+in_clk => counter[29].CLK
+in_clk => counter[30].CLK
+in_clk => counter[31].CLK
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

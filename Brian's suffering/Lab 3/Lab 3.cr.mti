@@ -1,12 +1,4 @@
-{C:/altera/13.0/Compsys 305/Lab 3/timer.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.0/Compsys 305/Lab 3/timer.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity up_timer
--- Compiling architecture behaviour of up_timer
-
-} {} {}} {C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd}
+{C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.0/Compsys 305/Lab 3/timer_convert.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -58,7 +50,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 ** Warning: [4] C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd(33): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 ** Warning: [4] C:/altera/13.0/Compsys 305/Lab 3/test_BCD_counter.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
-} {} {}} {C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd} {1 {vcom -work work -2002 -explicit {C:\altera\13.0\Compsys 305\Lab 3\timer_test.vhd}
+} {} {}} {C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.0/Compsys 305/Lab 3/timer_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

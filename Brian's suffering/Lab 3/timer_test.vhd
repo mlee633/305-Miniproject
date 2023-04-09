@@ -28,7 +28,7 @@ architecture test of timer_test is
   init: process
     begin
       setStop <= "0100110111";
-      start <= '1', '0' after 50 ns;
+      start <= '1', '0' after 1080000000 ns;
       wait;
     end process init;
   --Setting up 50Mhz timer--
