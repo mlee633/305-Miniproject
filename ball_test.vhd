@@ -3,8 +3,10 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity ball_test is port(
     Clk: in std_logic;
-    PushButton1, PushButton2: in std_logic;
+    PushButton1, PushButton2,left_button: in std_logic;
+	 
     mouseData : INOUT std_logic;
+	 clk_Mouse: INOUT std_logic;
     red_out, green_out, blue_out, horiz_sync_out, vert_sync_out	: OUT	STD_LOGIC
     );
 end entity;
@@ -33,8 +35,8 @@ architecture behave of ball_test is
     end component;
 
     signal VertSync, Red, Green, Blue: std_logic;
-    signal PixRow, PixCol: std_logic_vector(9 downto 0);
-
+    signal PixRow, PixCol,mouse_row,mouse_column: std_logic_vector(9 downto 0);
+	 signal left_click,right_click: std_logic;
     signal Clock25MHz: std_logic;
     signal resetSig: std_logic;
 begin

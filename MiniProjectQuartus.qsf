@@ -38,28 +38,53 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY ball_test
+set_global_assignment -name TOP_LEVEL_ENTITY MiniProjectQuartus
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:51:25  APRIL 28, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name VHDL_FILE ball_test.vhd
-set_global_assignment -name VHDL_FILE vga_sync.vhd
-set_global_assignment -name VHDL_FILE bouncy_ball.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_U7 -to PushButton1
 set_location_assignment PIN_W9 -to PushButton2
-set_location_assignment PIN_M9 -to Clk
 set_location_assignment PIN_A5 -to red_out
 set_location_assignment PIN_J8 -to green_out
 set_location_assignment PIN_A7 -to blue_out
 set_location_assignment PIN_H8 -to horiz_sync_out
 set_location_assignment PIN_G8 -to vert_sync_out
+set_global_assignment -name VHDL_FILE mouse.vhd
+set_global_assignment -name VHDL_FILE char_rom.vhd
+set_global_assignment -name VHDL_FILE BCD_to_7Seg.vhd
+set_global_assignment -name VHDL_FILE BCD.vhd
+set_global_assignment -name VHDL_FILE ball.vhd
+set_global_assignment -name VHDL_FILE ball_test.vhd
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE bouncy_ball.vhd
+set_global_assignment -name BDF_FILE MiniProjectQuartus.bdf
+set_global_assignment -name VHDL_FILE halfclock.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M9 -to clk
+set_location_assignment PIN_AA22 -to HEX0[6]
+set_location_assignment PIN_Y21 -to HEX0[5]
+set_location_assignment PIN_U22 -to HEX1[6]
+set_location_assignment PIN_AA17 -to HEX1[5]
+set_location_assignment PIN_AB18 -to HEX1[4]
+set_location_assignment PIN_AA18 -to HEX1[3]
+set_location_assignment PIN_AA19 -to HEX1[2]
+set_location_assignment PIN_AB20 -to HEX1[1]
+set_location_assignment PIN_AA20 -to HEX1[0]
+set_location_assignment PIN_Y22 -to HEX0[4]
+set_location_assignment PIN_W21 -to HEX0[3]
+set_location_assignment PIN_W22 -to HEX0[2]
+set_location_assignment PIN_V21 -to HEX0[1]
+set_location_assignment PIN_U21 -to HEX0[0]
+set_location_assignment PIN_AA1 -to LEDR[1]
+set_location_assignment PIN_AA2 -to LEDR[0]
+set_location_assignment PIN_G2 -to PS2_CLK
+set_location_assignment PIN_D3 -to PS2_DAT
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
