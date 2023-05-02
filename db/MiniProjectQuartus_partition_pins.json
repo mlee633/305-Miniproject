@@ -4,31 +4,79 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "red_out",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "green_out",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "blue_out",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "horiz_sync_out",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "vert_sync_out",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "pb1",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "HEX0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_DAT",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]
