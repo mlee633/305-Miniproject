@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity ball_test is port(
     Clk: in std_logic;
-    PushButton1, PushButton2,left_button: in std_logic;
+    PushButton1, PushButton2: in std_logic;
 	 
     mouseData : INOUT std_logic;
 	 clk_Mouse: INOUT std_logic;
@@ -14,7 +14,7 @@ end entity;
 architecture behave of ball_test is
     component bouncy_ball is
         port 
-            ( pb1, pb2, clk, vert_sync	: in std_logic;
+            ( pb1, pb2, clk, vert_sync,leftclick	: in std_logic;
               pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
               red, green, blue 			: out std_logic);		
     end component;
@@ -61,7 +61,8 @@ begin
                                pb1 => PushButton1,
                                pb2 => PushButton2,
                                --Vert_sync => VertSync,
-                               Vert_sync => left_button,
+                               Vert_sync => VertSync,
+										 leftclick => left_click,
                                pixel_column => PixCol,
                                pixel_row => PixRow,
                                red => Red,
