@@ -18,13 +18,12 @@ SIGNAL ball_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(200, 10);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
-SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2, 10);
 
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(12,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-ball_x_pos <= CONV_STD_LOGIC_VECTOR(490,11);
+ball_x_pos <= CONV_STD_LOGIC_VECTOR(200,11);
 
 ball_on <= '1' when ((pixel_column - ball_x_pos) * (pixel_column - ball_x_pos) + (pixel_row - ball_y_pos) * (pixel_row - ball_y_pos) <= size * size) else '0';
 
@@ -35,27 +34,27 @@ Red <=  pb1;
 Green <= (not pb2) and (not ball_on);
 Blue <=  not ball_on;
 
-
-BOUNCE_BALL: process (left_button, ball_y_motion,ball_y_pos)
+--leftclick, ball_y_motion,ball_y_pos,
+BOUNCE_BALL: process (vert_sync)
+	variable ball_y_motion: std_logic_vector(9 downto 0) := CONV_STD_LOGIC_VECTOR(0, 10);
 begin
-	-- Move ball once every vertical sync
-	if (rising_edge(left_button)) then	
-	
-		-- Bounce off top or bottom of the screen
---		if ('0' & ball_y_pos) >= (CONV_STD_LOGIC_VECTOR(479,10) - size) then
-		--	ball_y_motion <= - CONV_STD_LOGIC_VECTOR(10,10);
-	--	elsif (leftclick = '1') then 
-			--ball_y_motion <= CONV_STD_LOGIC_VECTOR(10,10);
-		--end if;
 
-		--if ball_y_motion /= -11 and ball_y_motion /= 11 then
-			--ball_y_motion <= ball_y_motion - 1; 
-		--end if;
-
-		--ball_y_pos <= ball_y_pos + ball_y_motion;
-		ball_y_motion <= CONV_STD_LOGIC_VECTOR(10,10)
+	if (rising_edge(vert_sync)) then	
+				if (ball_y_pos >= CONV_STD_LOGIC_VECTOR(439,10) + size) then
+					ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+					ball_y_motion := ball_y_motion;
+				else
+					if (leftclick /= '0') then
+						ball_y_motion := - CONV_STD_LOGIC_VECTOR(5,10);
+					else
+						ball_y_motion :=  CONV_STD_LOGIC_VECTOR(10,10);
+					end if;
+					
+					ball_y_pos <= ball_y_pos + ball_y_motion;				
+				end if;
 	end if;
-end process;
+	
+end process BOUNCE_BALL;
 
 
 END behavior;

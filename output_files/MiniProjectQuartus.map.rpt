@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Tue May 02 16:16:19 2023
+Wed May 03 12:50:58 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -14,16 +14,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |ball_test|MOUSE:mainMouse|mouse_state
+  9. State Machine - |bouncy_test_v1|MOUSE:inst2|mouse_state
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Port Connectivity Checks: "MOUSE:mainMouse"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -49,17 +47,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 02 16:16:19 2023           ;
+; Analysis & Synthesis Status     ; Successful - Wed May 03 12:50:58 2023           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; MiniProjectQuartus                              ;
-; Top-level Entity Name           ; ball_test                                       ;
+; Top-level Entity Name           ; bouncy_test_v1                                  ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 111                                             ;
-; Total pins                      ; 10                                              ;
+; Total registers                 ; 123                                             ;
+; Total pins                      ; 12                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 3                                               ;
+; Total DSP Blocks                ; 2                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -75,7 +73,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; ball_test          ; MiniProjectQuartus ;
+; Top-level entity name                                                           ; bouncy_test_v1     ; MiniProjectQuartus ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -161,67 +159,70 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; mouse.vhd                        ; yes             ; User VHDL File  ; H:/Documents/302-work/mouse.vhd       ;         ;
-; ball_test.vhd                    ; yes             ; User VHDL File  ; H:/Documents/302-work/ball_test.vhd   ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; H:/Documents/302-work/vga_sync.vhd    ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File  ; H:/Documents/302-work/bouncy_ball.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
+; mouse.vhd                        ; yes             ; User VHDL File                     ; H:/Documents/302-work/mouse.vhd          ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                     ; H:/Documents/302-work/vga_sync.vhd       ;         ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                     ; H:/Documents/302-work/bouncy_ball.vhd    ;         ;
+; halfclock.vhd                    ; yes             ; User VHDL File                     ; H:/Documents/302-work/halfclock.vhd      ;         ;
+; bouncy_test_v1.bdf               ; yes             ; User Block Diagram/Schematic File  ; H:/Documents/302-work/bouncy_test_v1.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 103        ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 178        ;
-;     -- 7 input functions                    ; 1          ;
-;     -- 6 input functions                    ; 21         ;
-;     -- 5 input functions                    ; 15         ;
-;     -- 4 input functions                    ; 22         ;
-;     -- <=3 input functions                  ; 119        ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 111        ;
-;                                             ;            ;
-; I/O pins                                    ; 10         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 3          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; Clock25MHz ;
-; Maximum fan-out                             ; 75         ;
-; Total fan-out                               ; 905        ;
-; Average fan-out                             ; 2.88       ;
-+---------------------------------------------+------------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 87                   ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 146                  ;
+;     -- 7 input functions                    ; 1                    ;
+;     -- 6 input functions                    ; 15                   ;
+;     -- 5 input functions                    ; 31                   ;
+;     -- 4 input functions                    ; 20                   ;
+;     -- <=3 input functions                  ; 79                   ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 123                  ;
+;                                             ;                      ;
+; I/O pins                                    ; 12                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 2                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; halfclock:inst|v_Clk ;
+; Maximum fan-out                             ; 76                   ;
+; Total fan-out                               ; 863                  ;
+; Average fan-out                             ; 2.91                 ;
++---------------------------------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
-; |ball_test                 ; 178 (1)             ; 111 (1)                   ; 0                 ; 3          ; 10   ; 0            ; |ball_test                  ; ball_test   ; work         ;
-;    |MOUSE:mainMouse|       ; 32 (32)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |ball_test|MOUSE:mainMouse  ; MOUSE       ; work         ;
-;    |VGA_SYNC:VGA|          ; 40 (40)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |ball_test|VGA_SYNC:VGA     ; VGA_SYNC    ; work         ;
-;    |bouncy_ball:BALL|      ; 105 (105)           ; 20 (20)                   ; 0                 ; 3          ; 0    ; 0            ; |ball_test|bouncy_ball:BALL ; bouncy_ball ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
+; |bouncy_test_v1            ; 146 (0)             ; 123 (0)                   ; 0                 ; 2          ; 12   ; 0            ; |bouncy_test_v1                   ; bouncy_test_v1 ; work         ;
+;    |MOUSE:inst2|           ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|MOUSE:inst2       ; MOUSE          ; work         ;
+;    |VGA_SYNC:inst1|        ; 39 (39)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|VGA_SYNC:inst1    ; VGA_SYNC       ; work         ;
+;    |bouncy_ball:inst3|     ; 59 (59)             ; 10 (10)                   ; 0                 ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3 ; bouncy_ball    ; work         ;
+;    |halfclock:inst|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|halfclock:inst    ; halfclock      ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,8 +232,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
 ; Independent 9x9                 ; 1           ;
-; Two Independent 18x18           ; 2           ;
-; Total number of DSP blocks      ; 3           ;
+; Sum of two 18x18                ; 1           ;
+; Total number of DSP blocks      ; 2           ;
 ;                                 ;             ;
 ; Fixed Point Signed Multiplier   ; 2           ;
 ; Fixed Point Unsigned Multiplier ; 1           ;
@@ -241,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ball_test|MOUSE:mainMouse|mouse_state                                                                                                                                                  ;
+; State Machine - |bouncy_test_v1|MOUSE:inst2|mouse_state                                                                                                                                                 ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 ; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
@@ -254,43 +255,20 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+-------------------------------------------+---------------------------------------------+
-; Register name                             ; Reason for Removal                          ;
-+-------------------------------------------+---------------------------------------------+
-; MOUSE:mainMouse|CHAROUT[4..7]             ; Stuck at VCC due to stuck port data_in      ;
-; MOUSE:mainMouse|CHAROUT[3]                ; Stuck at GND due to stuck port data_in      ;
-; MOUSE:mainMouse|CHAROUT[2]                ; Stuck at VCC due to stuck port data_in      ;
-; MOUSE:mainMouse|CHAROUT[0,1]              ; Stuck at GND due to stuck port data_in      ;
-; MOUSE:mainMouse|SHIFTOUT[10]              ; Stuck at VCC due to stuck port data_in      ;
-; VGA_SYNC:VGA|pixel_row[9]                 ; Stuck at GND due to stuck port data_in      ;
-; MOUSE:mainMouse|iready_set                ; Stuck at GND due to stuck port clock_enable ;
-; MOUSE:mainMouse|PACKET_CHAR1[0]           ; Stuck at GND due to stuck port clock_enable ;
-; MOUSE:mainMouse|SHIFTIN[0..8]             ; Lost fanout                                 ;
-; MOUSE:mainMouse|left_button               ; Stuck at GND due to stuck port data_in      ;
-; MOUSE:mainMouse|INCNT[0..3]               ; Lost fanout                                 ;
-; MOUSE:mainMouse|READ_CHAR                 ; Lost fanout                                 ;
-; MOUSE:mainMouse|PACKET_COUNT[0,1]         ; Lost fanout                                 ;
-; MOUSE:mainMouse|mouse_state.WAIT_CMD_ACK  ; Lost fanout                                 ;
-; MOUSE:mainMouse|mouse_state.INPUT_PACKETS ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 31    ;                                             ;
-+-------------------------------------------+---------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                            ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; Register name                   ; Reason for Removal             ; Registers Removed due to This Register                                              ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
-; MOUSE:mainMouse|PACKET_CHAR1[0] ; Stuck at GND                   ; MOUSE:mainMouse|SHIFTIN[0], MOUSE:mainMouse|SHIFTIN[1], MOUSE:mainMouse|SHIFTIN[2], ;
-;                                 ; due to stuck port clock_enable ; MOUSE:mainMouse|SHIFTIN[3], MOUSE:mainMouse|SHIFTIN[4], MOUSE:mainMouse|SHIFTIN[5], ;
-;                                 ;                                ; MOUSE:mainMouse|SHIFTIN[6], MOUSE:mainMouse|SHIFTIN[7], MOUSE:mainMouse|SHIFTIN[8], ;
-;                                 ;                                ; MOUSE:mainMouse|left_button, MOUSE:mainMouse|PACKET_COUNT[1],                       ;
-;                                 ;                                ; MOUSE:mainMouse|PACKET_COUNT[0]                                                     ;
-; MOUSE:mainMouse|iready_set      ; Stuck at GND                   ; MOUSE:mainMouse|INCNT[3], MOUSE:mainMouse|INCNT[2], MOUSE:mainMouse|INCNT[1],       ;
-;                                 ; due to stuck port clock_enable ; MOUSE:mainMouse|INCNT[0], MOUSE:mainMouse|READ_CHAR                                 ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; VGA_SYNC:inst1|red_out                 ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst2|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:inst2|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst2|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:inst2|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst2|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in ;
+; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,54 +276,41 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 111   ;
+; Total registers                              ; 123   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Clock Enable       ; 75    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; MOUSE:mainMouse|send_char               ; 3       ;
-; bouncy_ball:BALL|ball_y_pos[3]          ; 3       ;
-; bouncy_ball:BALL|ball_y_pos[6]          ; 3       ;
-; bouncy_ball:BALL|ball_y_pos[7]          ; 3       ;
-; MOUSE:mainMouse|SHIFTOUT[3]             ; 1       ;
-; bouncy_ball:BALL|ball_y_motion[1]       ; 5       ;
-; MOUSE:mainMouse|SHIFTOUT[5]             ; 1       ;
-; MOUSE:mainMouse|SHIFTOUT[6]             ; 1       ;
-; MOUSE:mainMouse|SHIFTOUT[7]             ; 1       ;
-; MOUSE:mainMouse|SHIFTOUT[8]             ; 1       ;
-; Total number of inverted registers = 10 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; bouncy_ball:inst3|ball_y_pos[3]        ; 3       ;
+; bouncy_ball:inst3|ball_y_pos[6]        ; 3       ;
+; bouncy_ball:inst3|ball_y_pos[7]        ; 3       ;
+; MOUSE:inst2|send_char                  ; 3       ;
+; MOUSE:inst2|SHIFTOUT[3]                ; 1       ;
+; MOUSE:inst2|SHIFTOUT[5]                ; 1       ;
+; MOUSE:inst2|SHIFTOUT[6]                ; 1       ;
+; MOUSE:inst2|SHIFTOUT[7]                ; 1       ;
+; MOUSE:inst2|SHIFTOUT[8]                ; 1       ;
+; Total number of inverted registers = 9 ;         ;
++----------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |ball_test|VGA_SYNC:VGA|v_count[3]           ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |ball_test|bouncy_ball:BALL|ball_y_motion[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MOUSE:mainMouse"                                                                                   ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                ; Type   ; Severity ; Details                                                                             ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
-; right_button        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mouse_cursor_row    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mouse_cursor_column ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -353,35 +318,36 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 111                         ;
+; arriav_ff             ; 123                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 31                          ;
+;     ENA               ; 50                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 44                          ;
+;     plain             ; 37                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 178                         ;
-;     arith             ; 83                          ;
-;         1 data inputs ; 50                          ;
-;         2 data inputs ; 33                          ;
+; arriav_lcell_comb     ; 147                         ;
+;     arith             ; 49                          ;
+;         1 data inputs ; 41                          ;
+;         2 data inputs ; 8                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 84                          ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 15                          ;
-;         6 data inputs ; 21                          ;
+;     normal            ; 87                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 31                          ;
+;         6 data inputs ; 15                          ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
-; arriav_mac            ; 3                           ;
-; boundary_port         ; 10                          ;
+; arriav_mac            ; 2                           ;
+; boundary_port         ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.40                        ;
-; Average LUT depth     ; 2.84                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -400,10 +366,10 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 02 16:16:07 2023
+    Info: Processing started: Wed May 03 12:50:47 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 0 design units, including 0 entities, in source file pipe_test.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
     Info (12022): Found design unit 1: pipe-behaviour File: H:/Documents/302-work/pipe.vhd Line: 13
@@ -440,35 +406,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file halfclo
     Info (12023): Found entity 1: halfclock File: H:/Documents/302-work/halfclock.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pipebdf.bdf
     Info (12023): Found entity 1: pipebdf
-Info (12127): Elaborating entity "ball_test" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ball_test.vhd(38): object "mouse_row" assigned a value but never read File: H:/Documents/302-work/ball_test.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at ball_test.vhd(38): object "mouse_column" assigned a value but never read File: H:/Documents/302-work/ball_test.vhd Line: 38
-Warning (10036): Verilog HDL or VHDL warning at ball_test.vhd(39): object "right_click" assigned a value but never read File: H:/Documents/302-work/ball_test.vhd Line: 39
-Warning (10541): VHDL Signal Declaration warning at ball_test.vhd(41): used implicit default value for signal "resetSig" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/302-work/ball_test.vhd Line: 41
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:mainMouse" File: H:/Documents/302-work/ball_test.vhd Line: 50
+Info (12021): Found 1 design units, including 1 entities, in source file bouncy_test_v1.bdf
+    Info (12023): Found entity 1: bouncy_test_v1
+Info (12127): Elaborating entity "bouncy_test_v1" for the top level hierarchy
+Warning (275011): Block or symbol "bouncy_ball" of instance "inst3" overlaps another block or symbol
+Warning (275009): Pin "PushButton1" not connected
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
+Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst"
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: H:/Documents/302-work/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 151
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 157
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:BALL" File: H:/Documents/302-work/ball_test.vhd Line: 60
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:VGA" File: H:/Documents/302-work/ball_test.vhd Line: 72
 Info (13000): Registers with preset signals will power-up high File: H:/Documents/302-work/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "red_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 229 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PushButton1"
+Info (21057): Implemented 211 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 5 output pins
+    Info (21059): Implemented 7 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 216 logic cells
-    Info (21062): Implemented 3 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Tue May 02 16:16:19 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 197 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Wed May 03 12:50:58 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
 
 
