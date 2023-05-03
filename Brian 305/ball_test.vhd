@@ -4,8 +4,9 @@ use IEEE.STD_LOGIC_1164.all;
 entity ball_test is port(
     Clk: in std_logic;
     PushButton1, PushButton2: in std_logic;
+	 
     mouseData : INOUT std_logic;
-    Clk_Mouse: INOUT std_logic;
+	 clk_Mouse: INOUT std_logic;
     red_out, green_out, blue_out, horiz_sync_out, vert_sync_out	: OUT	STD_LOGIC
     );
 end entity;
@@ -13,9 +14,8 @@ end entity;
 architecture behave of ball_test is
     component bouncy_ball is
         port 
-            ( pb1, pb2, clk, vert_sync	: in std_logic;
+            ( pb1, pb2, clk, vert_sync,leftclick	: in std_logic;
               pixel_row, pixel_column	: in std_logic_vector(9 downto 0);
-              left_button: in std_logic;
               red, green, blue 			: out std_logic);		
     end component;
 
@@ -35,14 +35,10 @@ architecture behave of ball_test is
     end component;
 
     signal VertSync, Red, Green, Blue: std_logic;
-    signal PixRow, PixCol: std_logic_vector(9 downto 0);
-
+    signal PixRow, PixCol,mouse_row,mouse_column: std_logic_vector(9 downto 0);
+	 signal left_click,right_click: std_logic;
     signal Clock25MHz: std_logic;
     signal resetSig: std_logic;
-    signal left_click: std_logic;
-    signal right_click, left_click: std_logic;
-    signal mouse_row, mouse_column: std_logic_vector(9 downto 0);
-    
 begin
 
     PRESCALE_CLK: process(Clk) is 
@@ -51,22 +47,24 @@ begin
             Clock25MHz <= not Clock25MHz;
         end if;
     end process;
-    mainMouse: MOUSE port map(clock_25Mhz => Clock25Mhz,
-                              reset => resetSig,
-                              mouse_data => mouseData,
-                              mouse_clk => Clk_Mouse,
-                              left_button => left_click,
-                              right_button => right_click,
-                              mouse_cursor_row => mouse_row,
-                              mouse_cursor_column => mouse_column
+    mainMouse: MOUSE port map(
+        clock_25Mhz => Clock25Mhz,
+        reset => resetSig,
+        mouse_data => mouseData,
+        mouse_clk => Clk_Mouse,
+        left_button => left_click,
+        right_button => right_click,
+        mouse_cursor_row => mouse_row,
+        mouse_cursor_column => mouse_column
     );
     BALL: bouncy_ball port map(Clk => Clk,
                                pb1 => PushButton1,
                                pb2 => PushButton2,
-                               left_button => left_click,
-                               vert_sync => VertSync,
-                               pixel_column => mouse_column,
-                               pixel_row => mouse_row,
+                               --Vert_sync => VertSync,
+                               Vert_sync => VertSync,
+										 leftclick => left_click,
+                               pixel_column => PixCol,
+                               pixel_row => PixRow,
                                red => Red,
                                green => Green,
                                blue => Blue);
@@ -75,14 +73,14 @@ begin
                            red => Red,
                            green => Green,
                            blue => Blue,
-                           pixel_row => mouse_row,
-                           pixel_column => mouse_column,
+                           pixel_row => PixRow,
+                           pixel_column => PixCol,
                            red_out => red_out,
                            green_out => green_out,
                            blue_out => blue_out,
                            horiz_sync_out => horiz_sync_out,
                            vert_sync_out => VertSync);
-    --horiz_sync_out <= HoriSync;
+
     vert_sync_out <= VertSync;
     
 

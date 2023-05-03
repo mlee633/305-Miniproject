@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "red_out",
+					"strict" : false
+				},
+				{
+					"name" : "green_out",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out",
+					"strict" : false
+				},
+				{
+					"name" : "rihgt_click",
+					"strict" : false
+				},
+				{
+					"name" : "vertSyncOut",
+					"strict" : false
+				},
+				{
+					"name" : "horizSyncOut",
+					"strict" : false
+				},
+				{
+					"name" : "leftclick",
+					"strict" : false
+				},
+				{
+					"name" : "mouseData",
+					"strict" : false
+				},
+				{
+					"name" : "mouseClk",
+					"strict" : false
+				},
+				{
+					"name" : "PushButton1",
+					"strict" : false
+				},
+				{
+					"name" : "PushButton2",
+					"strict" : false
+				},
+				{
+					"name" : "fullClock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
