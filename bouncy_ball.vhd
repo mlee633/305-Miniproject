@@ -18,7 +18,8 @@ SIGNAL ball_on					: std_logic;
 SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(200, 10);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
-
+SIGNAL prev_clicked : std_logic := '0';
+SIGNAL started, finished: std_logic := '0';
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(12,10);
@@ -30,30 +31,57 @@ ball_on <= '1' when ((pixel_column - ball_x_pos) * (pixel_column - ball_x_pos) +
 
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
-Red <=  pb1;
+Red <=  pb1; --won't work for some reason
 Green <= (not pb2) and (not ball_on);
 Blue <=  not ball_on;
 
+--Aight don't do Key0. Somehow now resets whole board -__-
+CLICK: process(pb2)
+begin
+	if rising_edge(pb2) then
+		started <= '1';
+	end if;
+end process;
+
 --leftclick, ball_y_motion,ball_y_pos,
-BOUNCE_BALL: process (vert_sync)
+BOUNCE_BALL: process(vert_sync)
 	variable ball_y_motion: std_logic_vector(9 downto 0) := CONV_STD_LOGIC_VECTOR(0, 10);
 begin
-
-	if (rising_edge(vert_sync)) then	
-				if (ball_y_pos >= CONV_STD_LOGIC_VECTOR(439,10) + size) then
-					ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+		if (rising_edge(vert_sync)) then
+		--When button has been  pressed
+				if (started = '1') then
+					--start at current value of speed. from beginning should be 0.....hopefully
 					ball_y_motion := ball_y_motion;
-				else
-					if (leftclick /= '0') then
-						ball_y_motion := - CONV_STD_LOGIC_VECTOR(5,10);
+					--Stuck on the bottom
+					if (ball_y_pos >= CONV_STD_LOGIC_VECTOR(439,10) + size) then
+						ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
+						ball_y_motion := CONV_STD_LOGIC_VECTOR(0, 10); --resets to 0 speed
 					else
-						ball_y_motion :=  CONV_STD_LOGIC_VECTOR(10,10);
-					end if;
+						prev_clicked <= leftclick;
+						if ((leftclick /= '0') and (prev_clicked = '0') ) then
+							--Set intial up speed to be 10
+							ball_y_motion := -CONV_STD_LOGIC_VECTOR(10,10);
+							if (ball_y_motion <= -CONV_STD_LOGIC_VECTOR(5,10)) then
+							--
+								ball_y_motion := ball_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
+							else
+								ball_y_motion := ball_y_motion;
+							end if;
+						else
+							if (ball_y_motion <= CONV_STD_LOGIC_VECTOR(10,10)) then
+								ball_y_motion :=  ball_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
+							else
+								ball_y_motion := ball_y_motion; --stay at max speed
+							end if;
+						
+						end if;
 					
-					ball_y_pos <= ball_y_pos + ball_y_motion;				
+						ball_y_pos <= ball_y_pos + ball_y_motion;				
+					end if;
 				end if;
-	end if;
-	
+
+		end if;
+		
 end process BOUNCE_BALL;
 
 
