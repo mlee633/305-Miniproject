@@ -1,0 +1,7 @@
+entity halfClock is
+	port(Clk: in std_logic;
+			clkOut: out std_logic;);
+end entity;
+
+architecture behave of halfclock is
+begin
