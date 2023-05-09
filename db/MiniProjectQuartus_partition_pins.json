@@ -12,10 +12,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "blue_out",
-					"strict" : false
-				},
-				{
 					"name" : "rihgt_click",
 					"strict" : false
 				},

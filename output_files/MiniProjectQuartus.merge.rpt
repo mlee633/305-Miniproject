@@ -1,0 +1,216 @@
+Partition Merge report for MiniProjectQuartus
+Tue May 09 14:40:47 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Rapid Recompile Summary
+  5. Partition Merge Rapid Recompile Table of Changed Logic Entities
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge DSP Block Usage Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                           ;
++---------------------------------+-------------------------------------------------+
+; Partition Merge Status          ; Successful - Tue May 09 14:40:47 2023           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; MiniProjectQuartus                              ;
+; Top-level Entity Name           ; bouncy_test_v1                                  ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; 181 / 18,480 ( < 1 % )                          ;
+; Total registers                 ; 175                                             ;
+; Total pins                      ; 12 / 224 ( 5 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                           ;
+; Total DSP Blocks                ; 2 / 66 ( 3 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                                   ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used        ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Hybrid (Rapid Recompile) ; Source File            ;                                ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File              ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+--------------------------+------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Rapid Recompile Summary                                                                          ;
++----------------+------------------------+--------------------------------+-------------------------------+-------+
+; Partition Name ; Rapid Recompile Status ; Netlist Preservation Requested ; Netlist Preservation Achieved ; Notes ;
++----------------+------------------------+--------------------------------+-------------------------------+-------+
+; Top            ; Engaged                ; 99.15% (465 / 469)             ; 97.01% (455 / 469)            ;       ;
++----------------+------------------------+--------------------------------+-------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Partition Merge Rapid Recompile Table of Changed Logic Entities ;
++-----------------------------------+-----------------------------+
+; Changed Logic Entities            ; Number of Changed Nodes     ;
++-----------------------------------+-----------------------------+
+; |bouncy_test_v1|VGA_SYNC:inst1    ; 6                           ;
+; |bouncy_test_v1|bouncy_ball:inst3 ; 1                           ;
++-----------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                                  ;
++----------------------------+-----------+---------------+--------------------+---------------------------------------------+
+; Name                       ; Partition ; Type          ; Location           ; Status                                      ;
++----------------------------+-----------+---------------+--------------------+---------------------------------------------+
+; PushButton1                ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- PushButton1         ; Top       ; Input Pad     ; IOPAD_X10_Y0_N91   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- PushButton1~input   ; Top       ; Input Buffer  ; IOIBUF_X10_Y0_N92  ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; PushButton2                ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- PushButton2         ; Top       ; Input Pad     ; IOPAD_X11_Y0_N34   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- PushButton2~input   ; Top       ; Input Buffer  ; IOIBUF_X11_Y0_N35  ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; blue_out                   ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- blue_out            ; Top       ; Output Pad    ; IOPAD_X12_Y45_N17  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- blue_out~output     ; Top       ; Output Buffer ; IOOBUF_X12_Y45_N19 ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; fullClock                  ; Top       ; Input Port    ; n/a                ;                                             ;
+;     -- fullClock           ; Top       ; Input Pad     ; IOPAD_X22_Y0_N0    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- fullClock~input     ; Top       ; Input Buffer  ; IOIBUF_X22_Y0_N1   ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; green_out                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- green_out           ; Top       ; Output Pad    ; IOPAD_X20_Y45_N17  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- green_out~output    ; Top       ; Output Buffer ; IOOBUF_X20_Y45_N19 ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; horizSyncOut               ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- horizSyncOut        ; Top       ; Output Pad    ; IOPAD_X20_Y45_N34  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- horizSyncOut~output ; Top       ; Output Buffer ; IOOBUF_X20_Y45_N36 ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; leftclick                  ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- leftclick           ; Top       ; Output Pad    ; IOPAD_X0_Y18_N94   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- leftclick~output    ; Top       ; Output Buffer ; IOOBUF_X0_Y18_N96  ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; mouseClk                   ; Top       ; Bidir Port    ; n/a                ;                                             ;
+;     -- mouseClk            ; Top       ; Bidir Pad     ; IOPAD_X0_Y20_N3    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- mouseClk~output     ; Top       ; Output Buffer ; IOOBUF_X0_Y20_N5   ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; mouseData                  ; Top       ; Bidir Port    ; n/a                ;                                             ;
+;     -- mouseData           ; Top       ; Bidir Pad     ; IOPAD_X0_Y21_N3    ; Preserved from Post-Fit or Imported Netlist ;
+;     -- mouseData~output    ; Top       ; Output Buffer ; IOOBUF_X0_Y21_N5   ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; red_out                    ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- red_out             ; Top       ; Output Pad    ; IOPAD_X16_Y45_N74  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- red_out~output      ; Top       ; Output Buffer ; IOOBUF_X16_Y45_N76 ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; rihgt_click                ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- rihgt_click         ; Top       ; Output Pad    ; IOPAD_X0_Y18_N77   ; Preserved from Post-Fit or Imported Netlist ;
+;     -- rihgt_click~output  ; Top       ; Output Buffer ; IOOBUF_X0_Y18_N79  ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
+; vertSyncOut                ; Top       ; Output Port   ; n/a                ;                                             ;
+;     -- vertSyncOut         ; Top       ; Output Pad    ; IOPAD_X20_Y45_N51  ; Preserved from Post-Fit or Imported Netlist ;
+;     -- vertSyncOut~output  ; Top       ; Output Buffer ; IOOBUF_X20_Y45_N53 ; Preserved from Post-Fit or Imported Netlist ;
+;                            ;           ;               ;                    ;                                             ;
++----------------------------+-----------+---------------+--------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                             ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 192                  ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 236                  ;
+;     -- 7 input functions                    ; 1                    ;
+;     -- 6 input functions                    ; 27                   ;
+;     -- 5 input functions                    ; 37                   ;
+;     -- 4 input functions                    ; 33                   ;
+;     -- <=3 input functions                  ; 138                  ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 175                  ;
+;                                             ;                      ;
+; I/O pins                                    ; 12                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 2                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; halfclock:inst|v_Clk ;
+; Maximum fan-out                             ; 84                   ;
+; Total fan-out                               ; 1332                 ;
+; Average fan-out                             ; 2.91                 ;
++---------------------------------------------+----------------------+
+
+
++-----------------------------------------------+
+; Partition Merge DSP Block Usage Summary       ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Sum of two 18x18                ; 1           ;
+; Total number of DSP blocks      ; 2           ;
+;                                 ;             ;
+; Fixed Point Signed Multiplier   ; 2           ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Tue May 09 14:40:44 2023
+Info: Command: quartus_cdb --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus --merge=on --recompile=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (12849): Using Hybrid (Rapid Recompile) netlist for partition "Top"
+Info (35002): Resolved and merged 1 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PushButton1"
+Info (21057): Implemented 398 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21060): Implemented 2 bidirectional pins
+    Info (21061): Implemented 383 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Partition Merge was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Tue May 09 14:40:47 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu May 04 18:14:00 2023
+Analysis & Synthesis Status : Successful - Tue May 09 14:58:33 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : MiniProjectQuartus
 Top-level Entity Name : bouncy_test_v1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 168
+Total registers : 167
 Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 0
