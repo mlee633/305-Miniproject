@@ -1,7 +1,10 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.all;
+USE IEEE.STD_LOGIC_ARITH.all;
+USE IEEE.STD_LOGIC_UNSIGNED.all;
 
+LIBRARY altera_mf;
+USE altera_mf.all;
 
 entity text_setter is
     PORT
