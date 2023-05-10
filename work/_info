@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0
+Etext_setter
+Z0 w1683714656
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\302-work
+Z6 8C:/302-work/text_setter.vhd
+Z7 FC:/302-work/text_setter.vhd
+l0
+L6
+V]3f4AJfgLgWOJ@]3G23bl2
+!s100 [zDl_DFAi?ENA81QDbYj03
+Z8 OV;C;10.1d;51
+32
+!i10b 1
+Z9 !s108 1683714662.263000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/302-work/text_setter.vhd|
+Z11 !s107 C:/302-work/text_setter.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Abehave
+R1
+R2
+R3
+R4
+DEx4 work 11 text_setter 0 22 ]3f4AJfgLgWOJ@]3G23bl2
+l17
+L16
+Vog<3aC74bfe1=Al<kAhAb3
+!s100 5ZgkKOLZ19lVKkOLTk8270
+R8
+32
+!i10b 1
+R9
+R10
+R11
+R12
+R13
