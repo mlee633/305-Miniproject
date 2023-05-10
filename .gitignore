@@ -3,3 +3,4 @@ Justfile
 *.ghw
 *.o
 *.wlf
+*.flock
