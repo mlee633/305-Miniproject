@@ -12,15 +12,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "horiz_sync_out",
+					"name" : "rihgt_click",
 					"strict" : false
 				},
 				{
-					"name" : "vert_sync_out",
+					"name" : "vertSyncOut",
 					"strict" : false
 				},
 				{
-					"name" : "Clk",
+					"name" : "horizSyncOut",
+					"strict" : false
+				},
+				{
+					"name" : "leftclick",
+					"strict" : false
+				},
+				{
+					"name" : "mouseData",
+					"strict" : false
+				},
+				{
+					"name" : "mouseClk",
+					"strict" : false
+				},
+				{
+					"name" : "fullClock",
+					"strict" : false
+				},
+				{
+					"name" : "PushButton2",
 					"strict" : false
 				}
 			]
