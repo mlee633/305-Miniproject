@@ -88,7 +88,7 @@ begin
 					if ((leftclick /= '0') and (prev_clicked = '0') ) then
 						--Set intial up speed to be 10
 						ball_y_motion := -CONV_STD_LOGIC_VECTOR(10,10);
-						if (ball_y_motion <= -CONV_STD_LOGIC_VECTOR(5,10)) then
+						if (ball_y_motion <= -CONV_STD_LOGIC_VECTOR(3,10)) then
 							ball_y_motion := ball_y_motion + CONV_STD_LOGIC_VECTOR(1,10);
 						else
 							ball_y_motion := ball_y_motion;

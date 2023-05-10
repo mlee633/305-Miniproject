@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Tue May 09 14:58:34 2023
+Wed May 10 15:30:13 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -13,15 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |bouncy_test_v1|MOUSE:inst2|mouse_state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,17 +45,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 09 14:58:33 2023           ;
+; Analysis & Synthesis Status     ; Successful - Wed May 10 15:30:13 2023           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; MiniProjectQuartus                              ;
-; Top-level Entity Name           ; bouncy_test_v1                                  ;
+; Top-level Entity Name           ; pipebdf                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 167                                             ;
-; Total pins                      ; 12                                              ;
+; Total registers                 ; 59                                              ;
+; Total pins                      ; 8                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 2                                               ;
+; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -73,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; bouncy_test_v1     ; MiniProjectQuartus ;
+; Top-level entity name                                                           ; pipebdf            ; MiniProjectQuartus ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,7 +157,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
+; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -171,103 +169,71 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
-; mouse.vhd                        ; yes             ; User VHDL File                     ; H:/Documents/302-work/mouse.vhd          ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                     ; H:/Documents/302-work/vga_sync.vhd       ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                     ; H:/Documents/302-work/bouncy_ball.vhd    ;         ;
-; halfclock.vhd                    ; yes             ; User VHDL File                     ; H:/Documents/302-work/halfclock.vhd      ;         ;
-; bouncy_test_v1.bdf               ; yes             ; User Block Diagram/Schematic File  ; H:/Documents/302-work/bouncy_test_v1.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path        ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
+; pipe.vhd                         ; yes             ; User VHDL File                     ; H:/Documents/302-work/pipe.vhd      ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                     ; H:/Documents/302-work/vga_sync.vhd  ;         ;
+; halfclock.vhd                    ; yes             ; User VHDL File                     ; H:/Documents/302-work/halfclock.vhd ;         ;
+; pipebdf.bdf                      ; yes             ; User Block Diagram/Schematic File  ; H:/Documents/302-work/pipebdf.bdf   ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------+---------+
 
 
-+--------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                        ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 132                  ;
-;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 227                  ;
-;     -- 7 input functions                    ; 1                    ;
-;     -- 6 input functions                    ; 27                   ;
-;     -- 5 input functions                    ; 36                   ;
-;     -- 4 input functions                    ; 32                   ;
-;     -- <=3 input functions                  ; 131                  ;
-;                                             ;                      ;
-; Dedicated logic registers                   ; 167                  ;
-;                                             ;                      ;
-; I/O pins                                    ; 12                   ;
-;                                             ;                      ;
-; Total DSP Blocks                            ; 2                    ;
-;                                             ;                      ;
-; Maximum fan-out node                        ; halfclock:inst|v_Clk ;
-; Maximum fan-out                             ; 76                   ;
-; Total fan-out                               ; 1274                 ;
-; Average fan-out                             ; 3.02                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 56                    ;
+;                                             ;                       ;
+; Combinational ALUT usage for logic          ; 97                    ;
+;     -- 7 input functions                    ; 1                     ;
+;     -- 6 input functions                    ; 10                    ;
+;     -- 5 input functions                    ; 18                    ;
+;     -- 4 input functions                    ; 13                    ;
+;     -- <=3 input functions                  ; 55                    ;
+;                                             ;                       ;
+; Dedicated logic registers                   ; 59                    ;
+;                                             ;                       ;
+; I/O pins                                    ; 8                     ;
+;                                             ;                       ;
+; Total DSP Blocks                            ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; halfclock:inst1|v_Clk ;
+; Maximum fan-out                             ; 48                    ;
+; Total fan-out                               ; 493                   ;
+; Average fan-out                             ; 2.87                  ;
++---------------------------------------------+-----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
-; |bouncy_test_v1            ; 227 (0)             ; 167 (0)                   ; 0                 ; 2          ; 12   ; 0            ; |bouncy_test_v1                   ; bouncy_test_v1 ; work         ;
-;    |MOUSE:inst2|           ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|MOUSE:inst2       ; MOUSE          ; work         ;
-;    |VGA_SYNC:inst1|        ; 42 (42)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|VGA_SYNC:inst1    ; VGA_SYNC       ; work         ;
-;    |bouncy_ball:inst3|     ; 137 (137)           ; 54 (54)                   ; 0                 ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3 ; bouncy_ball    ; work         ;
-;    |halfclock:inst|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|halfclock:inst    ; halfclock      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
+; |pipebdf                   ; 97 (0)              ; 59 (0)                    ; 0                 ; 0          ; 8    ; 0            ; |pipebdf                 ; pipebdf     ; work         ;
+;    |VGA_SYNC:inst|         ; 40 (40)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |pipebdf|VGA_SYNC:inst   ; VGA_SYNC    ; work         ;
+;    |halfclock:inst1|       ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |pipebdf|halfclock:inst1 ; halfclock   ; work         ;
+;    |pipe:inst2|            ; 56 (56)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |pipebdf|pipe:inst2      ; pipe        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Sum of two 18x18                ; 1           ;
-; Total number of DSP blocks      ; 2           ;
-;                                 ;             ;
-; Fixed Point Signed Multiplier   ; 2           ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |bouncy_test_v1|MOUSE:inst2|mouse_state                                                                                                                                                 ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; Name                          ; mouse_state.INPUT_PACKETS ; mouse_state.WAIT_CMD_ACK ; mouse_state.WAIT_OUTPUT_READY ; mouse_state.LOAD_COMMAND2 ; mouse_state.LOAD_COMMAND ; mouse_state.INHIBIT_TRANS ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-; mouse_state.INHIBIT_TRANS     ; 0                         ; 0                        ; 0                             ; 0                         ; 0                        ; 0                         ;
-; mouse_state.LOAD_COMMAND      ; 0                         ; 0                        ; 0                             ; 0                         ; 1                        ; 1                         ;
-; mouse_state.LOAD_COMMAND2     ; 0                         ; 0                        ; 0                             ; 1                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_OUTPUT_READY ; 0                         ; 0                        ; 1                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
-+-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; VGA_SYNC:inst1|blue_out                ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst2|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:inst2|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst2|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in ;
-; MOUSE:inst2|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in ;
-; MOUSE:inst2|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in ;
-; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++---------------------------------------------+----------------------------------------------------+
+; Register name                               ; Reason for Removal                                 ;
++---------------------------------------------+----------------------------------------------------+
+; VGA_SYNC:inst|red_out                       ; Stuck at GND due to stuck port data_in             ;
+; pipe:inst2|\MOVE_PIPE:pipe_x_motion[2..6,9] ; Merged with pipe:inst2|\MOVE_PIPE:pipe_x_motion[1] ;
+; pipe:inst2|\MOVE_PIPE:pipe_x_motion[8]      ; Merged with pipe:inst2|\MOVE_PIPE:pipe_x_motion[7] ;
+; VGA_SYNC:inst|pixel_row[9]                  ; Stuck at GND due to stuck port data_in             ;
+; pipe:inst2|\MOVE_PIPE:pipe_x_motion[1]      ; Stuck at VCC due to stuck port data_in             ;
+; pipe:inst2|\MOVE_PIPE:pipe_x_motion[7]      ; Merged with pipe:inst2|\MOVE_PIPE:pipe_x_motion[0] ;
+; Total Number of Removed Registers = 11      ;                                                    ;
++---------------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -275,12 +241,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 167   ;
-; Number of registers using Synchronous Clear  ; 62    ;
+; Total registers                              ; 59    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -290,29 +256,26 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; bouncy_ball:inst3|ball_y_pos[3]        ; 3       ;
-; bouncy_ball:inst3|ball_y_pos[6]        ; 3       ;
-; bouncy_ball:inst3|ball_y_pos[7]        ; 3       ;
-; MOUSE:inst2|send_char                  ; 3       ;
-; MOUSE:inst2|SHIFTOUT[3]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[5]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[6]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[7]                ; 1       ;
-; MOUSE:inst2|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 9 ;         ;
+; pipe:inst2|gap_x_pos[3]                ; 10      ;
+; pipe:inst2|gap_x_pos[2]                ; 8       ;
+; pipe:inst2|gap_x_pos[1]                ; 7       ;
+; pipe:inst2|gap_x_pos[0]                ; 5       ;
+; pipe:inst2|gap_x_pos[5]                ; 4       ;
+; pipe:inst2|gap_x_pos[6]                ; 4       ;
+; pipe:inst2|gap_x_pos[4]                ; 4       ;
+; pipe:inst2|gap_x_pos[9]                ; 9       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[3]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[0] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[6] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_motion ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |pipebdf|VGA_SYNC:inst|v_count[9] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pipebdf|pipe:inst2|pipe_x_motion ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -320,38 +283,30 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 167                         ;
-;     CLR               ; 1                           ;
-;     ENA               ; 60                          ;
-;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 20                          ;
-;     SCLR              ; 42                          ;
-;     plain             ; 29                          ;
-; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 228                         ;
-;     arith             ; 90                          ;
-;         1 data inputs ; 79                          ;
+; arriav_ff             ; 59                          ;
+;     ENA               ; 20                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 19                          ;
+; arriav_lcell_comb     ; 98                          ;
+;     arith             ; 43                          ;
+;         1 data inputs ; 39                          ;
 ;         2 data inputs ; 1                           ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 1                           ;
+;         5 data inputs ; 3                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 127                         ;
+;     normal            ; 54                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 35                          ;
-;         6 data inputs ; 27                          ;
-;     shared            ; 10                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-; arriav_mac            ; 2                           ;
-; boundary_port         ; 12                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 10                          ;
+; boundary_port         ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 3.17                        ;
+; Max LUT depth         ; 4.90                        ;
+; Average LUT depth     ; 3.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -360,7 +315,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -370,7 +325,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 09 14:58:22 2023
+    Info: Processing started: Wed May 10 15:30:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -412,41 +367,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file pipebdf
     Info (12023): Found entity 1: pipebdf
 Info (12021): Found 1 design units, including 1 entities, in source file bouncy_test_v1.bdf
     Info (12023): Found entity 1: bouncy_test_v1
-Info (12127): Elaborating entity "bouncy_test_v1" for the top level hierarchy
-Warning (275011): Block or symbol "bouncy_ball" of instance "inst3" overlaps another block or symbol
-Warning (275009): Pin "PushButton1" not connected
-Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
-Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst"
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10541): VHDL Signal Declaration warning at bouncy_ball.vhd(17): used implicit default value for signal "pipe2_on" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/302-work/bouncy_ball.vhd Line: 17
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(18): object "pipeSize1" assigned a value but never read File: H:/Documents/302-work/bouncy_ball.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(18): object "pipe_x_pos" assigned a value but never read File: H:/Documents/302-work/bouncy_ball.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(18): object "pipe1_y_pos" assigned a value but never read File: H:/Documents/302-work/bouncy_ball.vhd Line: 18
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: H:/Documents/302-work/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 157
-Info (13000): Registers with preset signals will power-up high File: H:/Documents/302-work/mouse.vhd Line: 146
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12127): Elaborating entity "pipebdf" for the top level hierarchy
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst"
+Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst1"
+Info (12128): Elaborating entity "pipe" for hierarchy "pipe:inst2"
+Warning (10540): VHDL Signal Declaration warning at pipe.vhd(17): used explicit default value for signal "gap_y_pos" because signal was never assigned a value File: H:/Documents/302-work/pipe.vhd Line: 17
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "blue_out" is stuck at GND
+    Warning (13410): Pin "red_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "PushButton1"
-Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pb1"
+    Warning (15610): No output dependent on input pin "pb2"
+Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 310 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Tue May 09 14:58:34 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 120 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Wed May 10 15:30:13 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
 
 
