@@ -1,8 +1,7 @@
-LIBRARY ieee;
-USE ieee.STD_LOGIC_1164.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
 USE IEEE.STD_LOGIC_ARITH.all;
 USE IEEE.STD_LOGIC_UNSIGNED.all;
-
 LIBRARY altera_mf;
 USE altera_mf.all;
 
@@ -11,15 +10,15 @@ entity text_setter is
     (
         character_address     :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
         pixel_row, pixel_col    :    IN STD_LOGIC_VECTOR (9 DOWNTO 4);
-        clock                               :     IN STD_LOGIC ;
-        rom_mux_output        :    OUT STD_LOGIC
+        clock                               :     IN STD_LOGIC 
     );
 end text_setter;
 
 architecture behave of text_setter is
-begin
 
-    process (pixel_col) 
+begin
+	 
+    process (clock) 
     begin
         if(pixel_row= "00010") then
             if (pixel_col ="00010") then
