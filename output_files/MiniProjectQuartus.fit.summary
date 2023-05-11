@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu May 11 13:18:54 2023
+Fitter Status : Successful - Thu May 11 17:06:35 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : MiniProjectQuartus
 Top-level Entity Name : bouncy_test_v1
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 185 / 18,480 ( 1 % )
-Total registers : 197
+Logic utilization (in ALMs) : 190 / 18,480 ( 1 % )
+Total registers : 216
 Total pins : 26 / 224 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 4,096 / 3,153,920 ( < 1 % )

@@ -135,7 +135,6 @@ begin
 		if (rising_edge(vert_sync)) then
 		--When button has been  pressed
 			if (started = '1')then
-				
 				--start at current value of speed. from beginning should be 0.....hopefully
 				
 				ball_y_motion := ball_y_motion;
@@ -180,7 +179,6 @@ begin
 			else
 				--reset to starting position
 				ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
-				
 			end if;
 		end if;
 		
