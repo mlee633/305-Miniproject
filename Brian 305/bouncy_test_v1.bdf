@@ -204,6 +204,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 392 1512 416))
 )
 (pin
 	(output)
@@ -220,6 +221,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 416 1512 440))
 )
 (pin
 	(output)
@@ -236,6 +238,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 440 1512 464))
 )
 (pin
 	(output)
@@ -252,6 +255,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 464 1512 488))
 )
 (pin
 	(output)
@@ -268,6 +272,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 488 1512 512))
 )
 (pin
 	(output)
@@ -284,6 +289,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 536 1520 560))
 )
 (pin
 	(output)
@@ -300,6 +306,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 512 1512 536))
 )
 (pin
 	(output)
@@ -316,6 +323,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 568 1520 592))
 )
 (pin
 	(output)
@@ -332,6 +340,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 592 1520 616))
 )
 (pin
 	(output)
@@ -348,6 +357,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 616 1520 640))
 )
 (pin
 	(output)
@@ -364,6 +374,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 648 1520 672))
 )
 (pin
 	(output)
@@ -380,6 +391,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 680 1520 704))
 )
 (pin
 	(output)
@@ -396,6 +408,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 704 1520 728))
 )
 (pin
 	(output)
@@ -412,6 +425,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 728 1512 752))
 )
 (pin
 	(bidir)
@@ -694,35 +708,35 @@ refer to the applicable agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "oneSeg_out[6..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "oneSeg_out[6..0]" (rect 149 27 219 39)(font "Arial" ))
+		(text "oneSeg_out[6..0]" (rect 149 27 232 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32)(line_width 3))
 	)
 	(port
 		(pt 240 48)
 		(output)
 		(text "tenSeg_out[6..0]" (rect 0 0 81 12)(font "Arial" ))
-		(text "tenSeg_out[6..0]" (rect 151 43 219 55)(font "Arial" ))
+		(text "tenSeg_out[6..0]" (rect 151 43 232 55)(font "Arial" ))
 		(line (pt 240 48)(pt 224 48)(line_width 3))
 	)
 	(port
 		(pt 240 64)
 		(output)
 		(text "red" (rect 0 0 15 12)(font "Arial" ))
-		(text "red" (rect 207 59 219 71)(font "Arial" ))
+		(text "red" (rect 207 59 222 71)(font "Arial" ))
 		(line (pt 240 64)(pt 224 64))
 	)
 	(port
 		(pt 240 80)
 		(output)
 		(text "green" (rect 0 0 27 12)(font "Arial" ))
-		(text "green" (rect 197 75 219 87)(font "Arial" ))
+		(text "green" (rect 197 75 224 87)(font "Arial" ))
 		(line (pt 240 80)(pt 224 80))
 	)
 	(port
 		(pt 240 96)
 		(output)
 		(text "blue" (rect 0 0 20 12)(font "Arial" ))
-		(text "blue" (rect 203 91 219 103)(font "Arial" ))
+		(text "blue" (rect 203 91 223 103)(font "Arial" ))
 		(line (pt 240 96)(pt 224 96))
 	)
 	(drawing

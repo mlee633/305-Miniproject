@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Thu May 11 00:15:20 2023
+Fri May 19 17:38:02 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -22,13 +22,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
  16. Parameter Settings for User Entity Instance: bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "bouncy_ball:inst3|BCD:tensBCD"
- 19. Port Connectivity Checks: "bouncy_ball:inst3|BCD:onesBCD"
- 20. Port Connectivity Checks: "bouncy_ball:inst3|pipe:pipeone"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 17. Parameter Settings for Inferred Entity Instance: bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "bouncy_ball:inst3|BCD:tensBCD"
+ 20. Port Connectivity Checks: "bouncy_ball:inst3|BCD:onesBCD"
+ 21. Port Connectivity Checks: "bouncy_ball:inst3|pipe:pipeone"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -54,17 +55,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 11 00:15:20 2023       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 19 17:38:02 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; MiniProjectQuartus                          ;
 ; Top-level Entity Name           ; bouncy_test_v1                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 189                                         ;
+; Total registers                 ; 217                                         ;
 ; Total pins                      ; 26                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
-; Total DSP Blocks                ; 2                                           ;
+; Total DSP Blocks                ; 4                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -174,7 +175,11 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -183,6 +188,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; LFSR.vhd                         ; yes             ; User VHDL File                         ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/LFSR.vhd                  ;         ;
 ; pipe.vhd                         ; yes             ; User VHDL File                         ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd                  ;         ;
 ; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd                 ;         ;
 ; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/char_rom.vhd              ;         ;
@@ -204,6 +210,14 @@ refer to the applicable agreement for further details.
 ; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/altsyncram_d5g1.tdf    ;         ;
 ; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/tcgrom.mif                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_fpo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_divide_fpo.tdf     ;         ;
+; db/abs_divider_obg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/abs_divider_obg.tdf    ;         ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/alt_u_div_00f.tdf      ;         ;
+; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_abs_on9.tdf        ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_abs_4p9.tdf        ;         ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
@@ -212,50 +226,56 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 188                  ;
+; Estimate of Logic utilization (ALMs needed) ; 527                  ;
 ;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 314                  ;
+; Combinational ALUT usage for logic          ; 991                  ;
 ;     -- 7 input functions                    ; 3                    ;
-;     -- 6 input functions                    ; 52                   ;
-;     -- 5 input functions                    ; 47                   ;
-;     -- 4 input functions                    ; 52                   ;
-;     -- <=3 input functions                  ; 160                  ;
+;     -- 6 input functions                    ; 53                   ;
+;     -- 5 input functions                    ; 147                  ;
+;     -- 4 input functions                    ; 213                  ;
+;     -- <=3 input functions                  ; 575                  ;
 ;                                             ;                      ;
-; Dedicated logic registers                   ; 189                  ;
+; Dedicated logic registers                   ; 217                  ;
 ;                                             ;                      ;
 ; I/O pins                                    ; 26                   ;
 ; Total MLAB memory bits                      ; 0                    ;
 ; Total block memory bits                     ; 4096                 ;
 ;                                             ;                      ;
-; Total DSP Blocks                            ; 2                    ;
+; Total DSP Blocks                            ; 4                    ;
 ;                                             ;                      ;
 ; Maximum fan-out node                        ; halfclock:inst|v_Clk ;
 ; Maximum fan-out                             ; 77                   ;
-; Total fan-out                               ; 1785                 ;
-; Average fan-out                             ; 3.15                 ;
+; Total fan-out                               ; 4031                 ;
+; Average fan-out                             ; 3.16                 ;
 +---------------------------------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                        ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |bouncy_test_v1                              ; 314 (0)             ; 189 (0)                   ; 4096              ; 2          ; 26   ; 0            ; |bouncy_test_v1                                                                                                   ; bouncy_test_v1  ; work         ;
-;    |MOUSE:inst2|                             ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|MOUSE:inst2                                                                                       ; MOUSE           ; work         ;
-;    |VGA_SYNC:inst1|                          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|VGA_SYNC:inst1                                                                                    ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst3|                       ; 225 (139)           ; 75 (57)                   ; 4096              ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3                                                                                 ; bouncy_ball     ; work         ;
-;       |BCD:onesBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD                                                                     ; BCD             ; work         ;
-;       |BCD:tensBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD                                                                     ; BCD             ; work         ;
-;       |BCD_to_7Seg:one_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:one_segment                                                         ; BCD_to_7Seg     ; work         ;
-;       |BCD_to_7Seg:ten_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment                                                         ; BCD_to_7Seg     ; work         ;
-;       |char_rom:charRom|                     ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |pipe:pipeone|                         ; 51 (51)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone                                                                    ; pipe            ; work         ;
-;       |text_setter:textSetter|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter                                                          ; text_setter     ; work         ;
-;    |halfclock:inst|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|halfclock:inst                                                                                    ; halfclock       ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |bouncy_test_v1                              ; 991 (0)             ; 217 (0)                   ; 4096              ; 4          ; 26   ; 0            ; |bouncy_test_v1                                                                                                                             ; bouncy_test_v1  ; work         ;
+;    |MOUSE:inst2|                             ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|MOUSE:inst2                                                                                                                 ; MOUSE           ; work         ;
+;    |VGA_SYNC:inst1|                          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|VGA_SYNC:inst1                                                                                                              ; VGA_SYNC        ; work         ;
+;    |bouncy_ball:inst3|                       ; 902 (134)           ; 103 (57)                  ; 4096              ; 4          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3                                                                                                           ; bouncy_ball     ; work         ;
+;       |BCD:onesBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD                                                                                               ; BCD             ; work         ;
+;       |BCD:tensBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD                                                                                               ; BCD             ; work         ;
+;       |BCD_to_7Seg:one_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:one_segment                                                                                   ; BCD_to_7Seg     ; work         ;
+;       |BCD_to_7Seg:ten_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment                                                                                   ; BCD_to_7Seg     ; work         ;
+;       |char_rom:charRom|                     ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom                                                                                          ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component                                                          ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                           ; altsyncram_d5g1 ; work         ;
+;       |pipe:pipeone|                         ; 733 (121)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone                                                                                              ; pipe            ; work         ;
+;          |LFSR:randomHeight|                 ; 5 (5)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|LFSR:randomHeight                                                                            ; LFSR            ; work         ;
+;          |lpm_divide:Div0|                   ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_fpo:auto_generated|  ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated                                                ; lpm_divide_fpo  ; work         ;
+;                |abs_divider_obg:divider|     ; 607 (20)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated|abs_divider_obg:divider                        ; abs_divider_obg ; work         ;
+;                   |alt_u_div_00f:divider|    ; 555 (555)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated|abs_divider_obg:divider|alt_u_div_00f:divider  ; alt_u_div_00f   ; work         ;
+;                   |lpm_abs_4p9:my_abs_num|   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated|abs_divider_obg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
+;       |text_setter:textSetter|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter                                                                                    ; text_setter     ; work         ;
+;    |halfclock:inst|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|halfclock:inst                                                                                                              ; halfclock       ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -274,11 +294,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
 ; Independent 9x9                 ; 1           ;
+; Two Independent 18x18           ; 1           ;
+; Independent 18x18 plus 36       ; 1           ;
 ; Sum of two 18x18                ; 1           ;
-; Total number of DSP blocks      ; 2           ;
+; Total number of DSP blocks      ; 4           ;
 ;                                 ;             ;
 ; Fixed Point Signed Multiplier   ; 2           ;
-; Fixed Point Unsigned Multiplier ; 1           ;
+; Fixed Point Unsigned Multiplier ; 3           ;
 +---------------------------------+-------------+
 
 
@@ -318,41 +340,51 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 189   ;
-; Number of registers using Synchronous Clear  ; 62    ;
+; Total registers                              ; 217   ;
+; Number of registers using Synchronous Clear  ; 70    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 107   ;
+; Number of registers using Clock Enable       ; 127   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------+
-; Inverted Register Statistics                          ;
-+---------------------------------------------+---------+
-; Inverted Register                           ; Fan out ;
-+---------------------------------------------+---------+
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[3] ; 15      ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[2] ; 5       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[1] ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[0] ; 12      ;
-; bouncy_ball:inst3|reset                     ; 33      ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[9] ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[6] ; 12      ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[5] ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[4] ; 4       ;
-; bouncy_ball:inst3|ball_y_pos[6]             ; 3       ;
-; bouncy_ball:inst3|ball_y_pos[7]             ; 3       ;
-; bouncy_ball:inst3|ball_y_pos[3]             ; 4       ;
-; MOUSE:inst2|send_char                       ; 3       ;
-; MOUSE:inst2|SHIFTOUT[3]                     ; 1       ;
-; MOUSE:inst2|SHIFTOUT[5]                     ; 1       ;
-; MOUSE:inst2|SHIFTOUT[6]                     ; 1       ;
-; MOUSE:inst2|SHIFTOUT[7]                     ; 1       ;
-; MOUSE:inst2|SHIFTOUT[8]                     ; 1       ;
-; Total number of inverted registers = 18     ;         ;
-+---------------------------------------------+---------+
++----------------------------------------------------------------------------+
+; Inverted Register Statistics                                               ;
++------------------------------------------------------------------+---------+
+; Inverted Register                                                ; Fan out ;
++------------------------------------------------------------------+---------+
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[9]                      ; 17      ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[6]                      ; 5       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[5]                      ; 4       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[4]                      ; 4       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[3]                      ; 5       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[2]                      ; 4       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[1]                      ; 4       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[0]                      ; 4       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[0]                      ; 4       ;
+; bouncy_ball:inst3|reset                                          ; 33      ;
+; bouncy_ball:inst3|pipe:pipeone|pipeWidth[5]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|pipeWidth[4]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[7]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[6]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[5]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[3]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[2]                      ; 2       ;
+; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[1]                      ; 2       ;
+; bouncy_ball:inst3|ball_y_pos[6]                                  ; 3       ;
+; bouncy_ball:inst3|ball_y_pos[7]                                  ; 3       ;
+; bouncy_ball:inst3|ball_y_pos[3]                                  ; 4       ;
+; MOUSE:inst2|send_char                                            ; 3       ;
+; bouncy_ball:inst3|pipe:pipeone|LFSR:randomHeight|currentState[0] ; 2       ;
+; MOUSE:inst2|SHIFTOUT[3]                                          ; 1       ;
+; MOUSE:inst2|SHIFTOUT[5]                                          ; 1       ;
+; MOUSE:inst2|SHIFTOUT[6]                                          ; 1       ;
+; MOUSE:inst2|SHIFTOUT[7]                                          ; 1       ;
+; MOUSE:inst2|SHIFTOUT[8]                                          ; 1       ;
+; Total number of inverted registers = 28                          ;         ;
++------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -360,15 +392,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[2]                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[8]                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD|counter[0]                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD|counter[3]                      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[3]                               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[3] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[1]                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[4]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|pipeWidth[0]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD|counter[3]                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD|counter[2]                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[7]                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|pipeWidth[5]                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[2] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_motion                               ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:one_segment|SevenSeg_out[3]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment|SevenSeg_out[5]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment|SevenSeg_out[0]     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
@@ -443,6 +477,29 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 9              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_fpo ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                               ;
 +-------------------------------------------+--------------------------------------------------------------------+
@@ -495,38 +552,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 189                         ;
+; arriav_ff             ; 217                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 72                          ;
+;     ENA               ; 84                          ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 20                          ;
+;     ENA SCLR          ; 28                          ;
 ;     SCLR              ; 42                          ;
-;     plain             ; 39                          ;
+;     plain             ; 47                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 318                         ;
-;     arith             ; 113                         ;
-;         1 data inputs ; 101                         ;
-;         2 data inputs ; 2                           ;
-;         4 data inputs ; 9                           ;
+; arriav_lcell_comb     ; 995                         ;
+;     arith             ; 451                         ;
+;         0 data inputs ; 26                          ;
+;         1 data inputs ; 254                         ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 102                         ;
 ;         5 data inputs ; 1                           ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 192                         ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 43                          ;
-;         5 data inputs ; 46                          ;
-;         6 data inputs ; 52                          ;
-;     shared            ; 10                          ;
+;     normal            ; 521                         ;
+;         1 data inputs ; 20                          ;
+;         2 data inputs ; 154                         ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 111                         ;
+;         5 data inputs ; 146                         ;
+;         6 data inputs ; 53                          ;
+;     shared            ; 20                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-; arriav_mac            ; 2                           ;
+;         2 data inputs ; 19                          ;
+; arriav_mac            ; 4                           ;
 ; boundary_port         ; 26                          ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 3.18                        ;
+; Max LUT depth         ; 77.00                       ;
+; Average LUT depth     ; 40.65                       ;
 +-----------------------+-----------------------------+
 
 
@@ -535,7 +594,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -545,14 +604,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 11 00:15:10 2023
+    Info: Processing started: Fri May 19 17:37:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file lfsr.vhd
+    Info (12022): Found design unit 1: LFSR-rtl File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/LFSR.vhd Line: 13
+    Info (12023): Found entity 1: LFSR File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/LFSR.vhd Line: 6
 Info (12021): Found 0 design units, including 0 entities, in source file pipe_test.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
-    Info (12022): Found design unit 1: pipe-behaviour File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 15
-    Info (12023): Found entity 1: pipe File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 6
+    Info (12022): Found design unit 1: pipe-behaviour File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 18
+    Info (12023): Found entity 1: pipe File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 9
 Info (12021): Found 0 design units, including 0 entities, in source file main.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 18
@@ -627,7 +689,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst3|pipe:pipeone" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/bouncy_ball.vhd Line: 79
-Warning (10540): VHDL Signal Declaration warning at pipe.vhd(19): used explicit default value for signal "gap_y_pos" because signal was never assigned a value File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at pipe.vhd(33): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 33
+Info (12128): Elaborating entity "LFSR" for hierarchy "bouncy_ball:inst3|pipe:pipeone|LFSR:randomHeight" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 38
 Info (12128): Elaborating entity "BCD" for hierarchy "bouncy_ball:inst3|BCD:onesBCD" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/bouncy_ball.vhd Line: 82
 Info (12128): Elaborating entity "BCD_to_7Seg" for hierarchy "bouncy_ball:inst3|BCD_to_7Seg:one_segment" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/bouncy_ball.vhd Line: 84
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
@@ -636,6 +699,25 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 157
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bouncy_ball:inst3|pipe:pipeone|Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
+Info (12133): Instantiated megafunction "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" with the following parameter: File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "9"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fpo.tdf
+    Info (12023): Found entity 1: lpm_divide_fpo File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_divide_fpo.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_obg.tdf
+    Info (12023): Found entity 1: abs_divider_obg File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/abs_divider_obg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/alt_u_div_00f.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_on9.tdf
+    Info (12023): Found entity 1: lpm_abs_on9 File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_abs_on9.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/db/lpm_abs_4p9.tdf Line: 22
 Info (13000): Registers with preset signals will power-up high File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
@@ -643,17 +725,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PushButton1"
-Info (21057): Implemented 434 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1116 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 398 logic cells
+    Info (21061): Implemented 1078 logic cells
     Info (21064): Implemented 8 RAM segments
-    Info (21062): Implemented 2 DSP elements
+    Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Thu May 11 00:15:20 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Fri May 19 17:38:02 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 
