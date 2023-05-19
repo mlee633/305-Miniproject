@@ -32,6 +32,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "collide",
+					"strict" : false
+				},
+				{
 					"name" : "HEX0[6]",
 					"strict" : false
 				},

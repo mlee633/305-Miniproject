@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Fri May 19 17:38:02 2023
+Fri May 19 23:11:36 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -26,10 +26,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  18. altsyncram Parameter Settings by Entity Instance
  19. Port Connectivity Checks: "bouncy_ball:inst3|BCD:tensBCD"
  20. Port Connectivity Checks: "bouncy_ball:inst3|BCD:onesBCD"
- 21. Port Connectivity Checks: "bouncy_ball:inst3|pipe:pipeone"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -55,14 +54,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 19 17:38:02 2023       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 19 23:11:36 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; MiniProjectQuartus                          ;
 ; Top-level Entity Name           ; bouncy_test_v1                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 217                                         ;
-; Total pins                      ; 26                                          ;
+; Total registers                 ; 218                                         ;
+; Total pins                      ; 27                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
 ; Total DSP Blocks                ; 4                                           ;
@@ -226,18 +225,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 527                  ;
+; Estimate of Logic utilization (ALMs needed) ; 528                  ;
 ;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 991                  ;
+; Combinational ALUT usage for logic          ; 990                  ;
 ;     -- 7 input functions                    ; 3                    ;
-;     -- 6 input functions                    ; 53                   ;
-;     -- 5 input functions                    ; 147                  ;
-;     -- 4 input functions                    ; 213                  ;
-;     -- <=3 input functions                  ; 575                  ;
+;     -- 6 input functions                    ; 56                   ;
+;     -- 5 input functions                    ; 127                  ;
+;     -- 4 input functions                    ; 221                  ;
+;     -- <=3 input functions                  ; 583                  ;
 ;                                             ;                      ;
-; Dedicated logic registers                   ; 217                  ;
+; Dedicated logic registers                   ; 218                  ;
 ;                                             ;                      ;
-; I/O pins                                    ; 26                   ;
+; I/O pins                                    ; 27                   ;
 ; Total MLAB memory bits                      ; 0                    ;
 ; Total block memory bits                     ; 4096                 ;
 ;                                             ;                      ;
@@ -245,7 +244,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                      ;
 ; Maximum fan-out node                        ; halfclock:inst|v_Clk ;
 ; Maximum fan-out                             ; 77                   ;
-; Total fan-out                               ; 4031                 ;
+; Total fan-out                               ; 4028                 ;
 ; Average fan-out                             ; 3.16                 ;
 +---------------------------------------------+----------------------+
 
@@ -255,10 +254,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |bouncy_test_v1                              ; 991 (0)             ; 217 (0)                   ; 4096              ; 4          ; 26   ; 0            ; |bouncy_test_v1                                                                                                                             ; bouncy_test_v1  ; work         ;
+; |bouncy_test_v1                              ; 990 (0)             ; 218 (0)                   ; 4096              ; 4          ; 27   ; 0            ; |bouncy_test_v1                                                                                                                             ; bouncy_test_v1  ; work         ;
 ;    |MOUSE:inst2|                             ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|MOUSE:inst2                                                                                                                 ; MOUSE           ; work         ;
 ;    |VGA_SYNC:inst1|                          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|VGA_SYNC:inst1                                                                                                              ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst3|                       ; 902 (134)           ; 103 (57)                  ; 4096              ; 4          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3                                                                                                           ; bouncy_ball     ; work         ;
+;    |bouncy_ball:inst3|                       ; 901 (137)           ; 104 (58)                  ; 4096              ; 4          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3                                                                                                           ; bouncy_ball     ; work         ;
 ;       |BCD:onesBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD                                                                                               ; BCD             ; work         ;
 ;       |BCD:tensBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD                                                                                               ; BCD             ; work         ;
 ;       |BCD_to_7Seg:one_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:one_segment                                                                                   ; BCD_to_7Seg     ; work         ;
@@ -266,7 +265,7 @@ refer to the applicable agreement for further details.
 ;       |char_rom:charRom|                     ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom                                                                                          ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component                                                          ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                           ; altsyncram_d5g1 ; work         ;
-;       |pipe:pipeone|                         ; 733 (121)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone                                                                                              ; pipe            ; work         ;
+;       |pipe:pipeone|                         ; 729 (117)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone                                                                                              ; pipe            ; work         ;
 ;          |LFSR:randomHeight|                 ; 5 (5)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|LFSR:randomHeight                                                                            ; LFSR            ; work         ;
 ;          |lpm_divide:Div0|                   ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
 ;             |lpm_divide_fpo:auto_generated|  ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated                                                ; lpm_divide_fpo  ; work         ;
@@ -340,9 +339,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 217   ;
-; Number of registers using Synchronous Clear  ; 70    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 218   ;
+; Number of registers using Synchronous Clear  ; 90    ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 127   ;
@@ -355,27 +354,12 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------+---------+
 ; Inverted Register                                                ; Fan out ;
 +------------------------------------------------------------------+---------+
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[9]                      ; 17      ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[6]                      ; 5       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[5]                      ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[4]                      ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[3]                      ; 5       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[2]                      ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[1]                      ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_x_pos[0]                      ; 4       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[0]                      ; 4       ;
-; bouncy_ball:inst3|reset                                          ; 33      ;
 ; bouncy_ball:inst3|pipe:pipeone|pipeWidth[5]                      ; 2       ;
 ; bouncy_ball:inst3|pipe:pipeone|pipeWidth[4]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[7]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[6]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[5]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[3]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[2]                      ; 2       ;
-; bouncy_ball:inst3|pipe:pipeone|gap_y_pos[1]                      ; 2       ;
+; bouncy_ball:inst3|reset                                          ; 34      ;
 ; bouncy_ball:inst3|ball_y_pos[6]                                  ; 3       ;
 ; bouncy_ball:inst3|ball_y_pos[7]                                  ; 3       ;
-; bouncy_ball:inst3|ball_y_pos[3]                                  ; 4       ;
+; bouncy_ball:inst3|ball_y_pos[3]                                  ; 3       ;
 ; MOUSE:inst2|send_char                                            ; 3       ;
 ; bouncy_ball:inst3|pipe:pipeone|LFSR:randomHeight|currentState[0] ; 2       ;
 ; MOUSE:inst2|SHIFTOUT[3]                                          ; 1       ;
@@ -383,7 +367,7 @@ Encoding Type:  One-Hot
 ; MOUSE:inst2|SHIFTOUT[6]                                          ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                                          ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                                          ; 1       ;
-; Total number of inverted registers = 28                          ;         ;
+; Total number of inverted registers = 13                          ;         ;
 +------------------------------------------------------------------+---------+
 
 
@@ -392,17 +376,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[1]                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[4]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|pipeWidth[0]                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD|counter[3]                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD|counter[2]                      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[7]                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[5]                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|VGA_SYNC:inst1|v_count[9]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|pipeWidth[8]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|gap_y_pos[0]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|gap_x_pos[8]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:onesBCD|counter[0]                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|BCD:tensBCD|counter[0]                      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_pos[6]                               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |bouncy_test_v1|bouncy_ball:inst3|pipe:pipeone|pipeWidth[5]                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[3] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|ball_y_motion                               ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:one_segment|SevenSeg_out[3]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment|SevenSeg_out[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|BCD_to_7Seg:ten_segment|SevenSeg_out[5]     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |bouncy_test_v1|bouncy_ball:inst3|text_setter:textSetter|character_address[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
@@ -538,29 +524,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+----------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst3|pipe:pipeone"                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_test ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 217                         ;
+; arriav_ff             ; 218                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 84                          ;
+;     ENA               ; 73                          ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 28                          ;
-;     SCLR              ; 42                          ;
-;     plain             ; 47                          ;
+;     ENA SCLR          ; 38                          ;
+;     ENA SLD           ; 1                           ;
+;     SCLR              ; 52                          ;
+;     plain             ; 38                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 995                         ;
+; arriav_lcell_comb     ; 994                         ;
 ;     arith             ; 451                         ;
 ;         0 data inputs ; 26                          ;
 ;         1 data inputs ; 254                         ;
@@ -570,22 +548,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 1                           ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 521                         ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 154                         ;
+;     normal            ; 520                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 168                         ;
 ;         3 data inputs ; 37                          ;
-;         4 data inputs ; 111                         ;
-;         5 data inputs ; 146                         ;
-;         6 data inputs ; 53                          ;
+;         4 data inputs ; 119                         ;
+;         5 data inputs ; 126                         ;
+;         6 data inputs ; 56                          ;
 ;     shared            ; 20                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 19                          ;
 ; arriav_mac            ; 4                           ;
-; boundary_port         ; 26                          ;
+; boundary_port         ; 27                          ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 77.00                       ;
-; Average LUT depth     ; 40.65                       ;
+; Max LUT depth         ; 76.20                       ;
+; Average LUT depth     ; 40.14                       ;
 +-----------------------+-----------------------------+
 
 
@@ -604,7 +582,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 19 17:37:50 2023
+    Info: Processing started: Fri May 19 23:11:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -658,7 +636,6 @@ Warning (275009): Pin "PushButton1" not connected
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(19): object "pipe_test" assigned a value but never read File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/bouncy_ball.vhd Line: 19
 Info (12128): Elaborating entity "text_setter" for hierarchy "bouncy_ball:inst3|text_setter:textSetter" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/bouncy_ball.vhd Line: 67
 Warning (10492): VHDL Process Statement warning at text_setter.vhd(23): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/text_setter.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at text_setter.vhd(24): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/text_setter.vhd Line: 24
@@ -700,9 +677,9 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/mouse.vhd Line: 157
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bouncy_ball:inst3|pipe:pipeone|Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
-Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
-Info (12133): Instantiated megafunction "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" with the following parameter: File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 62
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bouncy_ball:inst3|pipe:pipeone|Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 63
+Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 63
+Info (12133): Instantiated megafunction "bouncy_ball:inst3|pipe:pipeone|lpm_divide:Div0" with the following parameter: File: C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/pipe.vhd Line: 63
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "9"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -725,17 +702,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PushButton1"
-Info (21057): Implemented 1116 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 21 output pins
+    Info (21059): Implemented 22 output pins
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 1078 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4899 megabytes
-    Info: Processing ended: Fri May 19 17:38:02 2023
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Fri May 19 23:11:36 2023
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:23
 
 

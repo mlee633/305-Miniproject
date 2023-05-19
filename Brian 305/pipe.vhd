@@ -8,7 +8,7 @@ use ieee.math_real.all;
 
 entity pipe is
     port (
-        clk,vert_sync : in std_logic;
+        clk,vert_sync,enable : in std_logic;
         pixel_row,pixel_column : in std_logic_vector(9 DOWNTO 0);
 		  gap_x_pos_out : out std_logic_vector(9 downto 0);
         red,green,blue, pipe_test : out std_logic
@@ -26,8 +26,8 @@ component LFSR is
     end component;
     signal pipe1_on : std_logic;
     signal size,pipe_y_pos, pipeSize1, gapSize : std_logic_vector(9 DOWNTO 0);
-	signal gap_x_pos : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(639,10));
-	Signal gap_y_pos : std_logic_vector(9 downto 0) := std_logic_vector(to_unsigned(239,10));
+	signal gap_x_pos : std_logic_vector(9 downto 0) ;--:= std_logic_vector(to_unsigned(639,10));
+	Signal gap_y_pos : std_logic_vector(9 downto 0) ;--:= std_logic_vector(to_unsigned(239,10));
 	signal pipeWidth: std_logic_vector(9 downto 0) :=  std_logic_vector(to_unsigned(48, 10));
     signal tempHeight: integer;
     signal reset: std_logic;
@@ -54,6 +54,7 @@ variable v_height : integer;
 begin
 
     if (rising_edge(vert_sync)) then
+		 if enable = '1' then
         if (gap_x_pos < std_logic_vector(to_unsigned(1,10))) then
             gap_x_pos <= std_logic_vector(to_unsigned(687,10));
 			pipeWidth <= std_logic_vector(to_unsigned(48,10));
@@ -67,6 +68,11 @@ begin
         else
             gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(1,10));
         end if;
+		 else
+			gap_x_pos <= std_logic_vector(to_unsigned(0,10));
+			gap_y_pos <= std_logic_vector(to_unsigned(0,10));
+		 end if;
+		  
     end if;
 end process;
 gap_x_pos_out <= gap_x_pos;
