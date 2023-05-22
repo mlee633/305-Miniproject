@@ -1,5 +1,5 @@
 Flow report for MiniProjectQuartus
-Thu May 11 17:13:43 2023
+Mon May 22 15:21:44 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -37,24 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu May 11 17:13:42 2023          ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name               ; MiniProjectQuartus                              ;
-; Top-level Entity Name       ; bouncy_test_v1                                  ;
-; Family                      ; Cyclone V                                       ;
-; Device                      ; 5CEBA4F23C7                                     ;
-; Timing Models               ; Final                                           ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Mon May 22 15:21:29 2023           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; MiniProjectQuartus                              ;
+; Top-level Entity Name           ; bouncy_test_v1                                  ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CEBA4F23C7                                     ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 553 / 18,480 ( 3 % )                            ;
+; Total registers                 ; 233                                             ;
+; Total pins                      ; 27 / 224 ( 12 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                     ;
+; Total DSP Blocks                ; 4 / 66 ( 6 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2023 17:13:35 ;
+; Start date & time ; 05/22/2023 15:20:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MiniProjectQuartus  ;
 +-------------------+---------------------+
@@ -73,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+--------------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+--------------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 251053325904764.168378201408752        ; --                 ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 251053327274438.168472561511876        ; --                 ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; bouncy_test_v1 ; Top        ;
@@ -91,8 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4843 MB             ; 00:00:17                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:17                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4896 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:45     ; 1.1                     ; 6656 MB             ; 00:01:59                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4819 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.2                     ; 5137 MB             ; 00:00:08                           ;
+; Total                ; 00:01:16     ; --                      ; --                  ; 00:02:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,7 +109,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN404266         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN403699         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EN403699         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EN403699         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EN403699         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -109,6 +120,9 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
+quartus_fit --read_settings_files=off --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
+quartus_asm --read_settings_files=off --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
+quartus_sta MiniProjectQuartus -c MiniProjectQuartus
 
 
 

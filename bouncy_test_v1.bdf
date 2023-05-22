@@ -204,6 +204,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 392 1512 416))
 )
 (pin
 	(output)
@@ -220,6 +221,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 416 1512 440))
 )
 (pin
 	(output)
@@ -236,6 +238,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 440 1512 464))
 )
 (pin
 	(output)
@@ -252,6 +255,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 464 1512 488))
 )
 (pin
 	(output)
@@ -268,6 +272,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 488 1512 512))
 )
 (pin
 	(output)
@@ -284,6 +289,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 536 1520 560))
 )
 (pin
 	(output)
@@ -300,6 +306,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 512 1512 536))
 )
 (pin
 	(output)
@@ -316,6 +323,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 568 1520 592))
 )
 (pin
 	(output)
@@ -332,6 +340,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 592 1520 616))
 )
 (pin
 	(output)
@@ -348,6 +357,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 616 1520 640))
 )
 (pin
 	(output)
@@ -364,6 +374,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 648 1520 672))
 )
 (pin
 	(output)
@@ -380,6 +391,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 680 1520 704))
 )
 (pin
 	(output)
@@ -396,12 +408,30 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 704 1520 728))
 )
 (pin
 	(output)
 	(rect 1272 712 1448 728)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "HEX1[6]" (rect 90 0 128 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1448 728 1512 752))
+)
+(pin
+	(output)
+	(rect 1064 584 1240 600)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "collide" (rect 90 0 120 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -725,6 +755,13 @@ refer to the applicable agreement for further details.
 		(text "blue" (rect 203 91 219 103)(font "Arial" ))
 		(line (pt 240 96)(pt 224 96))
 	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "collide" (rect 0 0 30 12)(font "Arial" ))
+		(text "collide" (rect 194 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112))
+	)
 	(drawing
 		(rectangle (rect 16 16 224 160))
 	)
@@ -976,14 +1013,6 @@ refer to the applicable agreement for further details.
 	(pt 144 152)
 )
 (connector
-	(pt 1040 488)
-	(pt 1040 352)
-)
-(connector
-	(pt 336 488)
-	(pt 1040 488)
-)
-(connector
 	(pt 1064 504)
 	(pt 1064 336)
 )
@@ -1038,6 +1067,30 @@ refer to the applicable agreement for further details.
 	(pt 1136 408)
 	(pt 1176 408)
 	(bus)
+)
+(connector
+	(pt 336 488)
+	(pt 1056 488)
+)
+(connector
+	(pt 1056 352)
+	(pt 1056 488)
+)
+(connector
+	(pt 1056 352)
+	(pt 1040 352)
+)
+(connector
+	(pt 1040 368)
+	(pt 1048 368)
+)
+(connector
+	(pt 1048 368)
+	(pt 1048 592)
+)
+(connector
+	(pt 1048 592)
+	(pt 1064 592)
 )
 (junction (pt 304 152))
 (junction (pt 136 152))
