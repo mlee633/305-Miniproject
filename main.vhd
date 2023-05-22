@@ -17,6 +17,8 @@ architecture rtl of main is
             ball_y_pos : in std_logic_vector(9 downto 0);
         collide : out std_logic);
     end component;
+
+    --===============Pipe movement and display===================================
     component pipe is
         port (
             clk,vert_sync,enable   : in std_logic;
@@ -25,6 +27,8 @@ architecture rtl of main is
             red,green,blue, pipe_test : out std_logic
         );
     end component;
+
+    --=====================Data values required for displaying letters=================
     component text_setter is
         PORT
         (
@@ -33,6 +37,8 @@ architecture rtl of main is
             clock                   :    IN STD_LOGIC
         );
     end component;
+
+    --======================A component required for letter display=================
     component char_rom IS
         PORT
         (
@@ -42,16 +48,19 @@ architecture rtl of main is
             rom_mux_output		:	OUT STD_LOGIC
         );
     END component;
+    --==========================BCD counter==================================
     component BCD is
         port(Clk, Direction, Init, Enable: in std_logic;
             Q_Out: out std_logic_vector(3 downto 0));
     end component BCD;
      
+    --====================7 Segment display stuff============
     component BCD_to_7Seg is
          port (BCD_digit : in std_logic_vector(3 downto 0);
                SevenSeg_out : out std_logic_vector(6 downto 0));
     end component BCD_to_7Seg;
 
+    --====================Ball display and movement====================
     component ball is 
         port (vert_sync, left_click, enable: IN std_logic;
             pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
@@ -124,19 +133,21 @@ architecture rtl of main is
                     if (lives = 0) then
                         enable <= '0';
                     end if;
-                end if;
-            else
-                enable <= '1';
-                if (ones = "1001" and enable1 = '1') then
-                    enable2 <= '1';
+                
                 else
-                    enable2 <= '0';
-                end if;
-                if ball_y_pos = gap_x_pos then
-                    t_clk <= '1';
-                else 
-                    t_clk <= '0';
-                end if;
+                    enable1 <= '1';
+                    if (ones = "1001" and enable1 = '1') then
+                        enable2 <= '1';
+                    else
+                        enable2 <= '0';
+                    end if;
+                    if ball_y_pos = gap_x_pos then
+                        t_clk <= '1';
+                    else 
+                        t_clk <= '0';
+                    end if;
+                    lives := 0;
+                end if; 
             end if;
         end if;
     end process;

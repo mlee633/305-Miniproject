@@ -125,10 +125,6 @@ begin
 	end if;
 end process CLICK;
 
-
-
-
-
 --leftclick, ball_y_motion,ball_y_pos,
 BOUNCE_BALL: process(vert_sync)
 	variable ball_y_motion: std_logic_vector(9 downto 0) := CONV_STD_LOGIC_VECTOR(0, 10);
@@ -204,9 +200,7 @@ begin
 				lives := 0;
 			end if;
 		end if;
-
-
-
+		
 end process BOUNCE_BALL;
 -- else '0' when started = '1';
 --t_collide <= '1' when ((ball_on = '1') and (pipe_on = '1')) else '0';
