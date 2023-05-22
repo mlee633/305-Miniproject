@@ -6,6 +6,8 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 entity main is
     port(pb2, Clk,vert_sync, left_click: in std_logic;
         pixel_column,pixel_row : in std_logic_vector(9 downto 0);
+        oneSeg_out : out std_logic_vector(6 downto 0);
+		tenSeg_out : out std_logic_vector(6 downto 0);
         red, green, blue : out std_logic);
 end entity;
 
@@ -138,6 +140,7 @@ architecture rtl of main is
             end if;
         end if;
     end process;
-    
+    oneSeg_out <= oneSeg;
+    tenSeg_out <= tenSeg;
 
-end architecture;
+end architecture rtl;
