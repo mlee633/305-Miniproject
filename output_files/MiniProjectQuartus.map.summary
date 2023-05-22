@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon May 22 15:20:30 2023
+Analysis & Synthesis Status : Successful - Mon May 22 18:19:04 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : MiniProjectQuartus
-Top-level Entity Name : bouncy_test_v1
+Top-level Entity Name : ball
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 218
-Total pins : 27
+Total registers : 21
+Total pins : 47
 Total virtual pins : 0
-Total block memory bits : 4,096
-Total DSP Blocks : 4
+Total block memory bits : 0
+Total DSP Blocks : 3
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

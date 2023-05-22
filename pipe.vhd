@@ -19,9 +19,7 @@ architecture behaviour of pipe is
 component LFSR is
         port (
             clk ,reset  : in std_logic;
-
             outLFSR: out integer
-            
         );
     end component;
     signal pipe1_on : std_logic;

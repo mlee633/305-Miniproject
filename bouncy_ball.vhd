@@ -41,9 +41,9 @@ end component;
 component text_setter is
     PORT
     (
-        character_address     :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
+        character_address       :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
         pixel_row, pixel_col    :    IN STD_LOGIC_VECTOR (9 DOWNTO 4);
-        clock                               :     IN STD_LOGIC
+        clock                   :    IN STD_LOGIC
     );
 end component;
 component char_rom IS
@@ -132,24 +132,34 @@ end process CLICK;
 --leftclick, ball_y_motion,ball_y_pos,
 BOUNCE_BALL: process(vert_sync)
 	variable ball_y_motion: std_logic_vector(9 downto 0) := CONV_STD_LOGIC_VECTOR(0, 10);
-
+	variable lives: integer := 0;
+	
 begin
 		
 		if (rising_edge(vert_sync)) then
 		--When button has been  pressed
-			if (started = '1')then
+			if (started = '1') then
 			--start at current value of speed. from beginning should be 0.....hopefully
 				ball_y_motion := ball_y_motion;
 				
 				--Stuck on the bottom. Change the parameter for conversion to a 10 bit std logic vector to find sweet spot of the bottom of the moving object. 
-				if ((dead = '1') or ball_y_pos >= CONV_STD_LOGIC_VECTOR(450,10) + size) or (ball_y_pos <= CONV_STD_LOGIC_VECTOR(10,10) - size) or (((gap_x_pos - pipeWidth <= ball_x_pos) and (ball_x_pos<= gap_x_pos + pipeWidth) and  not (( gap_y_pos - gapSize<=ball_y_pos) and (ball_y_pos <=gap_y_pos + gapSize)))) then
+				if (dead = '1') or (ball_y_pos >= 450 + size) or (ball_y_pos <= 10 - size) or (((gap_x_pos - pipeWidth <= ball_x_pos) and (ball_x_pos<= gap_x_pos + pipeWidth) and not (( gap_y_pos - gapSize<=ball_y_pos) and (ball_y_pos <=gap_y_pos + gapSize)))) then
 				--stays at current position
-					dead <= '1';
+				--=================add the mode stuff under here==========================
+					--dead <= '1';
+					if (lives < 1) then
+						dead <= '1';
+						ball_y_motion := CONV_STD_LOGIC_VECTOR(0, 10); --resets to 0 speed
+						enable1 <= '0';
+						lives := lives + 1;
+					else 
+						dead <= '0';
+						ball_y_motion := ball_y_motion;
+					end if;
+					--ball_y_motion := CONV_STD_LOGIC_VECTOR(0, 10); --resets to 0 speed
 					
-					ball_y_motion := CONV_STD_LOGIC_VECTOR(0, 10); --resets to 0 speed
-					
-					enable1 <= '0';
 				else
+					--not dead state-
 					dead <= '0';
 					if (ones = "1001" and enable1 = '1') then
 							enable2 <= '1';
@@ -191,10 +201,11 @@ begin
 				--reset to starting position
 				ball_y_pos <= CONV_STD_LOGIC_VECTOR(200,10);
 				t_Clk <= '1';
+				lives := 0;
 			end if;
 		end if;
 
-		--end if;
+
 
 end process BOUNCE_BALL;
 -- else '0' when started = '1';
