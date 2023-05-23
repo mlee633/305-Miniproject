@@ -3,6 +3,7 @@ USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
 
+
 entity main is
     port(pb2, Clk,vert_sync, left_click: in std_logic;
         pixel_column,pixel_row : in std_logic_vector(9 downto 0);
@@ -13,12 +14,12 @@ end entity;
 
 architecture rtl of main is
     
-	 
+	 --=====================collision================================
 	 component collision is
-        port (vert_sync, ball_on, pipe_on,started : in std_logic;
-            ball_y_pos,size : in std_logic_vector(9 downto 0);
-        collide : out std_logic);
-    end component;
+port (vert_sync, ball_on, pipe_on, enable  : in std_logic;
+		ball_y_pos, size, gap_x_pos, pipeWidth, ball_x_pos, gap_y_pos, gapSize : in std_logic_vector(9 downto 0);
+    collide : out std_logic);
+end component;
 
     --===============Pipe movement and display===================================
     component pipe is
@@ -64,23 +65,27 @@ architecture rtl of main is
 
     --====================Ball display and movement====================
     component ball is 
-        port (vert_sync, left_click, enable: IN std_logic;
+        port (vert_sync, left_click, enable,reset: IN std_logic;
             pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
             ball_x_pos, ball_y_pos, ball_size  : OUT std_logic_vector(9 downto 0);
             ball_on,red, green, blue 			: OUT std_logic);
     end component ball;
-
+	 
+	 --=================================signal declaration
     SIGNAL ones,tens				: std_logic_vector(3 downto 0);
     signal oneSeg,tenSeg			: std_logic_vector(6 downto 0);
     SIGNAL character_address	: std_logic_vector(5 downto 0);
     SIGNAL enable : std_logic := '0';
+	 signal lives : integer := 2;
     SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
-    SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset,enable1,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+    SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
 	 signal dead : std_logic := '0';
     begin
-
+	
+	--=====================================Port map of all components============================================
     collision_detect: collision port map (vert_sync => vert_sync, ball_on => ball_on, pipe_on => pipe_on,
-                                        started => enable ,ball_y_pos => ball_y_pos, size => size ,collide => t_collide);
+                                        enable => enable ,ball_y_pos => ball_y_pos, size => size ,collide => t_collide,
+													 gap_x_pos => gap_x_pos, pipeWidth => pipeWidth, ball_x_pos => ball_x_pos, gap_y_pos => gap_y_pos, gapSize => gapSize);
 
     textSetter : text_setter port map(character_address	=> character_address,
                                     pixel_row => pixel_row(9 downto 4), 
@@ -102,7 +107,7 @@ architecture rtl of main is
                                 font_col => pixel_column(3 downto 1), clock	=> clk,
                                 rom_mux_output => rom_mux_output);
 
-    avatar: ball port map(vert_sync => vert_sync, left_click => left_click, enable => enable,
+    avatar: ball port map(vert_sync => vert_sync, left_click => left_click, enable => ball_enable, reset => ball_reset,
                         pixel_row => pixel_row, pixel_column => pixel_column,
                         ball_x_pos => ball_x_pos, ball_y_pos => ball_y_pos, ball_size => size,
                         ball_on => ball_on ,red => ball_red, green => ball_green, blue => ball_blue);
@@ -135,32 +140,46 @@ architecture rtl of main is
     end process CLICK;
 
     process(vert_sync)
-    variable lives : integer := 4;
+   
     begin
         if rising_edge(vert_sync) then
-            if (enable = '1' and dead = '0') then
-                if (t_collide = '1') then
-                    lives := lives - 1;
-                    if (lives = 0) then
+		  
+            if (enable = '1') then
+               if (t_collide = '1') then
+                    lives <= lives - 1;
+                    if (lives < 0) then
                         dead <= '1';
+								ball_enable <= '0';
+								ball_reset <= '1';
+								
                     end if;
                 
                 else
-						  dead <= '0';
-                    enable1 <= '1';
-                    if (ones = "1001" and enable1 = '1') then
-                        enable2 <= '1';
-                    else
-                        enable2 <= '0';
-                    end if;
-                    if ball_y_pos = gap_x_pos then
-                        t_clk <= '1';
-                    else 
-                        t_clk <= '0';
-                    end if;
-                    lives := 0;
-                end if; 
-            end if;
+					 ball_enable<= '1';
+					 ball_reset <= '0';
+					 
+					 --======================Point adding========================
+					 enable1 <= '1';
+                dead <= '0';
+						 if (ones = "1001" and enable1 = '1') then
+							enable2 <= '1';
+						 else
+							enable2 <= '0';
+						 end if;
+					    if (ball_x_pos = gap_x_pos) then
+							t_clk <= '1';
+						 else
+							t_clk <= '0';
+						 end if;
+					end if; 
+				else
+					-- Game not started, when button is pressed again after starting, 
+					ball_reset <= '1';
+					ball_enable <= '0';
+					t_clk <= '1';
+					lives <= 0;
+					dead <= '0';
+				end if;
         end if;
     end process;
     oneSeg_out <= oneSeg;

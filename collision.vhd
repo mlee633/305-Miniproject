@@ -27,7 +27,7 @@ begin
     --Setting a permanent state/signal which will be raised indefinitely if collision signal is detected. 
     Check: process(collision) 
     begin
-        if rising_edge(collision) then
+        if collision = '1' then
             collide <= '1';
         else
             collide <= '0';

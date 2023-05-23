@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Tue May 23 12:43:41 2023
+Tue May 23 14:35:07 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -16,24 +16,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
  10. State Machine - |MiniProjectQuartus|MOUSE:inst|mouse_state
- 11. Logic Cells Representing Combinational Loops
- 12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for main:inst1|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 18. Parameter Settings for User Entity Instance: main:inst1|char_rom:charRom|altsyncram:altsyncram_component
- 19. Parameter Settings for Inferred Entity Instance: main:inst1|pipe:pipeone|lpm_divide:Div0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "main:inst1|ball:avatar"
- 22. Port Connectivity Checks: "main:inst1|BCD:tensBCD"
- 23. Port Connectivity Checks: "main:inst1|BCD:onesBCD"
- 24. Port Connectivity Checks: "main:inst1|pipe:pipeone"
- 25. Port Connectivity Checks: "main:inst1|text_setter:textSetter"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for main:inst1|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 17. Parameter Settings for User Entity Instance: main:inst1|char_rom:charRom|altsyncram:altsyncram_component
+ 18. Parameter Settings for Inferred Entity Instance: main:inst1|pipe:pipeone|lpm_divide:Div0
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "main:inst1|ball:avatar"
+ 21. Port Connectivity Checks: "main:inst1|BCD:tensBCD"
+ 22. Port Connectivity Checks: "main:inst1|BCD:onesBCD"
+ 23. Port Connectivity Checks: "main:inst1|pipe:pipeone"
+ 24. Port Connectivity Checks: "main:inst1|text_setter:textSetter"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -59,17 +58,17 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 23 12:43:41 2023           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 23 14:35:07 2023           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; MiniProjectQuartus                              ;
 ; Top-level Entity Name           ; MiniProjectQuartus                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 249                                             ;
+; Total registers                 ; 251                                             ;
 ; Total pins                      ; 25                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 4,096                                           ;
-; Total DSP Blocks                ; 5                                               ;
+; Total DSP Blocks                ; 4                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -232,27 +231,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 546                   ;
+; Estimate of Logic utilization (ALMs needed) ; 560                   ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 1024                  ;
+; Combinational ALUT usage for logic          ; 1053                  ;
 ;     -- 7 input functions                    ; 3                     ;
 ;     -- 6 input functions                    ; 58                    ;
-;     -- 5 input functions                    ; 136                   ;
-;     -- 4 input functions                    ; 220                   ;
-;     -- <=3 input functions                  ; 607                   ;
+;     -- 5 input functions                    ; 142                   ;
+;     -- 4 input functions                    ; 214                   ;
+;     -- <=3 input functions                  ; 636                   ;
 ;                                             ;                       ;
-; Dedicated logic registers                   ; 249                   ;
+; Dedicated logic registers                   ; 251                   ;
 ;                                             ;                       ;
 ; I/O pins                                    ; 25                    ;
 ; Total MLAB memory bits                      ; 0                     ;
 ; Total block memory bits                     ; 4096                  ;
 ;                                             ;                       ;
-; Total DSP Blocks                            ; 5                     ;
+; Total DSP Blocks                            ; 4                     ;
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; halfclock:inst5|v_Clk ;
 ; Maximum fan-out                             ; 92                    ;
-; Total fan-out                               ; 4253                  ;
-; Average fan-out                             ; 3.18                  ;
+; Total fan-out                               ; 4325                  ;
+; Average fan-out                             ; 3.16                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -261,21 +260,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name        ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |MiniProjectQuartus                          ; 1024 (0)            ; 249 (0)                   ; 4096              ; 5          ; 25   ; 0            ; |MiniProjectQuartus                                                                                                                      ; MiniProjectQuartus ; work         ;
+; |MiniProjectQuartus                          ; 1053 (0)            ; 251 (0)                   ; 4096              ; 4          ; 25   ; 0            ; |MiniProjectQuartus                                                                                                                      ; MiniProjectQuartus ; work         ;
 ;    |MOUSE:inst|                              ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|MOUSE:inst                                                                                                           ; MOUSE              ; work         ;
 ;    |VGA_SYNC:inst2|                          ; 42 (42)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|VGA_SYNC:inst2                                                                                                       ; VGA_SYNC           ; work         ;
 ;    |halfclock:inst5|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|halfclock:inst5                                                                                                      ; halfclock          ; work         ;
-;    |main:inst1|                              ; 934 (87)            ; 136 (68)                  ; 4096              ; 5          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1                                                                                                           ; main               ; work         ;
+;    |main:inst1|                              ; 963 (82)            ; 138 (70)                  ; 4096              ; 4          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1                                                                                                           ; main               ; work         ;
 ;       |BCD:onesBCD|                          ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD:onesBCD                                                                                               ; BCD                ; work         ;
 ;       |BCD:tensBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD:tensBCD                                                                                               ; BCD                ; work         ;
 ;       |BCD_to_7Seg:one_segment|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:one_segment                                                                                   ; BCD_to_7Seg        ; work         ;
 ;       |BCD_to_7Seg:ten_segment|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:ten_segment                                                                                   ; BCD_to_7Seg        ; work         ;
-;       |ball:avatar|                          ; 94 (94)             ; 21 (21)                   ; 0                 ; 3          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|ball:avatar                                                                                               ; ball               ; work         ;
+;       |ball:avatar|                          ; 84 (84)             ; 21 (21)                   ; 0                 ; 2          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|ball:avatar                                                                                               ; ball               ; work         ;
 ;       |char_rom:charRom|                     ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|char_rom:charRom                                                                                          ; char_rom           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|char_rom:charRom|altsyncram:altsyncram_component                                                          ; altsyncram         ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                           ; altsyncram_d5g1    ; work         ;
-;       |collision:collision_detect|           ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|collision:collision_detect                                                                                ; collision          ; work         ;
-;       |pipe:pipeone|                         ; 712 (100)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone                                                                                              ; pipe               ; work         ;
+;       |collision:collision_detect|           ; 48 (48)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|collision:collision_detect                                                                                ; collision          ; work         ;
+;       |pipe:pipeone|                         ; 711 (99)            ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone                                                                                              ; pipe               ; work         ;
 ;          |LFSR:randomHeight|                 ; 5 (5)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|LFSR:randomHeight                                                                            ; LFSR               ; work         ;
 ;          |lpm_divide:Div0|                   ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
 ;             |lpm_divide_fpo:auto_generated|  ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated                                                ; lpm_divide_fpo     ; work         ;
@@ -302,9 +301,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
 ; Independent 9x9                 ; 1           ;
-; Two Independent 18x18           ; 3           ;
+; Two Independent 18x18           ; 1           ;
 ; Independent 18x18 plus 36       ; 1           ;
-; Total number of DSP blocks      ; 5           ;
+; Sum of two 18x18                ; 1           ;
+; Total number of DSP blocks      ; 4           ;
 ;                                 ;             ;
 ; Fixed Point Signed Multiplier   ; 2           ;
 ; Fixed Point Unsigned Multiplier ; 3           ;
@@ -324,17 +324,6 @@ Encoding Type:  One-Hot
 ; mouse_state.WAIT_CMD_ACK      ; 0                         ; 1                        ; 0                             ; 0                         ; 0                        ; 1                         ;
 ; mouse_state.INPUT_PACKETS     ; 1                         ; 0                        ; 0                             ; 0                         ; 0                        ; 1                         ;
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
-
-
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; main:inst1|collision:collision_detect|collide          ;   ;
-; Number of logic cells representing combinational loops ; 1 ;
-+--------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +---------------------------------------------------------------------------------+
@@ -370,12 +359,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 249   ;
-; Number of registers using Synchronous Clear  ; 111   ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 251   ;
+; Number of registers using Synchronous Clear  ; 121   ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 154   ;
+; Number of registers using Clock Enable       ; 143   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -385,20 +374,20 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-----------------------------------------------------------+---------+
 ; Inverted Register                                         ; Fan out ;
 +-----------------------------------------------------------+---------+
-; main:inst1|reset                                          ; 36      ;
-; main:inst1|pipe:pipeone|pipeWidth[5]                      ; 2       ;
-; main:inst1|pipe:pipeone|pipeWidth[4]                      ; 2       ;
-; main:inst1|ball:avatar|y_pos[6]                           ; 4       ;
-; main:inst1|ball:avatar|y_pos[7]                           ; 4       ;
-; main:inst1|ball:avatar|y_pos[3]                           ; 4       ;
+; main:inst1|reset                                          ; 49      ;
+; main:inst1|pipe:pipeone|pipeWidth[5]                      ; 5       ;
+; main:inst1|pipe:pipeone|pipeWidth[4]                      ; 5       ;
+; main:inst1|ball:avatar|y_pos[3]                           ; 5       ;
+; main:inst1|ball:avatar|y_pos[6]                           ; 5       ;
+; main:inst1|ball:avatar|y_pos[7]                           ; 5       ;
 ; MOUSE:inst|send_char                                      ; 3       ;
-; main:inst1|lives[2]                                       ; 2       ;
 ; main:inst1|pipe:pipeone|LFSR:randomHeight|currentState[0] ; 2       ;
 ; MOUSE:inst|SHIFTOUT[3]                                    ; 1       ;
 ; MOUSE:inst|SHIFTOUT[5]                                    ; 1       ;
 ; MOUSE:inst|SHIFTOUT[6]                                    ; 1       ;
 ; MOUSE:inst|SHIFTOUT[7]                                    ; 1       ;
 ; MOUSE:inst|SHIFTOUT[8]                                    ; 1       ;
+; main:inst1|lives[1]                                       ; 2       ;
 ; Total number of inverted registers = 14                   ;         ;
 +-----------------------------------------------------------+---------+
 
@@ -408,17 +397,22 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:onesBCD|counter[0]                      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|VGA_SYNC:inst2|v_count[5]                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[8]                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_y_pos[7]                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_x_pos[5]                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:tensBCD|counter[0]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:onesBCD|counter[2]                      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|lives[19]                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|VGA_SYNC:inst2|v_count[3]                              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion[6]                ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|y_pos[2]                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[3]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_y_pos[3]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_x_pos[8]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:tensBCD|counter[3]                      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|dead                                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|y_pos[6]                        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[4]                   ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion                   ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:one_segment|SevenSeg_out[5]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:ten_segment|SevenSeg_out[2]     ;
-; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:ten_segment|SevenSeg_out[0]     ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -535,15 +529,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "main:inst1|ball:avatar"                                                                   ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; ball_x_pos ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; green      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; blue       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "main:inst1|ball:avatar"                                                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; green ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; blue  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------+
@@ -564,16 +557,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "main:inst1|pipe:pipeone"                                                                     ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipewidth_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; gapsize_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; gap_y_pos_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; red           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "main:inst1|pipe:pipeone"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; red  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -590,15 +580,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 249                         ;
+; arriav_ff             ; 251                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 80                          ;
+;     ENA               ; 69                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 59                          ;
-;     SCLR              ; 52                          ;
-;     plain             ; 42                          ;
+;     SCLR              ; 62                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 44                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1029                        ;
+; arriav_lcell_comb     ; 1058                        ;
 ;     arith             ; 503                         ;
 ;         0 data inputs ; 26                          ;
 ;         1 data inputs ; 286                         ;
@@ -608,23 +599,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 1                           ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 503                         ;
+;     normal            ; 522                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 140                         ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 118                         ;
-;         5 data inputs ; 135                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 156                         ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 112                         ;
+;         5 data inputs ; 141                         ;
 ;         6 data inputs ; 58                          ;
-;     shared            ; 20                          ;
+;     shared            ; 30                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 19                          ;
-; arriav_mac            ; 5                           ;
+;         2 data inputs ; 29                          ;
+; arriav_mac            ; 4                           ;
 ; boundary_port         ; 25                          ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 76.20                       ;
-; Average LUT depth     ; 37.36                       ;
+; Average LUT depth     ; 36.78                       ;
 +-----------------------+-----------------------------+
 
 
@@ -643,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 23 12:43:27 2023
+    Info: Processing started: Tue May 23 14:34:53 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -652,8 +643,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file pipe.vh
     Info (12022): Found design unit 1: pipe-behaviour File: H:/Documents/302-work/pipe.vhd Line: 18
     Info (12023): Found entity 1: pipe File: H:/Documents/302-work/pipe.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
-    Info (12022): Found design unit 1: main-rtl File: H:/Documents/302-work/main.vhd Line: 14
-    Info (12023): Found entity 1: main File: H:/Documents/302-work/main.vhd Line: 6
+    Info (12022): Found design unit 1: main-rtl File: H:/Documents/302-work/main.vhd Line: 15
+    Info (12023): Found entity 1: main File: H:/Documents/302-work/main.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior File: H:/Documents/302-work/mouse.vhd Line: 18
     Info (12023): Found entity 1: MOUSE File: H:/Documents/302-work/mouse.vhd Line: 9
@@ -698,39 +689,34 @@ Warning (275011): Block or symbol "MOUSE" of instance "inst" overlaps another bl
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst5"
 Info (12128): Elaborating entity "main" for hierarchy "main:inst1"
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(77): object "pipeWidth" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(77): object "gapSize" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(77): object "gap_y_pos" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(77): object "ball_x_pos" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(78): object "pipe_red" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 78
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(78): object "ball_green" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 78
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(78): object "ball_blue" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 78
-Info (12128): Elaborating entity "collision" for hierarchy "main:inst1|collision:collision_detect" File: H:/Documents/302-work/main.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at collision.vhd(19): signal "started" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/collision.vhd Line: 19
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(81): object "pipe_red" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 81
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(81): object "ball_green" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 81
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(81): object "ball_blue" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 81
+Info (12128): Elaborating entity "collision" for hierarchy "main:inst1|collision:collision_detect" File: H:/Documents/302-work/main.vhd Line: 86
 Warning (12125): Using design file text_setter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: text_setter-behave File: H:/Documents/302-work/text_setter.vhd Line: 18
     Info (12023): Found entity 1: text_setter File: H:/Documents/302-work/text_setter.vhd Line: 8
-Info (12128): Elaborating entity "text_setter" for hierarchy "main:inst1|text_setter:textSetter" File: H:/Documents/302-work/main.vhd Line: 85
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(24): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(25): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(27): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(29): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(31): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(33): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(35): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(38): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(40): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 40
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(42): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 42
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(44): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 44
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(46): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 46
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(48): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 48
-Warning (10492): VHDL Process Statement warning at text_setter.vhd(50): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 50
-Info (12128): Elaborating entity "pipe" for hierarchy "main:inst1|pipe:pipeone" File: H:/Documents/302-work/main.vhd Line: 89
+Info (12128): Elaborating entity "text_setter" for hierarchy "main:inst1|text_setter:textSetter" File: H:/Documents/302-work/main.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(25): signal "pixel_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(26): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(28): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(30): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(32): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(34): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(36): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(39): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(41): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(43): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(45): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(47): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(49): signal "pixel_col" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at text_setter.vhd(51): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/text_setter.vhd Line: 51
+Info (12128): Elaborating entity "pipe" for hierarchy "main:inst1|pipe:pipeone" File: H:/Documents/302-work/main.vhd Line: 94
 Warning (10541): VHDL Signal Declaration warning at pipe.vhd(31): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/302-work/pipe.vhd Line: 31
 Info (12128): Elaborating entity "LFSR" for hierarchy "main:inst1|pipe:pipeone|LFSR:randomHeight" File: H:/Documents/302-work/pipe.vhd Line: 36
-Info (12128): Elaborating entity "BCD" for hierarchy "main:inst1|BCD:onesBCD" File: H:/Documents/302-work/main.vhd Line: 93
-Info (12128): Elaborating entity "BCD_to_7Seg" for hierarchy "main:inst1|BCD_to_7Seg:one_segment" File: H:/Documents/302-work/main.vhd Line: 97
-Info (12128): Elaborating entity "char_rom" for hierarchy "main:inst1|char_rom:charRom" File: H:/Documents/302-work/main.vhd Line: 101
+Info (12128): Elaborating entity "BCD" for hierarchy "main:inst1|BCD:onesBCD" File: H:/Documents/302-work/main.vhd Line: 98
+Info (12128): Elaborating entity "BCD_to_7Seg" for hierarchy "main:inst1|BCD_to_7Seg:one_segment" File: H:/Documents/302-work/main.vhd Line: 102
+Info (12128): Elaborating entity "char_rom" for hierarchy "main:inst1|char_rom:charRom" File: H:/Documents/302-work/main.vhd Line: 106
 Info (12128): Elaborating entity "altsyncram" for hierarchy "main:inst1|char_rom:charRom|altsyncram:altsyncram_component" File: H:/Documents/302-work/char_rom.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "main:inst1|char_rom:charRom|altsyncram:altsyncram_component" File: H:/Documents/302-work/char_rom.vhd Line: 51
 Info (12133): Instantiated megafunction "main:inst1|char_rom:charRom|altsyncram:altsyncram_component" with the following parameter: File: H:/Documents/302-work/char_rom.vhd Line: 51
@@ -751,10 +737,9 @@ Info (12133): Instantiated megafunction "main:inst1|char_rom:charRom|altsyncram:
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
     Info (12023): Found entity 1: altsyncram_d5g1 File: H:/Documents/302-work/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "main:inst1|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "ball" for hierarchy "main:inst1|ball:avatar" File: H:/Documents/302-work/main.vhd Line: 105
+Info (12128): Elaborating entity "ball" for hierarchy "main:inst1|ball:avatar" File: H:/Documents/302-work/main.vhd Line: 110
 Warning (10541): VHDL Signal Declaration warning at ball.vhd(12): used implicit default value for signal "ball_on" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/302-work/ball.vhd Line: 12
 Warning (10540): VHDL Signal Declaration warning at ball.vhd(20): used explicit default value for signal "x_pos" because signal was never assigned a value File: H:/Documents/302-work/ball.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at ball.vhd(43): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/ball.vhd Line: 43
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: H:/Documents/302-work/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/mouse.vhd Line: 151
@@ -788,17 +773,17 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1181 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1177 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1143 logic cells
+    Info (21061): Implemented 1140 logic cells
     Info (21064): Implemented 8 RAM segments
-    Info (21062): Implemented 5 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4894 megabytes
-    Info: Processing ended: Tue May 23 12:43:42 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Tue May 23 14:35:07 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:19
 
 
