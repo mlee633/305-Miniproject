@@ -21,6 +21,7 @@ begin
 	 
     process (clock) 
     begin
+        --
         if(pixel_row= "00010") then
             if (pixel_col ="00010") then
                 character_address <= "000110"; --F
@@ -47,7 +48,7 @@ begin
                 character_address <= "010011"; -- S
             elsif (pixel_col = "11001") then
 
-                character_address <= "110000" + CONV_STD_LOGIC_VECTOR(lives,5);
+                character_address <= "110000" + CONV_STD_LOGIC_VECTOR(lives,5); --Displaying number of lives
             else
                 character_address <= "100000";
             end if;
