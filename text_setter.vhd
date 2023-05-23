@@ -10,6 +10,7 @@ entity text_setter is
     (
         character_address     :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
         pixel_row, pixel_col    :    IN STD_LOGIC_VECTOR (9 DOWNTO 4);
+        lives : in integer;
         clock                               :     IN STD_LOGIC 
     );
 end text_setter;
@@ -32,7 +33,21 @@ begin
             elsif (pixel_col ="00111") then
                 character_address <= "010000"; --P
             elsif (pixel_col ="01000") then
-                character_address <= "000001"; --Y
+                character_address <= "000001"; --A
+
+            elsif (pixel_col = "10100") then
+                character_address <= "001100"; -- L
+            elsif (pixel_col = "10101") then
+                character_address <= "001001"; -- I
+            elsif (pixel_col = "10110") then
+                character_address <= "010110"; -- V
+            elsif (pixel_col = "10111") then
+                character_address <= "000101"; -- E
+            elsif (pixel_col = "11000") then
+                character_address <= "010011"; -- S
+            elsif (pixel_col = "11001") then
+
+                character_address <= "110000" + CONV_STD_LOGIC_VECTOR(lives,5);
             else
                 character_address <= "100000";
             end if;

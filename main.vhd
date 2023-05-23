@@ -12,9 +12,11 @@ entity main is
 end entity;
 
 architecture rtl of main is
-    component collision is
+    
+	 
+	 component collision is
         port (vert_sync, ball_on, pipe_on,started : in std_logic;
-            ball_y_pos : in std_logic_vector(9 downto 0);
+            ball_y_pos,size : in std_logic_vector(9 downto 0);
         collide : out std_logic);
     end component;
 
@@ -64,7 +66,7 @@ architecture rtl of main is
     component ball is 
         port (vert_sync, left_click, enable: IN std_logic;
             pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-            ball_x_pos, ball_y_pos  : OUT std_logic_vector(9 downto 0);
+            ball_x_pos, ball_y_pos, ball_size  : OUT std_logic_vector(9 downto 0);
             ball_on,red, green, blue 			: OUT std_logic);
     end component ball;
 
@@ -72,12 +74,12 @@ architecture rtl of main is
     signal oneSeg,tenSeg			: std_logic_vector(6 downto 0);
     SIGNAL character_address	: std_logic_vector(5 downto 0);
     SIGNAL enable : std_logic := '0';
-    SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move : std_logic_vector(9 downto  0);
+    SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
     SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset,enable1,enable2,dead,t_collide, ball_red, ball_green, ball_blue	: std_logic;
     begin
 
     collision_detect: collision port map (vert_sync => vert_sync, ball_on => ball_on, pipe_on => pipe_on,
-                                        started => enable ,ball_y_pos => ball_y_pos,collide => t_collide);
+                                        started => enable ,ball_y_pos => ball_y_pos, size => size ,collide => t_collide);
 
     textSetter : text_setter port map(character_address	=> character_address,
                                     pixel_row => pixel_row(9 downto 4), 
@@ -101,7 +103,7 @@ architecture rtl of main is
 
     avatar: ball port map(vert_sync => vert_sync, left_click => left_click, enable => enable,
                         pixel_row => pixel_row, pixel_column => pixel_column,
-                        ball_x_pos => ball_x_pos, ball_y_pos => ball_y_pos,
+                        ball_x_pos => ball_x_pos, ball_y_pos => ball_y_pos, ball_size => size,
                         ball_on => ball_on ,red => ball_red, green => ball_green, blue => ball_blue);
     --Running of game
     CLICK: process(pb2)

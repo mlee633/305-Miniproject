@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 entity collision is
-port (vert_sync, ball_on, pipe_on, started : in std_logic;
-		ball_y_pos : in std_logic_vector(9 downto 0);
+port (vert_sync, ball_on, pipe_on, started  : in std_logic;
+		ball_y_pos, size : in std_logic_vector(9 downto 0);
     collide : out std_logic);
 end entity;
 

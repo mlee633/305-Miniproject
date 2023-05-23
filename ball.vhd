@@ -8,7 +8,7 @@ ENTITY ball IS
 	PORT
 		(vert_sync, left_click, enable: IN std_logic;
 		  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  ball_x_pos, ball_y_pos   : OUT std_logic_vector(9 downto 0);
+		  ball_x_pos, ball_y_pos, ball_size   : OUT std_logic_vector(9 downto 0);
 		  ball_on,red, green, blue 			: OUT std_logic);		
 END ball;
 
@@ -27,7 +27,7 @@ x_pos <= CONV_STD_LOGIC_VECTOR(590,10);
 
 b_on <= '1' when ((pixel_column - x_pos) * (pixel_column - x_pos) + (pixel_row - y_pos) * (pixel_row - y_pos) <= size * size) else '0';
 
-
+ball_size <= size;
 -- Colours for pixel data on video signal
 -- Keeping background white and square in red
 Red <=  '1';
@@ -60,7 +60,7 @@ ball_x_pos <= x_pos;
 						
 		end if;
 		y_pos <= y_pos + ball_y_motion;	
-		ball_y_move <= ball_y_motion;
+		
 	end if;
 	end process;
 	

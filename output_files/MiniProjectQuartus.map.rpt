@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Mon May 22 18:19:05 2023
+Tue May 23 12:04:34 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -10,16 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,27 +33,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 22 18:19:04 2023           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; MiniProjectQuartus                              ;
-; Top-level Entity Name           ; ball                                            ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 21                                              ;
-; Total pins                      ; 47                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 3                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue May 23 12:04:34 2023               ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name               ; MiniProjectQuartus                              ;
+; Top-level Entity Name       ; main                                            ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -71,7 +57,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; ball               ; MiniProjectQuartus ;
+; Top-level entity name                                                           ; main               ; MiniProjectQuartus ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -161,151 +147,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                          ;
-+----------------------------------+-----------------+-----------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------+---------+
-; ball.vhd                         ; yes             ; User VHDL File  ; H:/Documents/302-work/ball.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 64              ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 108             ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 19              ;
-;     -- 5 input functions                    ; 15              ;
-;     -- 4 input functions                    ; 11              ;
-;     -- <=3 input functions                  ; 63              ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 21              ;
-;                                             ;                 ;
-; I/O pins                                    ; 47              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 3               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; vert_sync~input ;
-; Maximum fan-out                             ; 21              ;
-; Total fan-out                               ; 516             ;
-; Average fan-out                             ; 2.28            ;
-+---------------------------------------------+-----------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ball                      ; 108 (108)           ; 21 (21)                   ; 0                 ; 3          ; 47   ; 0            ; |ball               ; ball        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 1           ;
-; Two Independent 18x18           ; 2           ;
-; Total number of DSP blocks      ; 3           ;
-;                                 ;             ;
-; Fixed Point Signed Multiplier   ; 2           ;
-; Fixed Point Unsigned Multiplier ; 1           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 21    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 21    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; y_pos[1]                               ; 3       ;
-; y_pos[2]                               ; 3       ;
-; y_pos[3]                               ; 3       ;
-; y_pos[4]                               ; 3       ;
-; y_pos[6]                               ; 3       ;
-; y_pos[8]                               ; 3       ;
-; Total number of inverted registers = 6 ;         ;
-+----------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |ball|ball_y_motion        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
-;     ENA               ; 21                          ;
-; arriav_lcell_comb     ; 116                         ;
-;     arith             ; 48                          ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 21                          ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 1                           ;
-;     normal            ; 58                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 14                          ;
-;         6 data inputs ; 19                          ;
-;     shared            ; 10                          ;
-;         2 data inputs ; 10                          ;
-; arriav_mac            ; 3                           ;
-; boundary_port         ; 47                          ;
-;                       ;                             ;
-; Max LUT depth         ; 5.70                        ;
-; Average LUT depth     ; 3.65                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -314,7 +160,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 22 18:18:52 2023
+    Info: Processing started: Tue May 23 12:04:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -322,7 +168,9 @@ Info (12021): Found 0 design units, including 0 entities, in source file pipe_te
 Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
     Info (12022): Found design unit 1: pipe-behaviour File: H:/Documents/302-work/pipe.vhd Line: 18
     Info (12023): Found entity 1: pipe File: H:/Documents/302-work/pipe.vhd Line: 9
-Info (12021): Found 0 design units, including 0 entities, in source file main.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: main-rtl File: H:/Documents/302-work/main.vhd Line: 14
+    Info (12023): Found entity 1: main File: H:/Documents/302-work/main.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior File: H:/Documents/302-work/mouse.vhd Line: 18
     Info (12023): Found entity 1: MOUSE File: H:/Documents/302-work/mouse.vhd Line: 9
@@ -360,36 +208,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file lfsr.vh
     Info (12022): Found design unit 1: LFSR-rtl File: H:/Documents/302-work/LFSR.vhd Line: 13
     Info (12023): Found entity 1: LFSR File: H:/Documents/302-work/LFSR.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file collision.vhd
-    Info (12022): Found design unit 1: collision-rtl File: H:/Documents/302-work/collision.vhd Line: 8
+    Info (12022): Found design unit 1: collision-rtl File: H:/Documents/302-work/collision.vhd Line: 9
     Info (12023): Found entity 1: collision File: H:/Documents/302-work/collision.vhd Line: 3
-Info (12127): Elaborating entity "ball" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ball.vhd(12): used implicit default value for signal "ball_on" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/302-work/ball.vhd Line: 12
-Warning (10492): VHDL Process Statement warning at ball.vhd(43): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/302-work/ball.vhd Line: 43
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ball_x_pos[0]" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[1]" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[2]" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[3]" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[4]" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[5]" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[6]" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[7]" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[8]" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_x_pos[9]" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 11
-    Warning (13410): Pin "ball_on" is stuck at GND File: H:/Documents/302-work/ball.vhd Line: 12
-    Warning (13410): Pin "red" is stuck at VCC File: H:/Documents/302-work/ball.vhd Line: 12
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 109 logic cells
-    Info (21062): Implemented 3 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4887 megabytes
-    Info: Processing ended: Mon May 22 18:19:05 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:18
+Error (10327): VHDL error at collision.vhd(12): can't determine definition of operator ""+"" -- found 0 possible definitions File: H:/Documents/302-work/collision.vhd Line: 12
+Error (10327): VHDL error at collision.vhd(12): can't determine definition of operator ""-"" -- found 0 possible definitions File: H:/Documents/302-work/collision.vhd Line: 12
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4843 megabytes
+    Error: Processing ended: Tue May 23 12:04:34 2023
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:17
 
 
