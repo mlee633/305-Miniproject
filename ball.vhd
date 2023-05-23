@@ -16,21 +16,21 @@ architecture behavior of ball is
 
 SIGNAL b_on					: std_logic;
 SIGNAL size					: std_logic_vector(9 DOWNTO 0);
-signal y_pos : std_logic_vector(9 downto 0):=CONV_STD_LOGIC_VECTOR(350,10);
-SIGNAL x_pos	: std_logic_vector(9 DOWNTO 0);
+signal y_pos : std_logic_vector(9 downto 0):=CONV_STD_LOGIC_VECTOR(200,10);
+SIGNAL x_pos	: std_logic_vector(9 DOWNTO 0):= CONV_STD_LOGIC_VECTOR(200,10);
 SIGNAL prev_clicked : std_logic;
 BEGIN           
 
 size <= CONV_STD_LOGIC_VECTOR(12,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-x_pos <= CONV_STD_LOGIC_VECTOR(590,10);
+
 
 b_on <= '1' when ((pixel_column - x_pos) * (pixel_column - x_pos) + (pixel_row - y_pos) * (pixel_row - y_pos) <= size * size) else '0';
 
 ball_size <= size;
 -- Colours for pixel data on video signal
 -- Keeping background white and square in red
-Red <=  '1';
+Red <=  b_on;
 -- Turn off Green and Blue when displaying square
 Green <= not b_on;
 Blue <=  not b_on;

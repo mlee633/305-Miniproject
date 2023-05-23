@@ -1,5 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_SIGNED.all;
 entity collision is
 port (vert_sync, ball_on, pipe_on, started  : in std_logic;
 		ball_y_pos, size : in std_logic_vector(9 downto 0);

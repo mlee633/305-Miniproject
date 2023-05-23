@@ -75,7 +75,8 @@ architecture rtl of main is
     SIGNAL character_address	: std_logic_vector(5 downto 0);
     SIGNAL enable : std_logic := '0';
     SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
-    SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset,enable1,enable2,dead,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+    SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset,enable1,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+	 signal dead : std_logic := '0';
     begin
 
     collision_detect: collision port map (vert_sync => vert_sync, ball_on => ball_on, pipe_on => pipe_on,
@@ -106,6 +107,14 @@ architecture rtl of main is
                         ball_x_pos => ball_x_pos, ball_y_pos => ball_y_pos, ball_size => size,
                         ball_on => ball_on ,red => ball_red, green => ball_green, blue => ball_blue);
     --Running of game
+	 
+	Red <=  (ball_red) or (rom_mux_output); 
+
+	Green <= pipe_green or (rom_mux_output);
+
+	Blue <=  (not ball_on) and pipe_blue;
+
+	 
     CLICK: process(pb2)
     --Counting number of button clicks
     variable numOfpush : integer := 0;
@@ -129,14 +138,15 @@ architecture rtl of main is
     variable lives : integer := 4;
     begin
         if rising_edge(vert_sync) then
-            if (enable = '1') then
+            if (enable = '1' and dead = '0') then
                 if (t_collide = '1') then
                     lives := lives - 1;
                     if (lives = 0) then
-                        enable <= '0';
+                        dead <= '1';
                     end if;
                 
                 else
+						  dead <= '0';
                     enable1 <= '1';
                     if (ones = "1001" and enable1 = '1') then
                         enable2 <= '1';
