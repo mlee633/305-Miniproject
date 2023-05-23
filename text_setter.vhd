@@ -47,6 +47,8 @@ begin
             elsif (pixel_col = "11000") then
                 character_address <= "010011"; -- S
             elsif (pixel_col = "11001") then
+                character_address <= "101101"; -- -
+            elsif (pixel_col = "11010") then
 
                 character_address <= "110000" + CONV_STD_LOGIC_VECTOR(lives,5); --Displaying number of lives
             else
