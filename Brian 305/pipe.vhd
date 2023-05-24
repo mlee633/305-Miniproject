@@ -10,8 +10,10 @@ entity pipe is
     port (
         clk,vert_sync,enable : in std_logic;
         pixel_row,pixel_column : in std_logic_vector(9 DOWNTO 0);
-		  gap_x_pos_out : out std_logic_vector(9 downto 0);
-        red,green,blue, pipe_test : out std_logic
+        pipeWidth_out,gapSize_out, gap_x_pos_out ,gap_y_pos_out: out std_logic_vector(9 downto 0);
+        red,green,blue, pipe_test : out std_logic;
+		  pipeSpeed : in integer
+		  
     );
 end entity;
 
@@ -19,9 +21,7 @@ architecture behaviour of pipe is
 component LFSR is
         port (
             clk ,reset  : in std_logic;
-
             outLFSR: out integer
-            
         );
     end component;
     signal pipe1_on : std_logic;
@@ -66,7 +66,7 @@ begin
 				pipeWidth <= pipeWidth - std_logic_vector(to_unsigned(1,10));
 				gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(1,10));
         else
-            gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(1,10));
+            gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(pipeSpeed,10));
         end if;
 		 else
 			gap_x_pos <= std_logic_vector(to_unsigned(0,10));
@@ -75,5 +75,8 @@ begin
 		  
     end if;
 end process;
+pipeWidth_out <= pipeWidth;
 gap_x_pos_out <= gap_x_pos;
+gap_y_pos_out <= gap_y_pos;
+gapSize_out <= pipeWidth;
 end architecture behaviour;

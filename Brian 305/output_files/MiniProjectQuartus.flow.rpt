@@ -1,5 +1,5 @@
 Flow report for MiniProjectQuartus
-Fri May 19 23:12:34 2023
+Thu May 25 00:57:35 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri May 19 23:12:27 2023       ;
+; Flow Status                     ; Successful - Thu May 25 00:57:30 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; MiniProjectQuartus                          ;
-; Top-level Entity Name           ; bouncy_test_v1                              ;
+; Top-level Entity Name           ; MiniProjectQuartus                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 524 / 18,480 ( 3 % )                        ;
-; Total registers                 ; 240                                         ;
+; Logic utilization (in ALMs)     ; 599 / 18,480 ( 3 % )                        ;
+; Total registers                 ; 277                                         ;
 ; Total pins                      ; 27 / 224 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                 ;
@@ -67,28 +67,27 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2023 23:11:25 ;
+; Start date & time ; 05/25/2023 00:56:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MiniProjectQuartus  ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                ;
-+-------------------------------------+----------------------------------------+--------------------+----------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name    ; Section Id ;
-+-------------------------------------+----------------------------------------+--------------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 49410870269666.168449468402376         ; --                 ; --             ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --             ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --             ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; bouncy_test_v1 ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                 ; bouncy_test_v1 ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                 ; bouncy_test_v1 ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                 ; --             ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                 ; --             ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                 ; --             ; --         ;
-; TOP_LEVEL_ENTITY                    ; bouncy_test_v1                         ; MiniProjectQuartus ; --             ; --         ;
-+-------------------------------------+----------------------------------------+--------------------+----------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 176156953916808.168493297723832        ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -96,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4889 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:46     ; 1.1                     ; 6583 MB             ; 00:02:12                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4817 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.5                     ; 5124 MB             ; 00:00:09                           ;
-; Total                ; 00:01:06     ; --                      ; --                  ; 00:02:46                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4960 MB             ; 00:00:15                           ;
+; Fitter               ; 00:01:00     ; 1.2                     ; 7131 MB             ; 00:04:25                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4819 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.8                     ; 5206 MB             ; 00:00:06                           ;
+; Total                ; 00:01:16     ; --                      ; --                  ; 00:04:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +108,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Shaaran-Desktop  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Shaaran-Desktop  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Shaaran-Desktop  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Shaaran-Desktop  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-BOO1NRU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-BOO1NRU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-BOO1NRU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-BOO1NRU  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

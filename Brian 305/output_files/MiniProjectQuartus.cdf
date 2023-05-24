@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/shaar/OneDrive/Desktop/302-work/Brian 305/output_files/") File("MiniProjectQuartus.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/OEM/Documents/302-work/Brian 305/output_files/") File("MiniProjectQuartus.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
