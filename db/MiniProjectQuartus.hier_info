@@ -8,6 +8,7 @@ green <= VGA_SYNC:inst2.green_out
 red <= VGA_SYNC:inst2.red_out
 horiz_Out <= VGA_SYNC:inst2.horiz_sync_out
 vert_Out <= VGA_SYNC:inst2.vert_sync_out
+collided <= main:inst1.collided
 HEX0[0] <= main:inst1.oneSeg_out[0]
 HEX0[1] <= main:inst1.oneSeg_out[1]
 HEX0[2] <= main:inst1.oneSeg_out[2]
@@ -155,7 +156,7 @@ vert_sync => enable2.CLK
 vert_sync => enable1.CLK
 vert_sync => ball_reset.CLK
 vert_sync => ball_enable.CLK
-vert_sync => dead.CLK
+vert_sync => pipeEnable.CLK
 vert_sync => lives[0].CLK
 vert_sync => lives[1].CLK
 vert_sync => lives[2].CLK
@@ -188,6 +189,7 @@ vert_sync => lives[28].CLK
 vert_sync => lives[29].CLK
 vert_sync => lives[30].CLK
 vert_sync => lives[31].CLK
+vert_sync => prevCollide.CLK
 vert_sync => pipe:pipeone.vert_sync
 vert_sync => ball:avatar.vert_sync
 left_click => ball:avatar.left_click
@@ -266,6 +268,7 @@ tenSeg_out[6] <= BCD_to_7Seg:ten_segment.SevenSeg_out[6]
 red <= red.DB_MAX_OUTPUT_PORT_TYPE
 green <= green.DB_MAX_OUTPUT_PORT_TYPE
 blue <= blue.DB_MAX_OUTPUT_PORT_TYPE
+collided <= collision:collision_detect.collide
 
 
 |MiniProjectQuartus|main:inst1|collision:collision_detect

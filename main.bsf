@@ -100,6 +100,13 @@ refer to the applicable agreement for further details.
 		(text "blue" (rect 204 91 219 103)(font "Arial" ))
 		(line (pt 240 96)(pt 224 96)(line_width 1))
 	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "collided" (rect 0 0 27 12)(font "Arial" ))
+		(text "collided" (rect 192 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 224 128)(line_width 1))
 	)

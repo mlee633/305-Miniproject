@@ -1,5 +1,5 @@
 Timing Analyzer report for MiniProjectQuartus
-Wed May 24 19:43:41 2023
+Wed May 24 20:51:27 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -101,16 +101,16 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.34        ;
+; Average used               ; 1.33        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.2%      ;
-;     Processor 3            ;   7.1%      ;
-;     Processor 4            ;   7.1%      ;
-;     Processor 5            ;   6.4%      ;
-;     Processor 6            ;   6.4%      ;
+;     Processor 2            ;   7.0%      ;
+;     Processor 3            ;   6.9%      ;
+;     Processor 4            ;   6.8%      ;
+;     Processor 5            ;   6.2%      ;
+;     Processor 6            ;   6.2%      ;
 +----------------------------+-------------+
 
 
@@ -133,11 +133,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 89.86 MHz  ; 89.86 MHz       ; halfclock:inst5|v_Clk        ;      ;
-; 154.7 MHz  ; 154.7 MHz       ; VGA_SYNC:inst2|vert_sync_out ;      ;
-; 159.26 MHz ; 159.26 MHz      ; pb2                          ;      ;
-; 250.0 MHz  ; 250.0 MHz       ; MOUSE:inst|MOUSE_CLK_FILTER  ;      ;
-; 349.65 MHz ; 349.65 MHz      ; main:inst1|t_Clk             ;      ;
+; 90.93 MHz  ; 90.93 MHz       ; halfclock:inst5|v_Clk        ;      ;
+; 152.11 MHz ; 152.11 MHz      ; VGA_SYNC:inst2|vert_sync_out ;      ;
+; 160.67 MHz ; 160.67 MHz      ; pb2                          ;      ;
+; 236.85 MHz ; 236.85 MHz      ; MOUSE:inst|MOUSE_CLK_FILTER  ;      ;
+; 344.0 MHz  ; 344.0 MHz       ; main:inst1|t_Clk             ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -153,12 +153,12 @@ HTML report is unavailable in plain text report export.
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; VGA_SYNC:inst2|vert_sync_out ; -79.598 ; -1358.559     ;
-; halfclock:inst5|v_Clk        ; -10.128 ; -370.811      ;
-; main:inst1|t_Clk             ; -8.567  ; -65.404       ;
-; pb2                          ; -5.279  ; -169.055      ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -3.633  ; -119.696      ;
-; clk                          ; -2.521  ; -2.521        ;
+; VGA_SYNC:inst2|vert_sync_out ; -78.768 ; -1355.055     ;
+; halfclock:inst5|v_Clk        ; -10.214 ; -327.108      ;
+; main:inst1|t_Clk             ; -8.880  ; -70.588       ;
+; pb2                          ; -5.224  ; -165.482      ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -3.222  ; -89.099       ;
+; clk                          ; -2.729  ; -2.729        ;
 +------------------------------+---------+---------------+
 
 
@@ -167,12 +167,12 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; halfclock:inst5|v_Clk        ; 0.254 ; 0.000         ;
-; pb2                          ; 0.442 ; 0.000         ;
-; VGA_SYNC:inst2|vert_sync_out ; 0.515 ; 0.000         ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.553 ; 0.000         ;
-; main:inst1|t_Clk             ; 0.786 ; 0.000         ;
-; clk                          ; 0.802 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.407 ; 0.000         ;
+; pb2                          ; 0.441 ; 0.000         ;
+; halfclock:inst5|v_Clk        ; 0.445 ; 0.000         ;
+; VGA_SYNC:inst2|vert_sync_out ; 0.590 ; 0.000         ;
+; clk                          ; 0.684 ; 0.000         ;
+; main:inst1|t_Clk             ; 0.826 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -181,7 +181,7 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; -2.559 ; -33.480       ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; -1.439 ; -22.931       ;
 +-----------------------------+--------+---------------+
 
 
@@ -190,7 +190,7 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; 0.818 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; 0.716 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -199,12 +199,12 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -2.636 ; -144.330      ;
-; VGA_SYNC:inst2|vert_sync_out ; -0.538 ; -81.747       ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -0.538 ; -30.182       ;
-; pb2                          ; -0.538 ; -27.088       ;
-; main:inst1|t_Clk             ; -0.538 ; -7.069        ;
-; clk                          ; -0.538 ; -0.906        ;
+; halfclock:inst5|v_Clk        ; -2.636 ; -129.429      ;
+; VGA_SYNC:inst2|vert_sync_out ; -0.538 ; -75.231       ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -0.538 ; -30.785       ;
+; pb2                          ; -0.538 ; -27.079       ;
+; main:inst1|t_Clk             ; -0.538 ; -6.370        ;
+; clk                          ; -0.538 ; -1.016        ;
 +------------------------------+--------+---------------+
 
 
@@ -219,11 +219,11 @@ No synchronizer chains to report.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 88.07 MHz  ; 88.07 MHz       ; halfclock:inst5|v_Clk        ;      ;
-; 152.37 MHz ; 152.37 MHz      ; VGA_SYNC:inst2|vert_sync_out ;      ;
-; 158.1 MHz  ; 158.1 MHz       ; pb2                          ;      ;
-; 257.67 MHz ; 257.67 MHz      ; MOUSE:inst|MOUSE_CLK_FILTER  ;      ;
-; 345.07 MHz ; 345.07 MHz      ; main:inst1|t_Clk             ;      ;
+; 89.02 MHz  ; 89.02 MHz       ; halfclock:inst5|v_Clk        ;      ;
+; 155.45 MHz ; 155.45 MHz      ; VGA_SYNC:inst2|vert_sync_out ;      ;
+; 157.98 MHz ; 157.98 MHz      ; pb2                          ;      ;
+; 236.24 MHz ; 236.24 MHz      ; MOUSE:inst|MOUSE_CLK_FILTER  ;      ;
+; 342.47 MHz ; 342.47 MHz      ; main:inst1|t_Clk             ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -233,12 +233,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; VGA_SYNC:inst2|vert_sync_out ; -81.622 ; -1369.427     ;
-; halfclock:inst5|v_Clk        ; -10.354 ; -365.341      ;
-; main:inst1|t_Clk             ; -8.557  ; -65.158       ;
-; pb2                          ; -5.325  ; -170.820      ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -3.320  ; -110.505      ;
-; clk                          ; -2.376  ; -2.376        ;
+; VGA_SYNC:inst2|vert_sync_out ; -81.332 ; -1373.729     ;
+; halfclock:inst5|v_Clk        ; -10.362 ; -318.755      ;
+; main:inst1|t_Clk             ; -8.850  ; -70.110       ;
+; pb2                          ; -5.330  ; -169.103      ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -3.233  ; -83.517       ;
+; clk                          ; -2.541  ; -2.541        ;
 +------------------------------+---------+---------------+
 
 
@@ -247,12 +247,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; halfclock:inst5|v_Clk        ; 0.388 ; 0.000         ;
-; pb2                          ; 0.448 ; 0.000         ;
-; VGA_SYNC:inst2|vert_sync_out ; 0.495 ; 0.000         ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.538 ; 0.000         ;
-; clk                          ; 0.711 ; 0.000         ;
-; main:inst1|t_Clk             ; 0.756 ; 0.000         ;
+; halfclock:inst5|v_Clk        ; 0.428 ; 0.000         ;
+; pb2                          ; 0.445 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.449 ; 0.000         ;
+; clk                          ; 0.544 ; 0.000         ;
+; VGA_SYNC:inst2|vert_sync_out ; 0.588 ; 0.000         ;
+; main:inst1|t_Clk             ; 0.806 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -261,7 +261,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; -2.314 ; -30.106       ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; -1.308 ; -20.836       ;
 +-----------------------------+--------+---------------+
 
 
@@ -270,7 +270,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; 0.735 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; 0.680 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -279,12 +279,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -2.636 ; -142.218      ;
-; VGA_SYNC:inst2|vert_sync_out ; -0.538 ; -78.982       ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -0.538 ; -29.386       ;
-; pb2                          ; -0.538 ; -26.552       ;
-; main:inst1|t_Clk             ; -0.538 ; -6.796        ;
-; clk                          ; -0.538 ; -0.936        ;
+; halfclock:inst5|v_Clk        ; -2.636 ; -128.281      ;
+; VGA_SYNC:inst2|vert_sync_out ; -0.538 ; -73.850       ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -0.538 ; -28.947       ;
+; pb2                          ; -0.538 ; -26.540       ;
+; main:inst1|t_Clk             ; -0.538 ; -6.326        ;
+; clk                          ; -0.538 ; -1.038        ;
 +------------------------------+--------+---------------+
 
 
@@ -299,12 +299,12 @@ No synchronizer chains to report.
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; VGA_SYNC:inst2|vert_sync_out ; -37.609 ; -630.836      ;
-; halfclock:inst5|v_Clk        ; -4.287  ; -162.043      ;
-; main:inst1|t_Clk             ; -3.878  ; -29.109       ;
-; pb2                          ; -1.991  ; -62.826       ;
-; clk                          ; -1.831  ; -1.831        ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -1.759  ; -55.766       ;
+; VGA_SYNC:inst2|vert_sync_out ; -36.475 ; -617.345      ;
+; halfclock:inst5|v_Clk        ; -4.490  ; -145.534      ;
+; main:inst1|t_Clk             ; -4.106  ; -32.420       ;
+; pb2                          ; -2.003  ; -59.627       ;
+; clk                          ; -1.987  ; -1.987        ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -1.180  ; -32.169       ;
 +------------------------------+---------+---------------+
 
 
@@ -313,12 +313,12 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -0.089 ; -0.089        ;
-; VGA_SYNC:inst2|vert_sync_out ; 0.159  ; 0.000         ;
-; main:inst1|t_Clk             ; 0.192  ; 0.000         ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.193  ; 0.000         ;
-; pb2                          ; 0.199  ; 0.000         ;
-; clk                          ; 0.841  ; 0.000         ;
+; halfclock:inst5|v_Clk        ; -0.037 ; -0.037        ;
+; VGA_SYNC:inst2|vert_sync_out ; 0.184  ; 0.000         ;
+; pb2                          ; 0.201  ; 0.000         ;
+; main:inst1|t_Clk             ; 0.255  ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.273  ; 0.000         ;
+; clk                          ; 0.760  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -327,7 +327,7 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; -1.211 ; -14.728       ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; -0.526 ; -8.386        ;
 +-----------------------------+--------+---------------+
 
 
@@ -336,7 +336,7 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; 0.382 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; 0.333 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -345,12 +345,12 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -2.174 ; -44.096       ;
-; clk                          ; -0.383 ; -0.418        ;
-; pb2                          ; -0.290 ; -9.621        ;
-; VGA_SYNC:inst2|vert_sync_out ; -0.089 ; -4.580        ;
-; main:inst1|t_Clk             ; -0.036 ; -0.146        ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.009  ; 0.000         ;
+; halfclock:inst5|v_Clk        ; -2.174 ; -37.661       ;
+; clk                          ; -0.467 ; -0.583        ;
+; pb2                          ; -0.292 ; -9.683        ;
+; VGA_SYNC:inst2|vert_sync_out ; -0.030 ; -0.619        ;
+; main:inst1|t_Clk             ; 0.075  ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.116  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -365,12 +365,12 @@ No synchronizer chains to report.
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; VGA_SYNC:inst2|vert_sync_out ; -34.946 ; -588.837      ;
-; halfclock:inst5|v_Clk        ; -3.998  ; -139.492      ;
-; main:inst1|t_Clk             ; -3.717  ; -27.998       ;
-; pb2                          ; -1.765  ; -55.753       ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; -1.595  ; -49.657       ;
-; clk                          ; -1.509  ; -1.509        ;
+; VGA_SYNC:inst2|vert_sync_out ; -34.010 ; -578.473      ;
+; halfclock:inst5|v_Clk        ; -4.158  ; -124.224      ;
+; main:inst1|t_Clk             ; -3.914  ; -30.958       ;
+; pb2                          ; -1.779  ; -53.207       ;
+; clk                          ; -1.637  ; -1.637        ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; -1.036  ; -27.554       ;
 +------------------------------+---------+---------------+
 
 
@@ -379,12 +379,12 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -0.118 ; -0.118        ;
-; VGA_SYNC:inst2|vert_sync_out ; 0.102  ; 0.000         ;
-; main:inst1|t_Clk             ; 0.118  ; 0.000         ;
+; halfclock:inst5|v_Clk        ; -0.041 ; -0.041        ;
+; VGA_SYNC:inst2|vert_sync_out ; 0.112  ; 0.000         ;
+; main:inst1|t_Clk             ; 0.174  ; 0.000         ;
 ; pb2                          ; 0.187  ; 0.000         ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.207  ; 0.000         ;
-; clk                          ; 0.607  ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.262  ; 0.000         ;
+; clk                          ; 0.556  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -393,7 +393,7 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; -1.068 ; -13.029       ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; -0.463 ; -7.377        ;
 +-----------------------------+--------+---------------+
 
 
@@ -402,7 +402,7 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MOUSE:inst|MOUSE_CLK_FILTER ; 0.358 ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER ; 0.300 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -411,12 +411,12 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; halfclock:inst5|v_Clk        ; -2.174 ; -38.359       ;
-; clk                          ; -0.389 ; -0.438        ;
-; pb2                          ; -0.283 ; -9.387        ;
-; VGA_SYNC:inst2|vert_sync_out ; -0.034 ; -0.876        ;
-; main:inst1|t_Clk             ; 0.011  ; 0.000         ;
-; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.026  ; 0.000         ;
+; halfclock:inst5|v_Clk        ; -2.174 ; -35.265       ;
+; clk                          ; -0.453 ; -0.564        ;
+; pb2                          ; -0.283 ; -9.394        ;
+; VGA_SYNC:inst2|vert_sync_out ; 0.016  ; 0.000         ;
+; main:inst1|t_Clk             ; 0.096  ; 0.000         ;
+; MOUSE:inst|MOUSE_CLK_FILTER  ; 0.109  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -431,20 +431,20 @@ No synchronizer chains to report.
 +-------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                         ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack              ; -81.622   ; -0.118 ; -2.559   ; 0.358   ; -2.636              ;
-;  MOUSE:inst|MOUSE_CLK_FILTER  ; -3.633    ; 0.193  ; -2.559   ; 0.358   ; -0.538              ;
-;  VGA_SYNC:inst2|vert_sync_out ; -81.622   ; 0.102  ; N/A      ; N/A     ; -0.538              ;
-;  clk                          ; -2.521    ; 0.607  ; N/A      ; N/A     ; -0.538              ;
-;  halfclock:inst5|v_Clk        ; -10.354   ; -0.118 ; N/A      ; N/A     ; -2.636              ;
-;  main:inst1|t_Clk             ; -8.567    ; 0.118  ; N/A      ; N/A     ; -0.538              ;
-;  pb2                          ; -5.325    ; 0.187  ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS               ; -2086.046 ; -0.118 ; -33.48   ; 0.0     ; -291.322            ;
-;  MOUSE:inst|MOUSE_CLK_FILTER  ; -119.696  ; 0.000  ; -33.480  ; 0.000   ; -30.182             ;
-;  VGA_SYNC:inst2|vert_sync_out ; -1369.427 ; 0.000  ; N/A      ; N/A     ; -81.747             ;
-;  clk                          ; -2.521    ; 0.000  ; N/A      ; N/A     ; -0.936              ;
-;  halfclock:inst5|v_Clk        ; -370.811  ; -0.118 ; N/A      ; N/A     ; -144.330            ;
-;  main:inst1|t_Clk             ; -65.404   ; 0.000  ; N/A      ; N/A     ; -7.069              ;
-;  pb2                          ; -170.820  ; 0.000  ; N/A      ; N/A     ; -27.088             ;
+; Worst-case Slack              ; -81.332   ; -0.041 ; -1.439   ; 0.300   ; -2.636              ;
+;  MOUSE:inst|MOUSE_CLK_FILTER  ; -3.233    ; 0.262  ; -1.439   ; 0.300   ; -0.538              ;
+;  VGA_SYNC:inst2|vert_sync_out ; -81.332   ; 0.112  ; N/A      ; N/A     ; -0.538              ;
+;  clk                          ; -2.729    ; 0.544  ; N/A      ; N/A     ; -0.538              ;
+;  halfclock:inst5|v_Clk        ; -10.362   ; -0.041 ; N/A      ; N/A     ; -2.636              ;
+;  main:inst1|t_Clk             ; -8.880    ; 0.174  ; N/A      ; N/A     ; -0.538              ;
+;  pb2                          ; -5.330    ; 0.187  ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS               ; -2017.755 ; -0.041 ; -22.931  ; 0.0     ; -269.91             ;
+;  MOUSE:inst|MOUSE_CLK_FILTER  ; -89.099   ; 0.000  ; -22.931  ; 0.000   ; -30.785             ;
+;  VGA_SYNC:inst2|vert_sync_out ; -1373.729 ; 0.000  ; N/A      ; N/A     ; -75.231             ;
+;  clk                          ; -2.729    ; 0.000  ; N/A      ; N/A     ; -1.038              ;
+;  halfclock:inst5|v_Clk        ; -327.108  ; -0.041 ; N/A      ; N/A     ; -129.429            ;
+;  main:inst1|t_Clk             ; -70.588   ; 0.000  ; N/A      ; N/A     ; -6.370              ;
+;  pb2                          ; -169.103  ; 0.000  ; N/A      ; N/A     ; -27.079             ;
 +-------------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -458,6 +458,7 @@ No synchronizer chains to report.
 ; red       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; horiz_Out ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vert_Out  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; collided  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX0[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -501,6 +502,7 @@ No synchronizer chains to report.
 ; red       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; horiz_Out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; vert_Out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; collided  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -532,6 +534,7 @@ No synchronizer chains to report.
 ; red       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; horiz_Out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; vert_Out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; collided  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX0[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
@@ -563,6 +566,7 @@ No synchronizer chains to report.
 ; red       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; horiz_Out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vert_Out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; collided  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; HEX0[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; HEX0[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; HEX0[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -594,6 +598,7 @@ No synchronizer chains to report.
 ; red       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; horiz_Out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vert_Out  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; collided  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; HEX0[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; HEX0[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; HEX0[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -621,7 +626,7 @@ No synchronizer chains to report.
 ; From Clock                   ; To Clock                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+--------------+----------+----------+----------+
 ; halfclock:inst5|v_Clk        ; clk                          ; 1            ; 1        ; 0        ; 0        ;
-; halfclock:inst5|v_Clk        ; halfclock:inst5|v_Clk        ; 17819        ; 0        ; 0        ; 0        ;
+; halfclock:inst5|v_Clk        ; halfclock:inst5|v_Clk        ; 17509        ; 0        ; 0        ; 0        ;
 ; MOUSE:inst|MOUSE_CLK_FILTER  ; halfclock:inst5|v_Clk        ; 1            ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst2|vert_sync_out ; halfclock:inst5|v_Clk        ; 12553        ; 0        ; 0        ; 0        ;
 ; main:inst1|t_Clk             ; main:inst1|t_Clk             ; 24           ; 0        ; 0        ; 0        ;
@@ -634,7 +639,7 @@ No synchronizer chains to report.
 ; main:inst1|t_Clk             ; VGA_SYNC:inst2|vert_sync_out ; 5            ; 1        ; 0        ; 0        ;
 ; MOUSE:inst|MOUSE_CLK_FILTER  ; VGA_SYNC:inst2|vert_sync_out ; 0            ; 66       ; 0        ; 0        ;
 ; pb2                          ; VGA_SYNC:inst2|vert_sync_out ; 111          ; 0        ; 0        ; 0        ;
-; VGA_SYNC:inst2|vert_sync_out ; VGA_SYNC:inst2|vert_sync_out ; 4859         ; 0        ; 0        ; 0        ;
+; VGA_SYNC:inst2|vert_sync_out ; VGA_SYNC:inst2|vert_sync_out ; 4794         ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -645,7 +650,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock                   ; To Clock                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+--------------+----------+----------+----------+
 ; halfclock:inst5|v_Clk        ; clk                          ; 1            ; 1        ; 0        ; 0        ;
-; halfclock:inst5|v_Clk        ; halfclock:inst5|v_Clk        ; 17819        ; 0        ; 0        ; 0        ;
+; halfclock:inst5|v_Clk        ; halfclock:inst5|v_Clk        ; 17509        ; 0        ; 0        ; 0        ;
 ; MOUSE:inst|MOUSE_CLK_FILTER  ; halfclock:inst5|v_Clk        ; 1            ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst2|vert_sync_out ; halfclock:inst5|v_Clk        ; 12553        ; 0        ; 0        ; 0        ;
 ; main:inst1|t_Clk             ; main:inst1|t_Clk             ; 24           ; 0        ; 0        ; 0        ;
@@ -658,7 +663,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; main:inst1|t_Clk             ; VGA_SYNC:inst2|vert_sync_out ; 5            ; 1        ; 0        ; 0        ;
 ; MOUSE:inst|MOUSE_CLK_FILTER  ; VGA_SYNC:inst2|vert_sync_out ; 0            ; 66       ; 0        ; 0        ;
 ; pb2                          ; VGA_SYNC:inst2|vert_sync_out ; 111          ; 0        ; 0        ; 0        ;
-; VGA_SYNC:inst2|vert_sync_out ; VGA_SYNC:inst2|vert_sync_out ; 4859         ; 0        ; 0        ; 0        ;
+; VGA_SYNC:inst2|vert_sync_out ; VGA_SYNC:inst2|vert_sync_out ; 4794         ; 0        ; 0        ; 0        ;
 +------------------------------+------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -704,8 +709,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 22    ; 22   ;
-; Unconstrained Output Port Paths ; 67    ; 67   ;
+; Unconstrained Output Ports      ; 24    ; 24   ;
+; Unconstrained Output Port Paths ; 69    ; 69   ;
 +---------------------------------+-------+------+
 
 
@@ -756,6 +761,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; collided    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; horiz_Out   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -796,6 +803,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; collided    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; green       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; horiz_Out   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -809,7 +818,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 24 19:43:32 2023
+    Info: Processing started: Wed May 24 20:51:17 2023
 Info: Command: quartus_sta MiniProjectQuartus -c MiniProjectQuartus
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -831,168 +840,168 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -79.598
+Info (332146): Worst-case setup slack is -78.768
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -79.598           -1358.559 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):   -10.128            -370.811 halfclock:inst5|v_Clk 
-    Info (332119):    -8.567             -65.404 main:inst1|t_Clk 
-    Info (332119):    -5.279            -169.055 pb2 
-    Info (332119):    -3.633            -119.696 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):    -2.521              -2.521 clk 
-Info (332146): Worst-case hold slack is 0.254
+    Info (332119):   -78.768           -1355.055 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):   -10.214            -327.108 halfclock:inst5|v_Clk 
+    Info (332119):    -8.880             -70.588 main:inst1|t_Clk 
+    Info (332119):    -5.224            -165.482 pb2 
+    Info (332119):    -3.222             -89.099 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -2.729              -2.729 clk 
+Info (332146): Worst-case hold slack is 0.407
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.254               0.000 halfclock:inst5|v_Clk 
-    Info (332119):     0.442               0.000 pb2 
-    Info (332119):     0.515               0.000 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):     0.553               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):     0.786               0.000 main:inst1|t_Clk 
-    Info (332119):     0.802               0.000 clk 
-Info (332146): Worst-case recovery slack is -2.559
+    Info (332119):     0.407               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.441               0.000 pb2 
+    Info (332119):     0.445               0.000 halfclock:inst5|v_Clk 
+    Info (332119):     0.590               0.000 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.684               0.000 clk 
+    Info (332119):     0.826               0.000 main:inst1|t_Clk 
+Info (332146): Worst-case recovery slack is -1.439
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.559             -33.480 MOUSE:inst|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.818
+    Info (332119):    -1.439             -22.931 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.716
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.818               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.716               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -144.330 halfclock:inst5|v_Clk 
-    Info (332119):    -0.538             -81.747 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):    -0.538             -30.182 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538             -27.088 pb2 
-    Info (332119):    -0.538              -7.069 main:inst1|t_Clk 
-    Info (332119):    -0.538              -0.906 clk 
+    Info (332119):    -2.636            -129.429 halfclock:inst5|v_Clk 
+    Info (332119):    -0.538             -75.231 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):    -0.538             -30.785 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538             -27.079 pb2 
+    Info (332119):    -0.538              -6.370 main:inst1|t_Clk 
+    Info (332119):    -0.538              -1.016 clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -81.622
+Info (332146): Worst-case setup slack is -81.332
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -81.622           -1369.427 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):   -10.354            -365.341 halfclock:inst5|v_Clk 
-    Info (332119):    -8.557             -65.158 main:inst1|t_Clk 
-    Info (332119):    -5.325            -170.820 pb2 
-    Info (332119):    -3.320            -110.505 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):    -2.376              -2.376 clk 
-Info (332146): Worst-case hold slack is 0.388
+    Info (332119):   -81.332           -1373.729 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):   -10.362            -318.755 halfclock:inst5|v_Clk 
+    Info (332119):    -8.850             -70.110 main:inst1|t_Clk 
+    Info (332119):    -5.330            -169.103 pb2 
+    Info (332119):    -3.233             -83.517 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -2.541              -2.541 clk 
+Info (332146): Worst-case hold slack is 0.428
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.388               0.000 halfclock:inst5|v_Clk 
-    Info (332119):     0.448               0.000 pb2 
-    Info (332119):     0.495               0.000 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):     0.538               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):     0.711               0.000 clk 
-    Info (332119):     0.756               0.000 main:inst1|t_Clk 
-Info (332146): Worst-case recovery slack is -2.314
+    Info (332119):     0.428               0.000 halfclock:inst5|v_Clk 
+    Info (332119):     0.445               0.000 pb2 
+    Info (332119):     0.449               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.544               0.000 clk 
+    Info (332119):     0.588               0.000 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.806               0.000 main:inst1|t_Clk 
+Info (332146): Worst-case recovery slack is -1.308
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.314             -30.106 MOUSE:inst|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.735
+    Info (332119):    -1.308             -20.836 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.680
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.735               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.680               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -142.218 halfclock:inst5|v_Clk 
-    Info (332119):    -0.538             -78.982 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):    -0.538             -29.386 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538             -26.552 pb2 
-    Info (332119):    -0.538              -6.796 main:inst1|t_Clk 
-    Info (332119):    -0.538              -0.936 clk 
+    Info (332119):    -2.636            -128.281 halfclock:inst5|v_Clk 
+    Info (332119):    -0.538             -73.850 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):    -0.538             -28.947 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538             -26.540 pb2 
+    Info (332119):    -0.538              -6.326 main:inst1|t_Clk 
+    Info (332119):    -0.538              -1.038 clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -37.609
+Info (332146): Worst-case setup slack is -36.475
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -37.609            -630.836 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):    -4.287            -162.043 halfclock:inst5|v_Clk 
-    Info (332119):    -3.878             -29.109 main:inst1|t_Clk 
-    Info (332119):    -1.991             -62.826 pb2 
-    Info (332119):    -1.831              -1.831 clk 
-    Info (332119):    -1.759             -55.766 MOUSE:inst|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is -0.089
+    Info (332119):   -36.475            -617.345 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):    -4.490            -145.534 halfclock:inst5|v_Clk 
+    Info (332119):    -4.106             -32.420 main:inst1|t_Clk 
+    Info (332119):    -2.003             -59.627 pb2 
+    Info (332119):    -1.987              -1.987 clk 
+    Info (332119):    -1.180             -32.169 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.037
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.089              -0.089 halfclock:inst5|v_Clk 
-    Info (332119):     0.159               0.000 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):     0.192               0.000 main:inst1|t_Clk 
-    Info (332119):     0.193               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):     0.199               0.000 pb2 
-    Info (332119):     0.841               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.211
+    Info (332119):    -0.037              -0.037 halfclock:inst5|v_Clk 
+    Info (332119):     0.184               0.000 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.201               0.000 pb2 
+    Info (332119):     0.255               0.000 main:inst1|t_Clk 
+    Info (332119):     0.273               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.760               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.526
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.211             -14.728 MOUSE:inst|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.382
+    Info (332119):    -0.526              -8.386 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.333
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.382               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.333               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -44.096 halfclock:inst5|v_Clk 
-    Info (332119):    -0.383              -0.418 clk 
-    Info (332119):    -0.290              -9.621 pb2 
-    Info (332119):    -0.089              -4.580 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):    -0.036              -0.146 main:inst1|t_Clk 
-    Info (332119):     0.009               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -2.174             -37.661 halfclock:inst5|v_Clk 
+    Info (332119):    -0.467              -0.583 clk 
+    Info (332119):    -0.292              -9.683 pb2 
+    Info (332119):    -0.030              -0.619 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.075               0.000 main:inst1|t_Clk 
+    Info (332119):     0.116               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -34.946
+Info (332146): Worst-case setup slack is -34.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -34.946            -588.837 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):    -3.998            -139.492 halfclock:inst5|v_Clk 
-    Info (332119):    -3.717             -27.998 main:inst1|t_Clk 
-    Info (332119):    -1.765             -55.753 pb2 
-    Info (332119):    -1.595             -49.657 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):    -1.509              -1.509 clk 
-Info (332146): Worst-case hold slack is -0.118
+    Info (332119):   -34.010            -578.473 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):    -4.158            -124.224 halfclock:inst5|v_Clk 
+    Info (332119):    -3.914             -30.958 main:inst1|t_Clk 
+    Info (332119):    -1.779             -53.207 pb2 
+    Info (332119):    -1.637              -1.637 clk 
+    Info (332119):    -1.036             -27.554 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.041
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.118              -0.118 halfclock:inst5|v_Clk 
-    Info (332119):     0.102               0.000 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):     0.118               0.000 main:inst1|t_Clk 
+    Info (332119):    -0.041              -0.041 halfclock:inst5|v_Clk 
+    Info (332119):     0.112               0.000 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.174               0.000 main:inst1|t_Clk 
     Info (332119):     0.187               0.000 pb2 
-    Info (332119):     0.207               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
-    Info (332119):     0.607               0.000 clk 
-Info (332146): Worst-case recovery slack is -1.068
+    Info (332119):     0.262               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.556               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.463
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.068             -13.029 MOUSE:inst|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.358
+    Info (332119):    -0.463              -7.377 MOUSE:inst|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.300
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.358               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):     0.300               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174             -38.359 halfclock:inst5|v_Clk 
-    Info (332119):    -0.389              -0.438 clk 
-    Info (332119):    -0.283              -9.387 pb2 
-    Info (332119):    -0.034              -0.876 VGA_SYNC:inst2|vert_sync_out 
-    Info (332119):     0.011               0.000 main:inst1|t_Clk 
-    Info (332119):     0.026               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
+    Info (332119):    -2.174             -35.265 halfclock:inst5|v_Clk 
+    Info (332119):    -0.453              -0.564 clk 
+    Info (332119):    -0.283              -9.394 pb2 
+    Info (332119):     0.016               0.000 VGA_SYNC:inst2|vert_sync_out 
+    Info (332119):     0.096               0.000 main:inst1|t_Clk 
+    Info (332119):     0.109               0.000 MOUSE:inst|MOUSE_CLK_FILTER 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5135 megabytes
-    Info: Processing ended: Wed May 24 19:43:41 2023
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 5134 megabytes
+    Info: Processing ended: Wed May 24 20:51:27 2023
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:08
 
 

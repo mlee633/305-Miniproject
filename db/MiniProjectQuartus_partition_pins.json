@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "blue",
+					"strict" : false
+				},
+				{
 					"name" : "green",
 					"strict" : false
 				},
@@ -17,6 +21,10 @@
 				},
 				{
 					"name" : "vert_Out",
+					"strict" : false
+				},
+				{
+					"name" : "collided",
 					"strict" : false
 				},
 				{

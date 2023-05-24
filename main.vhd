@@ -9,7 +9,7 @@ entity main is
         pixel_column,pixel_row : in std_logic_vector(9 downto 0);
         oneSeg_out : out std_logic_vector(6 downto 0);
 		tenSeg_out : out std_logic_vector(6 downto 0);
-        red, green, blue : out std_logic);
+        red, green, blue, collided: out std_logic);
 end entity;
 
 architecture rtl of main is
@@ -79,7 +79,7 @@ end component;
     SIGNAL enable : std_logic := '0';
 	 signal lives : integer := 2;
     SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
-    SIGNAL rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+    SIGNAL prevCollide,pipeEnable,rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
 	 signal dead : std_logic := '0';
     begin
 	
@@ -92,7 +92,7 @@ end component;
                                     pixel_row => pixel_row(9 downto 4), 
                                     pixel_col => pixel_column(9 downto 4), lives => lives,
                                     clock => clk);
-    pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => (not dead) and enable, pixel_row => pixel_row, 
+    pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => pipeEnable and enable, pixel_row => pixel_row, 
                             pixel_column => pixel_column,pipeWidth_out => pipeWidth,gapSize_out => gapSize, gap_x_pos_out => gap_x_pos,
                             gap_y_pos_out => gap_y_pos ,red => pipe_red, green => pipe_green, blue => pipe_blue, pipe_test => pipe_on);           
 
@@ -118,8 +118,8 @@ end component;
 
 	Green <= pipe_green or (rom_mux_output);
 
-	Blue <=  (not ball_on) and pipe_blue;
-
+	Blue <=  ((not ball_on) and pipe_blue) or rom_mux_output;
+	collided <= t_collide;
 	 
     CLICK: process(pb2)
     --Counting number of button clicks
@@ -146,16 +146,21 @@ end component;
         if rising_edge(vert_sync) then
 		  
             if (enable = '1') then
+					prevCollide <= t_collide;
                if (t_collide = '1') then
-                    lives <= lives - 1;
-                    if (lives < 0) then
-                        dead <= '1';
-								ball_enable <= '0';
-								ball_reset <= '1';
+							if prevCollide = '0' then
+								lives <= lives - 1;
+								pipeEnable <= '0';
+								if (lives < 0) then
+									dead <= '1';
+									ball_enable <= '0';
+									ball_reset <= '1';
 								
-                    end if;
+								end if;
+							end if;
                 
                 else
+					 pipeEnable <= '1';
 					 ball_enable<= '1';
 					 ball_reset <= '0';
 					 
@@ -178,7 +183,7 @@ end component;
 					ball_reset <= '1';
 					ball_enable <= '0';
 					t_clk <= '1';
-					lives <= 0;
+					lives <= 3;
 					dead <= '0';
 				end if;
         end if;

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed May 24 19:42:36 2023
+Analysis & Synthesis Status : Successful - Wed May 24 20:50:23 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : MiniProjectQuartus
 Top-level Entity Name : MiniProjectQuartus
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 251
-Total pins : 25
+Total registers : 253
+Total pins : 26
 Total virtual pins : 0
 Total block memory bits : 4,096
 Total DSP Blocks : 4
