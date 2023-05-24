@@ -127,7 +127,8 @@ end component;
 	 
     CLICK: process(pb2)
     --Counting number of button clicks
-    variable numOfpush : integer := 0;
+    
+    variable numOfpush,pointCount : integer := 0;
 
     begin
         if rising_edge(pb2) then
@@ -180,6 +181,14 @@ end component;
 						 end if;
 					    if (ball_x_pos  <= gap_x_pos + (pipeSpeed - 1)) and (ball_x_pos >= gap_x_pos - (pipeSpeed - 1)) then
 							t_clk <= '1';
+                            pointCount := pointCount + 1;
+                            if pointCount = 10 then
+                                pipeSpeed <= 2;
+                            elsif pointCount = 20 then
+                                pipeSpeed<= 3
+                            elsif pointCount = 30 then
+                                pipeSpeed <= 4;
+                            end if;
 							
 						 else
 							t_clk <= '0';
@@ -192,6 +201,7 @@ end component;
 				ball_enable <= '0';
 				t_clk <= '1';
 				pipespeed <= 1;
+                pointCount := 0;
                 if gameMode = '1' then 
 				    lives <= 3;
                 else 
