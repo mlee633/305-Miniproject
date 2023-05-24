@@ -178,27 +178,27 @@ end component;
 						 else
 							enable2 <= '0';
 						 end if;
-					    if (ball_x_pos = gap_x_pos) then
+					    if (ball_x_pos  <= gap_x_pos + (pipeSpeed - 1)) and (ball_x_pos >= gap_x_pos - (pipeSpeed - 1)) then
 							t_clk <= '1';
-							prevHit <= '1';
+							
 						 else
 							t_clk <= '0';
-							prevHit <= '1';
+							
 						 end if;
-					end if; 
-				else
-					-- Game not started, when button is pressed again after starting, 
-					ball_reset <= '1';
-					ball_enable <= '0';
-					t_clk <= '1';
-					pipespeed <= 1;
-                    if gameMode = '1' then 
-					    lives <= 3;
-                    else 
-                        lives <= 0;
-                    end if;
-					dead <= '0';
-				end if;
+				end if; 
+			else
+				-- Game not started, when button is pressed again after starting, 
+				ball_reset <= '1';
+				ball_enable <= '0';
+				t_clk <= '1';
+				pipespeed <= 1;
+                if gameMode = '1' then 
+				    lives <= 3;
+                else 
+                    lives <= 0;
+                end if;
+				dead <= '0';
+			end if;
         end if;
     end process;
     oneSeg_out <= oneSeg;
