@@ -54,6 +54,22 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect -232 344 -176 368))
 )
 (pin
+	(input)
+	(rect -208 424 -40 440)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "gameMode" (rect 5 0 59 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 816 184 992 200)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -425,6 +441,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 696 424 752 448))
 )
 (pin
 	(bidir)
@@ -651,9 +668,9 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 152 304 392 448)
+	(rect 152 304 392 480)
 	(text "main" (rect 5 0 28 12)(font "Arial" ))
-	(text "inst1" (rect 8 128 31 140)(font "Arial" ))
+	(text "inst1" (rect 8 160 31 172)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -695,6 +712,13 @@ refer to the applicable agreement for further details.
 		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
 		(text "pixel_row[9..0]" (rect 21 107 91 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "gameMode" (rect 0 0 53 12)(font "Arial" ))
+		(text "gameMode" (rect 21 123 74 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
 	)
 	(port
 		(pt 240 32)
@@ -739,7 +763,7 @@ refer to the applicable agreement for further details.
 		(line (pt 240 112)(pt 224 112))
 	)
 	(drawing
-		(rectangle (rect 16 16 224 128))
+		(rectangle (rect 16 16 224 160))
 	)
 )
 (connector
@@ -987,6 +1011,10 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 392 416)
 	(pt 520 416)
+)
+(connector
+	(pt 152 432)
+	(pt -40 432)
 )
 (junction (pt 88 128))
 (junction (pt 808 192))

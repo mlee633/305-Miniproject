@@ -106,6 +106,10 @@
 				{
 					"name" : "pb2",
 					"strict" : false
+				},
+				{
+					"name" : "gameMode",
+					"strict" : false
 				}
 			]
 		}

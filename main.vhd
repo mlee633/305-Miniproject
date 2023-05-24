@@ -7,6 +7,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 entity main is
     port(pb2, Clk,vert_sync, left_click: in std_logic;
         pixel_column,pixel_row : in std_logic_vector(9 downto 0);
+        gameMode : in std_logic;
         oneSeg_out : out std_logic_vector(6 downto 0);
 		tenSeg_out : out std_logic_vector(6 downto 0);
         red, green, blue, collided: out std_logic);
@@ -27,7 +28,8 @@ end component;
             clk,vert_sync,enable   : in std_logic;
             pixel_row,pixel_column : in std_logic_vector(9 DOWNTO 0);
               pipeWidth_out,gapSize_out,gap_x_pos_out,gap_y_pos_out : out std_logic_vector(9 downto 0);
-            red,green,blue, pipe_test : out std_logic
+            red,green,blue, pipe_test : out std_logic;
+				pipeSpeed : in integer
         );
     end component;
 
@@ -78,8 +80,9 @@ end component;
     SIGNAL character_address	: std_logic_vector(5 downto 0);
     SIGNAL enable : std_logic := '0';
 	 signal lives : integer := 2;
+	 SIGNAL pipeSpeed : integer := 1;
     SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
-    SIGNAL prevCollide,pipeEnable,rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+    SIGNAL prevHit,prevCollide,pipeEnable,rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
 	 signal dead : std_logic := '0';
     begin
 	
@@ -94,7 +97,7 @@ end component;
                                     clock => clk);
     pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => pipeEnable and enable, pixel_row => pixel_row, 
                             pixel_column => pixel_column,pipeWidth_out => pipeWidth,gapSize_out => gapSize, gap_x_pos_out => gap_x_pos,
-                            gap_y_pos_out => gap_y_pos ,red => pipe_red, green => pipe_green, blue => pipe_blue, pipe_test => pipe_on);           
+                            gap_y_pos_out => gap_y_pos ,red => pipe_red, green => pipe_green, blue => pipe_blue, pipe_test => pipe_on, pipeSpeed => pipeSpeed);           
 
     onesBCD: BCD port map (Clk => t_clk, Direction => '1', Init => reset, Enable => enable1, Q_out => ones); 
 
@@ -151,10 +154,10 @@ end component;
 							if prevCollide = '0' then
 								lives <= lives - 1;
 								pipeEnable <= '0';
-								if (lives < 0) then
+								if (lives <= 1) then
 									dead <= '1';
 									ball_enable <= '0';
-									ball_reset <= '1';
+									--ball_reset <= '1';
 								
 								end if;
 							end if;
@@ -169,13 +172,16 @@ end component;
                 dead <= '0';
 						 if (ones = "1001" and enable1 = '1') then
 							enable2 <= '1';
+							pipeSpeed <= pipeSpeed + 1;
 						 else
 							enable2 <= '0';
 						 end if;
 					    if (ball_x_pos = gap_x_pos) then
 							t_clk <= '1';
+							prevHit <= '1';
 						 else
 							t_clk <= '0';
+							prevHit <= '1';
 						 end if;
 					end if; 
 				else
@@ -183,7 +189,11 @@ end component;
 					ball_reset <= '1';
 					ball_enable <= '0';
 					t_clk <= '1';
-					lives <= 3;
+                    if gameMode = '1' then 
+					    lives <= 3;
+                    else 
+                        lives <= 0;
+                    end if;
 					dead <= '0';
 				end if;
         end if;

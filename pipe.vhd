@@ -11,7 +11,9 @@ entity pipe is
         clk,vert_sync,enable : in std_logic;
         pixel_row,pixel_column : in std_logic_vector(9 DOWNTO 0);
         pipeWidth_out,gapSize_out, gap_x_pos_out ,gap_y_pos_out: out std_logic_vector(9 downto 0);
-        red,green,blue, pipe_test : out std_logic
+        red,green,blue, pipe_test : out std_logic;
+		  pipeSpeed : in integer
+		  
     );
 end entity;
 
@@ -64,7 +66,7 @@ begin
 				pipeWidth <= pipeWidth - std_logic_vector(to_unsigned(1,10));
 				gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(1,10));
         else
-            gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(1,10));
+            gap_x_pos <= gap_x_pos - std_logic_vector(to_unsigned(pipeSpeed,10));
         end if;
 		 else
 			gap_x_pos <= std_logic_vector(to_unsigned(0,10));

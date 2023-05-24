@@ -13,7 +13,7 @@ entity FSM is
 end entity FSM;
 
 architecture rtl of FSM is
-    type fsm_states is (Initial, Running, Dead);
+    type fsm_states is (Initial, Running, DeadState);
         signal currentState, nextState: fsm_states;
 begin
 
@@ -28,7 +28,7 @@ begin
         end if;
     end process;
 
-    next_State process(currentState,reset,dead,start)
+    next_State: process(currentState,reset,dead,start)
 begin
 end process;
 end architecture;
