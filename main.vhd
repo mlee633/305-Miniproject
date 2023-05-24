@@ -81,8 +81,8 @@ end component;
     SIGNAL enable : std_logic := '0';
 	 signal lives : integer := 2;
 	 SIGNAL pipeSpeed : integer := 1;
-    SIGNAL pipeWidth,gapSize,gap_y_pos,gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
-    SIGNAL prevHit,prevCollide,pipeEnable,rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
+    SIGNAL pipeWidth, gapSize, gap_y_pos, gap_x_pos, ball_y_pos, ball_x_pos, ball_y_move, size : std_logic_vector(9 downto  0);
+    SIGNAL prevHit,prevCollide,pipeEnable, rom_mux_output, ball_on, pipe_on, pipe_red, pipe_blue, pipe_green,green1, t_Clk,reset, ball_enable, enable1,ball_reset,enable2,t_collide, ball_red, ball_green, ball_blue	: std_logic;
 	 signal dead : std_logic := '0';
     begin
 	
@@ -98,6 +98,7 @@ end component;
     pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => pipeEnable and enable, pixel_row => pixel_row, 
                             pixel_column => pixel_column,pipeWidth_out => pipeWidth,gapSize_out => gapSize, gap_x_pos_out => gap_x_pos,
                             gap_y_pos_out => gap_y_pos ,red => pipe_red, green => pipe_green, blue => pipe_blue, pipe_test => pipe_on, pipeSpeed => pipeSpeed);           
+    
 
     onesBCD: BCD port map (Clk => t_clk, Direction => '1', Init => reset, Enable => enable1, Q_out => ones); 
 
@@ -164,12 +165,13 @@ end component;
                 
                 else
 					 pipeEnable <= '1';
+   
 					 ball_enable<= '1';
 					 ball_reset <= '0';
 					 
 					 --======================Point adding========================
 					 enable1 <= '1';
-                dead <= '0';
+                     dead <= '0';
 						 if (ones = "1001" and enable1 = '1') then
 							enable2 <= '1';
 							pipeSpeed <= pipeSpeed + 1;
@@ -189,6 +191,7 @@ end component;
 					ball_reset <= '1';
 					ball_enable <= '0';
 					t_clk <= '1';
+					pipespeed <= 1;
                     if gameMode = '1' then 
 					    lives <= 3;
                     else 
