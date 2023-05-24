@@ -37,6 +37,7 @@ end component;
         (
             character_address       :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
             pixel_row, pixel_col    :    IN STD_LOGIC_VECTOR (9 DOWNTO 4);
+				lives : in integer;
             clock                   :    IN STD_LOGIC
         );
     end component;
@@ -89,7 +90,7 @@ end component;
 
     textSetter : text_setter port map(character_address	=> character_address,
                                     pixel_row => pixel_row(9 downto 4), 
-                                    pixel_col => pixel_column(9 downto 4),
+                                    pixel_col => pixel_column(9 downto 4), lives => lives,
                                     clock => clk);
     pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => (not dead) and enable, pixel_row => pixel_row, 
                             pixel_column => pixel_column,pipeWidth_out => pipeWidth,gapSize_out => gapSize, gap_x_pos_out => gap_x_pos,
