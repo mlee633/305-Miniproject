@@ -39,8 +39,8 @@ end component;
         (
             character_address       :    OUT STD_LOGIC_VECTOR (5 DOWNTO 0);
             pixel_row, pixel_col    :    IN STD_LOGIC_VECTOR (9 DOWNTO 4);
-				lives : in integer;
-            clock                   :    IN STD_LOGIC
+				lives, pipespeed : in integer;
+            clock, enable                   :    IN STD_LOGIC
         );
     end component;
 
@@ -94,7 +94,7 @@ end component;
     textSetter : text_setter port map(character_address	=> character_address,
                                     pixel_row => pixel_row(9 downto 4), 
                                     pixel_col => pixel_column(9 downto 4), lives => lives,
-                                    clock => clk);
+                                    clock => clk, enable => enable, pipespeed => pipeSpeed);
     pipeone: pipe port map (clk => clk, vert_sync => vert_sync,enable => pipeEnable and enable, pixel_row => pixel_row, 
                             pixel_column => pixel_column,pipeWidth_out => pipeWidth,gapSize_out => gapSize, gap_x_pos_out => gap_x_pos,
                             gap_y_pos_out => gap_y_pos ,red => pipe_red, green => pipe_green, blue => pipe_blue, pipe_test => pipe_on, pipeSpeed => pipeSpeed);           
@@ -151,7 +151,7 @@ end component;
 		  
             if (enable = '1') then
 					prevCollide <= t_collide;
-               if (t_collide = '1') then
+               if (t_collide = '1') and gamemode = '1'then
 							if prevCollide = '0' then
 								lives <= lives - 1;
 								pipeEnable <= '0';
@@ -162,6 +162,12 @@ end component;
 								
 								end if;
 							end if;
+					 elsif (t_collide = '1') and gamemode = '0' then
+						if prevCollide = '0' then
+							dead <= '1';
+							ball_enable <= '0';
+							pipeEnable <= '0';
+						end if;
                 
                 else
 					 pipeEnable <= '1';
@@ -174,7 +180,6 @@ end component;
                      dead <= '0';
 						 if (ones = "1001" and enable1 = '1') then
 							enable2 <= '1';
-							pipeSpeed <= pipeSpeed + 1;
 						 else
 							enable2 <= '0';
 						 end if;

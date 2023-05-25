@@ -1,5 +1,5 @@
 Flow report for MiniProjectQuartus
-Thu May 25 11:50:27 2023
+Thu May 25 12:56:23 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu May 25 11:50:16 2023           ;
+; Flow Status                     ; Successful - Thu May 25 12:56:13 2023           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; MiniProjectQuartus                              ;
 ; Top-level Entity Name           ; MiniProjectQuartus                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 647 / 18,480 ( 4 % )                            ;
-; Total registers                 ; 312                                             ;
+; Logic utilization (in ALMs)     ; 636 / 18,480 ( 3 % )                            ;
+; Total registers                 ; 298                                             ;
 ; Total pins                      ; 27 / 224 ( 12 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                     ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/25/2023 11:48:52 ;
+; Start date & time ; 05/25/2023 12:54:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MiniProjectQuartus  ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 118933448981377.168497213118724        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 118933448981377.168497609313548        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,10 +96,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4898 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:58     ; 1.1                     ; 6637 MB             ; 00:02:43                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4821 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.4                     ; 5133 MB             ; 00:00:09                           ;
-; Total                ; 00:01:26     ; --                      ; --                  ; 00:03:15                           ;
+; Fitter               ; 00:00:53     ; 1.1                     ; 6639 MB             ; 00:02:31                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4820 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.4                     ; 5135 MB             ; 00:00:09                           ;
+; Total                ; 00:01:20     ; --                      ; --                  ; 00:03:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
