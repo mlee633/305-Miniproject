@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MiniProjectQuartus
-Wed May 24 23:05:14 2023
+Thu May 25 11:49:06 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -57,13 +57,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 24 23:05:13 2023           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 25 11:49:05 2023           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; MiniProjectQuartus                              ;
 ; Top-level Entity Name           ; MiniProjectQuartus                              ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 263                                             ;
+; Total registers                 ; 295                                             ;
 ; Total pins                      ; 27                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 4,096                                           ;
@@ -230,16 +230,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 590                          ;
+; Estimate of Logic utilization (ALMs needed) ; 653                          ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1093                         ;
+; Combinational ALUT usage for logic          ; 1201                         ;
 ;     -- 7 input functions                    ; 4                            ;
-;     -- 6 input functions                    ; 77                           ;
-;     -- 5 input functions                    ; 143                          ;
-;     -- 4 input functions                    ; 214                          ;
-;     -- <=3 input functions                  ; 655                          ;
+;     -- 6 input functions                    ; 95                           ;
+;     -- 5 input functions                    ; 147                          ;
+;     -- 4 input functions                    ; 230                          ;
+;     -- <=3 input functions                  ; 725                          ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 263                          ;
+; Dedicated logic registers                   ; 295                          ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 27                           ;
 ; Total MLAB memory bits                      ; 0                            ;
@@ -248,9 +248,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 4                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
-; Maximum fan-out                             ; 101                          ;
-; Total fan-out                               ; 4548                         ;
-; Average fan-out                             ; 3.19                         ;
+; Maximum fan-out                             ; 133                          ;
+; Total fan-out                               ; 5027                         ;
+; Average fan-out                             ; 3.21                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -259,11 +259,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name        ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |MiniProjectQuartus                          ; 1093 (0)            ; 263 (0)                   ; 4096              ; 4          ; 27   ; 0            ; |MiniProjectQuartus                                                                                                                      ; MiniProjectQuartus ; work         ;
+; |MiniProjectQuartus                          ; 1201 (0)            ; 295 (0)                   ; 4096              ; 4          ; 27   ; 0            ; |MiniProjectQuartus                                                                                                                      ; MiniProjectQuartus ; work         ;
 ;    |MOUSE:inst|                              ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|MOUSE:inst                                                                                                           ; MOUSE              ; work         ;
 ;    |VGA_SYNC:inst2|                          ; 43 (43)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|VGA_SYNC:inst2                                                                                                       ; VGA_SYNC           ; work         ;
 ;    |halfclock:inst5|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|halfclock:inst5                                                                                                      ; halfclock          ; work         ;
-;    |main:inst1|                              ; 1002 (101)          ; 149 (81)                  ; 4096              ; 4          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1                                                                                                           ; main               ; work         ;
+;    |main:inst1|                              ; 1110 (206)          ; 181 (113)                 ; 4096              ; 4          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1                                                                                                           ; main               ; work         ;
 ;       |BCD:onesBCD|                          ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD:onesBCD                                                                                               ; BCD                ; work         ;
 ;       |BCD:tensBCD|                          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD:tensBCD                                                                                               ; BCD                ; work         ;
 ;       |BCD_to_7Seg:one_segment|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:one_segment                                                                                   ; BCD_to_7Seg        ; work         ;
@@ -273,7 +273,7 @@ refer to the applicable agreement for further details.
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|char_rom:charRom|altsyncram:altsyncram_component                                                          ; altsyncram         ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|char_rom:charRom|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                           ; altsyncram_d5g1    ; work         ;
 ;       |collision:collision_detect|           ; 48 (48)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|collision:collision_detect                                                                                ; collision          ; work         ;
-;       |pipe:pipeone|                         ; 721 (109)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone                                                                                              ; pipe               ; work         ;
+;       |pipe:pipeone|                         ; 724 (112)           ; 38 (30)                   ; 0                 ; 2          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone                                                                                              ; pipe               ; work         ;
 ;          |LFSR:randomHeight|                 ; 5 (5)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|LFSR:randomHeight                                                                            ; LFSR               ; work         ;
 ;          |lpm_divide:Div0|                   ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
 ;             |lpm_divide_fpo:auto_generated|  ; 607 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MiniProjectQuartus|main:inst1|pipe:pipeone|lpm_divide:Div0|lpm_divide_fpo:auto_generated                                                ; lpm_divide_fpo     ; work         ;
@@ -363,12 +363,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 263   ;
-; Number of registers using Synchronous Clear  ; 130   ;
+; Total registers                              ; 295   ;
+; Number of registers using Synchronous Clear  ; 162   ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 152   ;
+; Number of registers using Clock Enable       ; 184   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -381,11 +381,11 @@ Encoding Type:  One-Hot
 ; main:inst1|ball:avatar|y_pos[7]                           ; 5       ;
 ; main:inst1|ball:avatar|y_pos[6]                           ; 5       ;
 ; main:inst1|ball:avatar|y_pos[3]                           ; 5       ;
-; main:inst1|reset                                          ; 62      ;
+; main:inst1|reset                                          ; 95      ;
 ; main:inst1|pipe:pipeone|pipeWidth[5]                      ; 5       ;
 ; main:inst1|pipe:pipeone|pipeWidth[4]                      ; 5       ;
 ; main:inst1|lives[1]                                       ; 3       ;
-; main:inst1|pipeSpeed[0]                                   ; 3       ;
+; main:inst1|pipeSpeed[0]                                   ; 5       ;
 ; MOUSE:inst|send_char                                      ; 3       ;
 ; main:inst1|pipe:pipeone|LFSR:randomHeight|currentState[0] ; 2       ;
 ; MOUSE:inst|SHIFTOUT[3]                                    ; 1       ;
@@ -402,23 +402,24 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:onesBCD|counter[3]                      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion[6]                ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|y_pos[8]                        ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|VGA_SYNC:inst2|v_count[4]                              ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipeSpeed[27]                               ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|lives[31]                                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[0]                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_y_pos[3]                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:tensBCD|counter[1]                      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_x_pos[0]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:onesBCD|counter[1]                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion[1]                ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|y_pos[9]                        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|VGA_SYNC:inst2|v_count[0]                              ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|lives[11]                                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[1]                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_y_pos[0]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pointCount[30]                              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|BCD:tensBCD|counter[3]                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|gap_x_pos[9]                   ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |MiniProjectQuartus|main:inst1|pipeSpeed[18]                               ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|ball:avatar|y_pos[7]                        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MiniProjectQuartus|main:inst1|pipe:pipeone|pipeWidth[5]                   ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|ball:avatar|ball_y_motion                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:one_segment|SevenSeg_out[2]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:ten_segment|SevenSeg_out[0]     ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[3] ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:one_segment|SevenSeg_out[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|BCD_to_7Seg:ten_segment|SevenSeg_out[5]     ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[2] ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |MiniProjectQuartus|main:inst1|text_setter:textSetter|character_address[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -577,41 +578,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 263                         ;
+; arriav_ff             ; 295                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 70                          ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 67                          ;
+;     ENA SCLR          ; 99                          ;
 ;     SCLR              ; 63                          ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 46                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1097                        ;
-;     arith             ; 513                         ;
+; arriav_lcell_comb     ; 1205                        ;
+;     arith             ; 565                         ;
 ;         0 data inputs ; 26                          ;
-;         1 data inputs ; 296                         ;
-;         2 data inputs ; 57                          ;
+;         1 data inputs ; 338                         ;
+;         2 data inputs ; 67                          ;
 ;         3 data inputs ; 31                          ;
 ;         4 data inputs ; 102                         ;
 ;         5 data inputs ; 1                           ;
 ;     extend            ; 4                           ;
 ;         7 data inputs ; 4                           ;
-;     normal            ; 540                         ;
+;     normal            ; 586                         ;
 ;         1 data inputs ; 13                          ;
-;         2 data inputs ; 152                         ;
-;         3 data inputs ; 44                          ;
-;         4 data inputs ; 112                         ;
-;         5 data inputs ; 142                         ;
-;         6 data inputs ; 77                          ;
-;     shared            ; 40                          ;
+;         2 data inputs ; 157                         ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 128                         ;
+;         5 data inputs ; 146                         ;
+;         6 data inputs ; 95                          ;
+;     shared            ; 50                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 39                          ;
+;         2 data inputs ; 49                          ;
 ; arriav_mac            ; 4                           ;
 ; boundary_port         ; 27                          ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 76.20                       ;
-; Average LUT depth     ; 35.41                       ;
+; Average LUT depth     ; 32.73                       ;
 +-----------------------+-----------------------------+
 
 
@@ -630,7 +631,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed May 24 23:04:58 2023
+    Info: Processing started: Thu May 25 11:48:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProjectQuartus -c MiniProjectQuartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -691,7 +692,6 @@ Warning (275011): Block or symbol "MOUSE" of instance "inst" overlaps another bl
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "halfclock" for hierarchy "halfclock:inst5"
 Info (12128): Elaborating entity "main" for hierarchy "main:inst1"
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(85): object "prevHit" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 85
 Warning (10036): Verilog HDL or VHDL warning at main.vhd(85): object "pipe_red" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 85
 Warning (10036): Verilog HDL or VHDL warning at main.vhd(85): object "ball_green" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 85
 Warning (10036): Verilog HDL or VHDL warning at main.vhd(85): object "ball_blue" assigned a value but never read File: H:/Documents/302-work/main.vhd Line: 85
@@ -774,17 +774,17 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 22 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1219 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1359 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 22 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1180 logic cells
+    Info (21061): Implemented 1320 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Wed May 24 23:05:14 2023
-    Info: Elapsed time: 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Thu May 25 11:49:06 2023
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:19
 
 

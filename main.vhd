@@ -127,9 +127,7 @@ end component;
 	 
     CLICK: process(pb2)
     --Counting number of button clicks
-    
-    variable numOfpush,pointCount : integer := 0;
-
+    variable numOfpush: integer := 0;
     begin
         if rising_edge(pb2) then
             numOfPush := numOfPush + 1;
@@ -146,7 +144,8 @@ end component;
     end process CLICK;
 
     process(vert_sync)
-   
+	 variable pointCount : integer := 0;
+
     begin
         if rising_edge(vert_sync) then
 		  
@@ -185,7 +184,7 @@ end component;
                             if pointCount = 10 then
                                 pipeSpeed <= 2;
                             elsif pointCount = 20 then
-                                pipeSpeed<= 3
+                                pipeSpeed<= 3;
                             elsif pointCount = 30 then
                                 pipeSpeed <= 4;
                             end if;
